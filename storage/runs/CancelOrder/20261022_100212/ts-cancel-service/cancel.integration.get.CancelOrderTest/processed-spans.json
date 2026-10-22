@@ -1,0 +1,684 @@
+[ {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "8c84aef5bc635193",
+  "parentSpanId" : "3b3f90500cf93d44",
+  "name" : "OrderController.saveOrderInfo",
+  "service" : "ts-order-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "5263f31fa7bc96f3",
+  "parentSpanId" : "a964fa6f8b02e55a",
+  "name" : "GET /api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+  "service" : "ts-inside-payment-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Draw Back Money Success\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "f86667e3d0aec6e1",
+  "parentSpanId" : "7a0e93403ed44785",
+  "name" : "UserController.getUserByUserId",
+  "service" : "ts-user-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "7213f582ca837d23",
+  "parentSpanId" : "77ff57cb46563b88",
+  "name" : "GET",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:53707/api/v1/orderservice/order/e9cb042e-54d3-4b56-b5fa-67ff1c1c992b",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "a964fa6f8b02e55a",
+  "parentSpanId" : "77ff57cb46563b88",
+  "name" : "GET",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:53723/api/v1/inside_pay_service/inside_payment/drawback/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f/80,00",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "1a1ad84e87136114",
+  "parentSpanId" : "77ff57cb46563b88",
+  "name" : "POST",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "POST",
+  "statusCode" : 200,
+  "url" : "http://localhost:17853/api/v1/notifyservice/notification/order_cancel_success",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "92a18feace437480",
+  "parentSpanId" : "92106a1b9eafbb9e",
+  "name" : "CancelController.cancelTicket",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "a5f373039347765e",
+  "parentSpanId" : "1a1ad84e87136114",
+  "name" : "additional-data",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "3b3f90500cf93d44",
+  "parentSpanId" : "5d2990c99b484bb6",
+  "name" : "PUT /api/v1/orderservice/order",
+  "service" : "ts-order-service",
+  "httpMethod" : "PUT",
+  "route" : "/api/v1/orderservice/order",
+  "statusCode" : 200,
+  "requestBody" : "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-10-22T08:02:47.222+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-10-22T08:02:47.222+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "7a0e93403ed44785",
+  "parentSpanId" : "fc1ea12174abf986",
+  "name" : "GET /api/v1/userservice/users/id/{userId}",
+  "service" : "ts-user-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/userservice/users/id/{userId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Find User Success\",\"data\":{\"userId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"userName\":\"fdse_microservice\",\"password\":\"111111\",\"gender\":1,\"documentType\":1,\"documentNum\":\"2135488099312X\",\"email\":\"fdse_microservice@163.com\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "fc1ea12174abf986",
+  "parentSpanId" : "77ff57cb46563b88",
+  "name" : "GET",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:53720/api/v1/userservice/users/id/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "77ff57cb46563b88",
+  "parentSpanId" : "92a18feace437480",
+  "name" : "CancelController.cancelTicket.execute",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "92106a1b9eafbb9e",
+  "parentSpanId" : null,
+  "name" : "GET /api/v1/cancelservice/cancel/{orderId}/{loginId}",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/cancelservice/cancel/{orderId}/{loginId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success.\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "5d2990c99b484bb6",
+  "parentSpanId" : "77ff57cb46563b88",
+  "name" : "PUT",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "PUT",
+  "statusCode" : 200,
+  "url" : "http://localhost:53707/api/v1/orderservice/order",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "ca5bb6cc86917de2",
+  "parentSpanId" : "1a4096cbb29aa710",
+  "name" : "OrderController.getOrderById",
+  "service" : "ts-order-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "1a4096cbb29aa710",
+  "parentSpanId" : "7213f582ca837d23",
+  "name" : "GET /api/v1/orderservice/order/{orderId}",
+  "service" : "ts-order-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/orderservice/order/{orderId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-10-22T08:02:47.222+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":0,\"price\":\"100.0\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "79a7d17566581231ca6d43a599a4f1b0",
+  "spanId" : "b1ef75af69eb0910",
+  "parentSpanId" : "5263f31fa7bc96f3",
+  "name" : "InsidePaymentController.drawBack",
+  "service" : "ts-inside-payment-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "1c116744e86d5a86a24b93400cda9c0b",
+  "spanId" : "402cf29dbbc95aea",
+  "parentSpanId" : "9b87699bd0e1cfd7",
+  "name" : "CancelController.cancelTicket",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "1c116744e86d5a86a24b93400cda9c0b",
+  "spanId" : "9b87699bd0e1cfd7",
+  "parentSpanId" : null,
+  "name" : "GET /api/v1/cancelservice/cancel/{orderId}/{loginId}",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/cancelservice/cancel/{orderId}/{loginId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Order Status Cancel Not Permitted\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "1c116744e86d5a86a24b93400cda9c0b",
+  "spanId" : "c7e0433a7bb5b6f0",
+  "parentSpanId" : "8aa97854544c8e73",
+  "name" : "GET /api/v1/orderservice/order/{orderId}",
+  "service" : "ts-order-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/orderservice/order/{orderId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d7\",\"boughtDate\":\"2026-10-22T08:02:47.218+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":2,\"price\":\"100.0\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "1c116744e86d5a86a24b93400cda9c0b",
+  "spanId" : "81c7f5c4ce5f80b7",
+  "parentSpanId" : "c7e0433a7bb5b6f0",
+  "name" : "OrderController.getOrderById",
+  "service" : "ts-order-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "1c116744e86d5a86a24b93400cda9c0b",
+  "spanId" : "8aa97854544c8e73",
+  "parentSpanId" : "a02b8e5264e522c0",
+  "name" : "GET",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:53707/api/v1/orderservice/order/f8e2dc60-bd59-4af9-bf15-507f3b6572d7",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "1c116744e86d5a86a24b93400cda9c0b",
+  "spanId" : "a02b8e5264e522c0",
+  "parentSpanId" : "402cf29dbbc95aea",
+  "name" : "CancelController.cancelTicket.execute",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "3004327ba37a1a26cba2b076295eebf5",
+  "spanId" : "26549bb53e20de24",
+  "parentSpanId" : "374369cde3d3e6f6",
+  "name" : "GET",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "statusCode" : 0,
+  "url" : "http://localhost:53707/api/v1/orderservice/order/e9cb042e-54d3-4b56-b5fa-67ff1c1c992b",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "3004327ba37a1a26cba2b076295eebf5",
+  "spanId" : "374369cde3d3e6f6",
+  "parentSpanId" : "7450a3393d46c515",
+  "name" : "CancelController.cancelTicket.execute",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "3004327ba37a1a26cba2b076295eebf5",
+  "spanId" : "7450a3393d46c515",
+  "parentSpanId" : "19fe8317dd072c10",
+  "name" : "CancelController.cancelTicket",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "3004327ba37a1a26cba2b076295eebf5",
+  "spanId" : "19fe8317dd072c10",
+  "parentSpanId" : null,
+  "name" : "GET /api/v1/cancelservice/cancel/{orderId}/{loginId}",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/cancelservice/cancel/{orderId}/{loginId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : null,
+  "kind" : "SERVER"
+}, {
+  "traceId" : "4d823eb46d434c8b26d2cdfceb06f22b",
+  "spanId" : "aef8dfbc5bce33e3",
+  "parentSpanId" : "72a574a6c51ae437",
+  "name" : "GET /api/v1/orderOtherService/orderOther/{orderId}",
+  "service" : "ts-order-other-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/orderOtherService/orderOther/{orderId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d4\",\"boughtDate\":\"2026-10-22T08:02:34.818+00:00\",\"travelDate\":\"1970-01-02T10:17:36.799+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d4\",\"contactsName\":\"Test\",\"documentType\":1,\"contactsDocumentNumber\":\"Test\",\"trainNumber\":\"Z1234\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"6A\",\"from\":\"shanghai\",\"to\":\"taiyuan\",\"status\":2,\"price\":\"100\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "4d823eb46d434c8b26d2cdfceb06f22b",
+  "spanId" : "de3b3172bda2b592",
+  "parentSpanId" : "d2823d0baeada90f",
+  "name" : "CancelController.cancelTicket.execute",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "4d823eb46d434c8b26d2cdfceb06f22b",
+  "spanId" : "d2823d0baeada90f",
+  "parentSpanId" : "7877623ef245d162",
+  "name" : "CancelController.cancelTicket",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "4d823eb46d434c8b26d2cdfceb06f22b",
+  "spanId" : "7877623ef245d162",
+  "parentSpanId" : null,
+  "name" : "GET /api/v1/cancelservice/cancel/{orderId}/{loginId}",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/cancelservice/cancel/{orderId}/{loginId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Order Status Cancel Not Permitted\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "4d823eb46d434c8b26d2cdfceb06f22b",
+  "spanId" : "6941ddedd1256243",
+  "parentSpanId" : "859fdae26e5a73b7",
+  "name" : "GET /api/v1/orderservice/order/{orderId}",
+  "service" : "ts-order-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/orderservice/order/{orderId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "4d823eb46d434c8b26d2cdfceb06f22b",
+  "spanId" : "aa209224e07862d5",
+  "parentSpanId" : "6941ddedd1256243",
+  "name" : "OrderController.getOrderById",
+  "service" : "ts-order-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "4d823eb46d434c8b26d2cdfceb06f22b",
+  "spanId" : "080004c40a48f387",
+  "parentSpanId" : "aef8dfbc5bce33e3",
+  "name" : "OrderOtherController.getOrderById",
+  "service" : "ts-order-other-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "4d823eb46d434c8b26d2cdfceb06f22b",
+  "spanId" : "72a574a6c51ae437",
+  "parentSpanId" : "de3b3172bda2b592",
+  "name" : "GET",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:53701/api/v1/orderOtherService/orderOther/f8e2dc60-bd59-4af9-bf15-507f3b6572d4",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "4d823eb46d434c8b26d2cdfceb06f22b",
+  "spanId" : "859fdae26e5a73b7",
+  "parentSpanId" : "de3b3172bda2b592",
+  "name" : "GET",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:53707/api/v1/orderservice/order/f8e2dc60-bd59-4af9-bf15-507f3b6572d4",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "82871780ea601ba915bb4be58456ebe2",
+  "spanId" : "d8c1d14a5c95ad2b",
+  "parentSpanId" : "df36fd6a3ed9202b",
+  "name" : "OrderController.getOrderById",
+  "service" : "ts-order-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "82871780ea601ba915bb4be58456ebe2",
+  "spanId" : "7a5eaeace0dde219",
+  "parentSpanId" : "17dd4f31b2c74c71",
+  "name" : "InsidePaymentController.drawBack",
+  "service" : "ts-inside-payment-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "82871780ea601ba915bb4be58456ebe2",
+  "spanId" : "e017034abeb0071d",
+  "parentSpanId" : "6ef7fe324f11bf53",
+  "name" : "PUT /api/v1/orderOtherService/orderOther",
+  "service" : "ts-order-other-service",
+  "httpMethod" : "PUT",
+  "route" : "/api/v1/orderOtherService/orderOther",
+  "statusCode" : 200,
+  "requestBody" : "{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"boughtDate\":\"2026-10-22T08:02:34.806+00:00\",\"travelDate\":\"1970-01-02T10:17:36.799+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"contactsName\":\"Test\",\"documentType\":1,\"contactsDocumentNumber\":\"Test\",\"trainNumber\":\"K1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"6A\",\"from\":\"shanghai\",\"to\":\"taiyuan\",\"status\":4,\"price\":\"100\"}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"boughtDate\":\"2026-10-22T08:02:34.806+00:00\",\"travelDate\":\"1970-01-02T10:17:36.799+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"contactsName\":\"Test\",\"documentType\":1,\"contactsDocumentNumber\":\"Test\",\"trainNumber\":\"K1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"6A\",\"from\":\"shanghai\",\"to\":\"taiyuan\",\"status\":4,\"price\":\"100\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "82871780ea601ba915bb4be58456ebe2",
+  "spanId" : "7c0b14641e28cdca",
+  "parentSpanId" : "be94233f673903b4",
+  "name" : "OrderOtherController.getOrderById",
+  "service" : "ts-order-other-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "82871780ea601ba915bb4be58456ebe2",
+  "spanId" : "31e3336af1d08cbb",
+  "parentSpanId" : "e017034abeb0071d",
+  "name" : "OrderOtherController.saveOrderInfo",
+  "service" : "ts-order-other-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "82871780ea601ba915bb4be58456ebe2",
+  "spanId" : "0a36da01ae74c750",
+  "parentSpanId" : "b43838b97672062a",
+  "name" : "GET",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:53707/api/v1/orderservice/order/f8e2dc60-bd59-4af9-bf15-507f3b6572d6",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "82871780ea601ba915bb4be58456ebe2",
+  "spanId" : "eb1c61a23eeb3a63",
+  "parentSpanId" : "b43838b97672062a",
+  "name" : "GET",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:53723/api/v1/inside_pay_service/inside_payment/drawback/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f/80,00",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "82871780ea601ba915bb4be58456ebe2",
+  "spanId" : "d79e111867028826",
+  "parentSpanId" : "310ad71bce836e1f",
+  "name" : "CancelController.cancelTicket",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "82871780ea601ba915bb4be58456ebe2",
+  "spanId" : "df36fd6a3ed9202b",
+  "parentSpanId" : "0a36da01ae74c750",
+  "name" : "GET /api/v1/orderservice/order/{orderId}",
+  "service" : "ts-order-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/orderservice/order/{orderId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "82871780ea601ba915bb4be58456ebe2",
+  "spanId" : "c7edf52f3e91f710",
+  "parentSpanId" : "b43838b97672062a",
+  "name" : "GET",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:53701/api/v1/orderOtherService/orderOther/f8e2dc60-bd59-4af9-bf15-507f3b6572d6",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "82871780ea601ba915bb4be58456ebe2",
+  "spanId" : "b43838b97672062a",
+  "parentSpanId" : "d79e111867028826",
+  "name" : "CancelController.cancelTicket.execute",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "82871780ea601ba915bb4be58456ebe2",
+  "spanId" : "17dd4f31b2c74c71",
+  "parentSpanId" : "eb1c61a23eeb3a63",
+  "name" : "GET /api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+  "service" : "ts-inside-payment-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Draw Back Money Success\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "82871780ea601ba915bb4be58456ebe2",
+  "spanId" : "be94233f673903b4",
+  "parentSpanId" : "c7edf52f3e91f710",
+  "name" : "GET /api/v1/orderOtherService/orderOther/{orderId}",
+  "service" : "ts-order-other-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/orderOtherService/orderOther/{orderId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"boughtDate\":\"2026-10-22T08:02:34.806+00:00\",\"travelDate\":\"1970-01-02T10:17:36.799+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"contactsName\":\"Test\",\"documentType\":1,\"contactsDocumentNumber\":\"Test\",\"trainNumber\":\"K1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"6A\",\"from\":\"shanghai\",\"to\":\"taiyuan\",\"status\":0,\"price\":\"100\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "82871780ea601ba915bb4be58456ebe2",
+  "spanId" : "6ef7fe324f11bf53",
+  "parentSpanId" : "b43838b97672062a",
+  "name" : "PUT",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "PUT",
+  "statusCode" : 200,
+  "url" : "http://localhost:53701/api/v1/orderOtherService/orderOther",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "82871780ea601ba915bb4be58456ebe2",
+  "spanId" : "310ad71bce836e1f",
+  "parentSpanId" : null,
+  "name" : "GET /api/v1/cancelservice/cancel/{orderId}/{loginId}",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/cancelservice/cancel/{orderId}/{loginId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success.\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "19a33a13bd5f6a1b84ebca59217a3881",
+  "spanId" : "6d653c0429c228a5",
+  "parentSpanId" : "c7e01f5393e0d8eb",
+  "name" : "InsidePaymentController.drawBack",
+  "service" : "ts-inside-payment-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "19a33a13bd5f6a1b84ebca59217a3881",
+  "spanId" : "da7b1ee2ddd7cd93",
+  "parentSpanId" : "e13aa270f6dfc6fa",
+  "name" : "GET",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:53720/api/v1/userservice/users/id/0ccf8330-4f74-488c-8572-9da813727e12",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "19a33a13bd5f6a1b84ebca59217a3881",
+  "spanId" : "f5666194d0042127",
+  "parentSpanId" : "da7b1ee2ddd7cd93",
+  "name" : "GET /api/v1/userservice/users/id/{userId}",
+  "service" : "ts-user-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/userservice/users/id/{userId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"No User\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "19a33a13bd5f6a1b84ebca59217a3881",
+  "spanId" : "17522e32b6951f04",
+  "parentSpanId" : "e13aa270f6dfc6fa",
+  "name" : "GET",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:53707/api/v1/orderservice/order/e9cb042e-54d3-4b56-b5fa-67ff1c1c992c",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "19a33a13bd5f6a1b84ebca59217a3881",
+  "spanId" : "e02863c0a9862bf8",
+  "parentSpanId" : "e13aa270f6dfc6fa",
+  "name" : "PUT",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "PUT",
+  "statusCode" : 200,
+  "url" : "http://localhost:53707/api/v1/orderservice/order",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "19a33a13bd5f6a1b84ebca59217a3881",
+  "spanId" : "abcce084f564cdaa",
+  "parentSpanId" : "846af01bed3a27dc",
+  "name" : "CancelController.cancelTicket",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "19a33a13bd5f6a1b84ebca59217a3881",
+  "spanId" : "846af01bed3a27dc",
+  "parentSpanId" : null,
+  "name" : "GET /api/v1/cancelservice/cancel/{orderId}/{loginId}",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/cancelservice/cancel/{orderId}/{loginId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Cann't find userinfo by user id.\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "19a33a13bd5f6a1b84ebca59217a3881",
+  "spanId" : "1194963909d78075",
+  "parentSpanId" : "f5666194d0042127",
+  "name" : "UserController.getUserByUserId",
+  "service" : "ts-user-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "19a33a13bd5f6a1b84ebca59217a3881",
+  "spanId" : "095364f0e0ed77c2",
+  "parentSpanId" : "e02863c0a9862bf8",
+  "name" : "PUT /api/v1/orderservice/order",
+  "service" : "ts-order-service",
+  "httpMethod" : "PUT",
+  "route" : "/api/v1/orderservice/order",
+  "statusCode" : 200,
+  "requestBody" : "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-10-22T08:02:47.226+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0ccf8330-4f74-488c-8572-9da813727e12\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-10-22T08:02:47.226+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0ccf8330-4f74-488c-8572-9da813727e12\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "19a33a13bd5f6a1b84ebca59217a3881",
+  "spanId" : "e13aa270f6dfc6fa",
+  "parentSpanId" : "abcce084f564cdaa",
+  "name" : "CancelController.cancelTicket.execute",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "19a33a13bd5f6a1b84ebca59217a3881",
+  "spanId" : "7d965f5c99f729d5",
+  "parentSpanId" : "17522e32b6951f04",
+  "name" : "GET /api/v1/orderservice/order/{orderId}",
+  "service" : "ts-order-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/orderservice/order/{orderId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-10-22T08:02:47.226+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0ccf8330-4f74-488c-8572-9da813727e12\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":0,\"price\":\"100.0\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "19a33a13bd5f6a1b84ebca59217a3881",
+  "spanId" : "d8fcefac3bbe8a53",
+  "parentSpanId" : "095364f0e0ed77c2",
+  "name" : "OrderController.saveOrderInfo",
+  "service" : "ts-order-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "19a33a13bd5f6a1b84ebca59217a3881",
+  "spanId" : "153a174e1a17de41",
+  "parentSpanId" : "e13aa270f6dfc6fa",
+  "name" : "GET",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:53723/api/v1/inside_pay_service/inside_payment/drawback/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f/80,00",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "19a33a13bd5f6a1b84ebca59217a3881",
+  "spanId" : "7c0f945850cb36bb",
+  "parentSpanId" : "7d965f5c99f729d5",
+  "name" : "OrderController.getOrderById",
+  "service" : "ts-order-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "19a33a13bd5f6a1b84ebca59217a3881",
+  "spanId" : "c7e01f5393e0d8eb",
+  "parentSpanId" : "153a174e1a17de41",
+  "name" : "GET /api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+  "service" : "ts-inside-payment-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Draw Back Money Success\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "18d89751969bae09b3da3c97c2a8b8f9",
+  "spanId" : "891daa710ab3cc37",
+  "parentSpanId" : "fe4bede0ef8aa953",
+  "name" : "GET",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:53701/api/v1/orderOtherService/orderOther/4802a380-219f-4950-9987-54f834a197af",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "18d89751969bae09b3da3c97c2a8b8f9",
+  "spanId" : "fe4bede0ef8aa953",
+  "parentSpanId" : "a7a9cd544353b0fb",
+  "name" : "CancelController.cancelTicket.execute",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "18d89751969bae09b3da3c97c2a8b8f9",
+  "spanId" : "a7a9cd544353b0fb",
+  "parentSpanId" : "dc16613876e31e26",
+  "name" : "CancelController.cancelTicket",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "18d89751969bae09b3da3c97c2a8b8f9",
+  "spanId" : "dc16613876e31e26",
+  "parentSpanId" : null,
+  "name" : "GET /api/v1/cancelservice/cancel/{orderId}/{loginId}",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/cancelservice/cancel/{orderId}/{loginId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Order Not Found.\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "18d89751969bae09b3da3c97c2a8b8f9",
+  "spanId" : "f4b03c8c74ae4cec",
+  "parentSpanId" : "891daa710ab3cc37",
+  "name" : "GET /api/v1/orderOtherService/orderOther/{orderId}",
+  "service" : "ts-order-other-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/orderOtherService/orderOther/{orderId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "18d89751969bae09b3da3c97c2a8b8f9",
+  "spanId" : "dad19a567672af85",
+  "parentSpanId" : "f4b03c8c74ae4cec",
+  "name" : "OrderOtherController.getOrderById",
+  "service" : "ts-order-other-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "18d89751969bae09b3da3c97c2a8b8f9",
+  "spanId" : "8da9efd1f4cebff2",
+  "parentSpanId" : "fe4bede0ef8aa953",
+  "name" : "GET",
+  "service" : "ts-cancel-service/cancel.integration.get.CancelOrderTest",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:53707/api/v1/orderservice/order/4802a380-219f-4950-9987-54f834a197af",
+  "kind" : "CLIENT"
+} ]

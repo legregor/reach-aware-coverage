@@ -1,0 +1,954 @@
+{
+  "rootService": "gateway-service",
+  "paths": [
+    {
+      "segments": [
+        {
+          "sourceService": "gateway-service",
+          "sourceRoot": "/services/gateway-service",
+          "sourceEndpointMethodKey": "gateway.GatewayController#placeOrder[gateway.OrderRequest]",
+          "sourceHttpMethod": "POST",
+          "sourcePath": "/gw/orders",
+          "sourceReturnType": "GatewayResponse",
+          "destinationService": "order-service",
+          "destinationHttpMethod": "POST",
+          "destinationUrl": "http://order-service:8080/api/orders",
+          "destinationReturnType": "OrderDto",
+          "destinationEndpointMethodKey": "order.OrderController#createOrder[order.OrderRequest, org.springframework.http.HttpHeaders]",
+          "destinationEndpointHttpMethod": "POST",
+          "destinationEndpointPath": "/api/orders",
+          "destinationEndpointReturnType": "ResponseEntity<OrderDto>",
+          "destinationEndpointArguments": [
+            "@RequestBody OrderRequest request",
+            "@RequestHeader HttpHeaders headers"
+          ],
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": true,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        }
+      ],
+      "pathHash": "gateway-service|/gw/orders->order-service|POST|http://order-service:8080/api/orders",
+      "metadata": {},
+      "originService": "gateway-service",
+      "finalDestinationService": "order-service"
+    },
+    {
+      "segments": [
+        {
+          "sourceService": "gateway-service",
+          "sourceRoot": "/services/gateway-service",
+          "sourceEndpointMethodKey": "gateway.GatewayController#placeOrder[gateway.OrderRequest]",
+          "sourceHttpMethod": "POST",
+          "sourcePath": "/gw/orders",
+          "sourceReturnType": "GatewayResponse",
+          "destinationService": "order-service",
+          "destinationHttpMethod": "POST",
+          "destinationUrl": "http://order-service:8080/api/orders",
+          "destinationReturnType": "OrderDto",
+          "destinationEndpointMethodKey": "order.OrderController#createOrder[order.OrderRequest, org.springframework.http.HttpHeaders]",
+          "destinationEndpointHttpMethod": "POST",
+          "destinationEndpointPath": "/api/orders",
+          "destinationEndpointReturnType": "ResponseEntity<OrderDto>",
+          "destinationEndpointArguments": [
+            "@RequestBody OrderRequest request",
+            "@RequestHeader HttpHeaders headers"
+          ],
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": true,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        },
+        {
+          "sourceService": "order-service",
+          "sourceRoot": "/services/order-service",
+          "sourceEndpointMethodKey": "order.OrderController#createOrder[order.OrderRequest, org.springframework.http.HttpHeaders]",
+          "sourceHttpMethod": "POST",
+          "sourcePath": "/api/orders",
+          "sourceReturnType": "ResponseEntity<OrderDto>",
+          "destinationService": "inventory-service",
+          "destinationHttpMethod": "GET",
+          "destinationUrl": "http://inventory-service:8080/api/inventory/items/{itemId}",
+          "destinationReturnType": "ItemDto",
+          "destinationEndpointMethodKey": "inventory.InventoryController#getItem[inventory.String, inventory.String]",
+          "destinationEndpointHttpMethod": "GET",
+          "destinationEndpointPath": "/api/inventory/items/{itemId}",
+          "destinationEndpointReturnType": "ResponseEntity<ItemDto>",
+          "destinationEndpointArguments": [
+            "@PathVariable String itemId",
+            "@RequestParam(required = false) String warehouse"
+          ],
+          "sentPathVariables": [
+            "itemId"
+          ],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        }
+      ],
+      "pathHash": "gateway-service|/gw/orders->order-service|POST|http://order-service:8080/api/orders->inventory-service|GET|http://inventory-service:8080/api/inventory/items/{itemId}",
+      "metadata": {},
+      "originService": "gateway-service",
+      "finalDestinationService": "inventory-service"
+    },
+    {
+      "segments": [
+        {
+          "sourceService": "gateway-service",
+          "sourceRoot": "/services/gateway-service",
+          "sourceEndpointMethodKey": "gateway.GatewayController#placeOrder[gateway.OrderRequest]",
+          "sourceHttpMethod": "POST",
+          "sourcePath": "/gw/orders",
+          "sourceReturnType": "GatewayResponse",
+          "destinationService": "order-service",
+          "destinationHttpMethod": "POST",
+          "destinationUrl": "http://order-service:8080/api/orders",
+          "destinationReturnType": "OrderDto",
+          "destinationEndpointMethodKey": "order.OrderController#createOrder[order.OrderRequest, org.springframework.http.HttpHeaders]",
+          "destinationEndpointHttpMethod": "POST",
+          "destinationEndpointPath": "/api/orders",
+          "destinationEndpointReturnType": "ResponseEntity<OrderDto>",
+          "destinationEndpointArguments": [
+            "@RequestBody OrderRequest request",
+            "@RequestHeader HttpHeaders headers"
+          ],
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": true,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        },
+        {
+          "sourceService": "order-service",
+          "sourceRoot": "/services/order-service",
+          "sourceEndpointMethodKey": "order.OrderController#createOrder[order.OrderRequest, org.springframework.http.HttpHeaders]",
+          "sourceHttpMethod": "POST",
+          "sourcePath": "/api/orders",
+          "sourceReturnType": "ResponseEntity<OrderDto>",
+          "destinationService": "inventory-service",
+          "destinationHttpMethod": "PUT",
+          "destinationUrl": "http://inventory-service:8080/api/inventory/items/{itemId}",
+          "destinationReturnType": "ReservationDto",
+          "destinationEndpointMethodKey": "inventory.InventoryController#reserveItem[inventory.String, inventory.ReservationRequest]",
+          "destinationEndpointHttpMethod": "PUT",
+          "destinationEndpointPath": "/api/inventory/items/{itemId}",
+          "destinationEndpointReturnType": "ResponseEntity<ReservationDto>",
+          "destinationEndpointArguments": [
+            "@PathVariable String itemId",
+            "@RequestBody ReservationRequest reservation"
+          ],
+          "sentPathVariables": [
+            "itemId"
+          ],
+          "sentQueryParameters": [],
+          "requestBodySent": true,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        }
+      ],
+      "pathHash": "gateway-service|/gw/orders->order-service|POST|http://order-service:8080/api/orders->inventory-service|PUT|http://inventory-service:8080/api/inventory/items/{itemId}",
+      "metadata": {},
+      "originService": "gateway-service",
+      "finalDestinationService": "inventory-service"
+    },
+    {
+      "segments": [
+        {
+          "sourceService": "gateway-service",
+          "sourceRoot": "/services/gateway-service",
+          "sourceEndpointMethodKey": "gateway.GatewayController#placeOrder[gateway.OrderRequest]",
+          "sourceHttpMethod": "POST",
+          "sourcePath": "/gw/orders",
+          "sourceReturnType": "GatewayResponse",
+          "destinationService": "order-service",
+          "destinationHttpMethod": "POST",
+          "destinationUrl": "http://order-service:8080/api/orders",
+          "destinationReturnType": "OrderDto",
+          "destinationEndpointMethodKey": "order.OrderController#createOrder[order.OrderRequest, org.springframework.http.HttpHeaders]",
+          "destinationEndpointHttpMethod": "POST",
+          "destinationEndpointPath": "/api/orders",
+          "destinationEndpointReturnType": "ResponseEntity<OrderDto>",
+          "destinationEndpointArguments": [
+            "@RequestBody OrderRequest request",
+            "@RequestHeader HttpHeaders headers"
+          ],
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": true,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        },
+        {
+          "sourceService": "order-service",
+          "sourceRoot": "/services/order-service",
+          "sourceEndpointMethodKey": "order.OrderController#createOrder[order.OrderRequest, org.springframework.http.HttpHeaders]",
+          "sourceHttpMethod": "POST",
+          "sourcePath": "/api/orders",
+          "sourceReturnType": "ResponseEntity<OrderDto>",
+          "destinationService": "payment-service",
+          "destinationHttpMethod": "POST",
+          "destinationUrl": "http://payment-service:8080/api/payments",
+          "destinationReturnType": "PaymentDto",
+          "destinationEndpointMethodKey": "payment.PaymentController#pay[payment.PaymentRequest]",
+          "destinationEndpointHttpMethod": "POST",
+          "destinationEndpointPath": "/api/payments",
+          "destinationEndpointReturnType": "ResponseEntity<PaymentDto>",
+          "destinationEndpointArguments": [
+            "@RequestBody PaymentRequest payment"
+          ],
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": true,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        }
+      ],
+      "pathHash": "gateway-service|/gw/orders->order-service|POST|http://order-service:8080/api/orders->payment-service|POST|http://payment-service:8080/api/payments",
+      "metadata": {},
+      "originService": "gateway-service",
+      "finalDestinationService": "payment-service"
+    },
+    {
+      "segments": [
+        {
+          "sourceService": "gateway-service",
+          "sourceRoot": "/services/gateway-service",
+          "sourceEndpointMethodKey": "gateway.GatewayController#placeOrder[gateway.OrderRequest]",
+          "sourceHttpMethod": "POST",
+          "sourcePath": "/gw/orders",
+          "sourceReturnType": "GatewayResponse",
+          "destinationService": "order-service",
+          "destinationHttpMethod": "POST",
+          "destinationUrl": "http://order-service:8080/api/orders",
+          "destinationReturnType": "OrderDto",
+          "destinationEndpointMethodKey": "order.OrderController#createOrder[order.OrderRequest, org.springframework.http.HttpHeaders]",
+          "destinationEndpointHttpMethod": "POST",
+          "destinationEndpointPath": "/api/orders",
+          "destinationEndpointReturnType": "ResponseEntity<OrderDto>",
+          "destinationEndpointArguments": [
+            "@RequestBody OrderRequest request",
+            "@RequestHeader HttpHeaders headers"
+          ],
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": true,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        },
+        {
+          "sourceService": "order-service",
+          "sourceRoot": "/services/order-service",
+          "sourceEndpointMethodKey": "order.OrderController#createOrder[order.OrderRequest, org.springframework.http.HttpHeaders]",
+          "sourceHttpMethod": "POST",
+          "sourcePath": "/api/orders",
+          "sourceReturnType": "ResponseEntity<OrderDto>",
+          "destinationService": "payment-service",
+          "destinationHttpMethod": "POST",
+          "destinationUrl": "http://payment-service:8080/api/payments",
+          "destinationReturnType": "PaymentDto",
+          "destinationEndpointMethodKey": "payment.PaymentController#pay[payment.PaymentRequest]",
+          "destinationEndpointHttpMethod": "POST",
+          "destinationEndpointPath": "/api/payments",
+          "destinationEndpointReturnType": "ResponseEntity<PaymentDto>",
+          "destinationEndpointArguments": [
+            "@RequestBody PaymentRequest payment"
+          ],
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": true,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        },
+        {
+          "sourceService": "payment-service",
+          "sourceRoot": "/services/payment-service",
+          "sourceEndpointMethodKey": "payment.PaymentController#pay[payment.PaymentRequest]",
+          "sourceHttpMethod": "POST",
+          "sourcePath": "/api/payments",
+          "sourceReturnType": "ResponseEntity<PaymentDto>",
+          "destinationService": "order-service",
+          "destinationHttpMethod": "POST",
+          "destinationUrl": "http://order-service:8080/api/orders/{orderId}/paid",
+          "destinationReturnType": "Void",
+          "destinationEndpointMethodKey": "order.OrderController#markPaid[order.String, order.PaymentConfirmation]",
+          "destinationEndpointHttpMethod": "POST",
+          "destinationEndpointPath": "/api/orders/{orderId}/paid",
+          "destinationEndpointReturnType": "ResponseEntity<Void>",
+          "destinationEndpointArguments": [
+            "@PathVariable String orderId",
+            "@RequestBody PaymentConfirmation confirmation"
+          ],
+          "sentPathVariables": [
+            "orderId"
+          ],
+          "sentQueryParameters": [],
+          "requestBodySent": true,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        }
+      ],
+      "pathHash": "gateway-service|/gw/orders->order-service|POST|http://order-service:8080/api/orders->payment-service|POST|http://payment-service:8080/api/payments->order-service|POST|http://order-service:8080/api/orders/{orderId}/paid",
+      "metadata": {},
+      "originService": "gateway-service",
+      "finalDestinationService": "order-service"
+    },
+    {
+      "segments": [
+        {
+          "sourceService": "gateway-service",
+          "sourceRoot": "/services/gateway-service",
+          "sourceEndpointMethodKey": "gateway.GatewayController#placeOrder[gateway.OrderRequest]",
+          "sourceHttpMethod": "POST",
+          "sourcePath": "/gw/orders",
+          "sourceReturnType": "GatewayResponse",
+          "destinationService": "order-service",
+          "destinationHttpMethod": "POST",
+          "destinationUrl": "http://order-service:8080/api/orders",
+          "destinationReturnType": "OrderDto",
+          "destinationEndpointMethodKey": "order.OrderController#createOrder[order.OrderRequest, org.springframework.http.HttpHeaders]",
+          "destinationEndpointHttpMethod": "POST",
+          "destinationEndpointPath": "/api/orders",
+          "destinationEndpointReturnType": "ResponseEntity<OrderDto>",
+          "destinationEndpointArguments": [
+            "@RequestBody OrderRequest request",
+            "@RequestHeader HttpHeaders headers"
+          ],
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": true,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        },
+        {
+          "sourceService": "order-service",
+          "sourceRoot": "/services/order-service",
+          "sourceEndpointMethodKey": "order.OrderController#createOrder[order.OrderRequest, org.springframework.http.HttpHeaders]",
+          "sourceHttpMethod": "POST",
+          "sourcePath": "/api/orders",
+          "sourceReturnType": "ResponseEntity<OrderDto>",
+          "destinationService": "payment-service",
+          "destinationHttpMethod": "POST",
+          "destinationUrl": "http://payment-service:8080/api/payments",
+          "destinationReturnType": "PaymentDto",
+          "destinationEndpointMethodKey": "payment.PaymentController#pay[payment.PaymentRequest]",
+          "destinationEndpointHttpMethod": "POST",
+          "destinationEndpointPath": "/api/payments",
+          "destinationEndpointReturnType": "ResponseEntity<PaymentDto>",
+          "destinationEndpointArguments": [
+            "@RequestBody PaymentRequest payment"
+          ],
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": true,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        },
+        {
+          "sourceService": "payment-service",
+          "sourceRoot": "/services/payment-service",
+          "sourceEndpointMethodKey": "payment.PaymentController#pay[payment.PaymentRequest]",
+          "sourceHttpMethod": "POST",
+          "sourcePath": "/api/payments",
+          "sourceReturnType": "ResponseEntity<PaymentDto>",
+          "destinationService": "legacy-billing",
+          "destinationHttpMethod": "POST",
+          "destinationUrl": "http://legacy-billing:9000/billing/invoices?async=true",
+          "destinationReturnType": "InvoiceDto",
+          "destinationEndpointMethodKey": null,
+          "destinationEndpointHttpMethod": "POST",
+          "destinationEndpointPath": "/billing/invoices",
+          "destinationEndpointReturnType": null,
+          "destinationEndpointArguments": [],
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": true,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        }
+      ],
+      "pathHash": "gateway-service|/gw/orders->order-service|POST|http://order-service:8080/api/orders->payment-service|POST|http://payment-service:8080/api/payments->legacy-billing|POST|http://legacy-billing:9000/billing/invoices?async=true",
+      "metadata": {},
+      "originService": "gateway-service",
+      "finalDestinationService": "legacy-billing"
+    },
+    {
+      "segments": [
+        {
+          "sourceService": "gateway-service",
+          "sourceRoot": "/services/gateway-service",
+          "sourceEndpointMethodKey": "gateway.GatewayController#showOrder[gateway.String]",
+          "sourceHttpMethod": "GET",
+          "sourcePath": "/gw/orders/{orderId}",
+          "sourceReturnType": "GatewayResponse",
+          "destinationService": "order-service",
+          "destinationHttpMethod": "GET",
+          "destinationUrl": "http://order-service:8080/api/orders/{orderId}",
+          "destinationReturnType": "OrderDto",
+          "destinationEndpointMethodKey": "order.OrderController#getOrder[order.String]",
+          "destinationEndpointHttpMethod": "GET",
+          "destinationEndpointPath": "/api/orders/{orderId}",
+          "destinationEndpointReturnType": "ResponseEntity<OrderDto>",
+          "destinationEndpointArguments": [
+            "@PathVariable String orderId"
+          ],
+          "sentPathVariables": [
+            "orderId"
+          ],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        }
+      ],
+      "pathHash": "gateway-service|/gw/orders/{orderId}->order-service|GET|http://order-service:8080/api/orders/{orderId}",
+      "metadata": {},
+      "originService": "gateway-service",
+      "finalDestinationService": "order-service"
+    },
+    {
+      "segments": [
+        {
+          "sourceService": "gateway-service",
+          "sourceRoot": "/services/gateway-service",
+          "sourceEndpointMethodKey": "gateway.GatewayController#showOrder[gateway.String]",
+          "sourceHttpMethod": "GET",
+          "sourcePath": "/gw/orders/{orderId}",
+          "sourceReturnType": "GatewayResponse",
+          "destinationService": "order-service",
+          "destinationHttpMethod": "GET",
+          "destinationUrl": "http://order-service:8080/api/orders/{orderId}",
+          "destinationReturnType": "OrderDto",
+          "destinationEndpointMethodKey": "order.OrderController#getOrder[order.String]",
+          "destinationEndpointHttpMethod": "GET",
+          "destinationEndpointPath": "/api/orders/{orderId}",
+          "destinationEndpointReturnType": "ResponseEntity<OrderDto>",
+          "destinationEndpointArguments": [
+            "@PathVariable String orderId"
+          ],
+          "sentPathVariables": [
+            "orderId"
+          ],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        },
+        {
+          "sourceService": "order-service",
+          "sourceRoot": "/services/order-service",
+          "sourceEndpointMethodKey": "order.OrderController#getOrder[order.String]",
+          "sourceHttpMethod": "GET",
+          "sourcePath": "/api/orders/{orderId}",
+          "sourceReturnType": "ResponseEntity<OrderDto>",
+          "destinationService": "inventory-service",
+          "destinationHttpMethod": "GET",
+          "destinationUrl": "http://inventory-service:8080/api/inventory/items/{id}",
+          "destinationReturnType": "ItemDto",
+          "destinationEndpointMethodKey": "inventory.InventoryController#getItem[inventory.String, inventory.String]",
+          "destinationEndpointHttpMethod": "GET",
+          "destinationEndpointPath": "/api/inventory/items/{itemId}",
+          "destinationEndpointReturnType": "ResponseEntity<ItemDto>",
+          "destinationEndpointArguments": [
+            "@PathVariable String itemId",
+            "@RequestParam(required = false) String warehouse"
+          ],
+          "sentPathVariables": [
+            "id"
+          ],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        }
+      ],
+      "pathHash": "gateway-service|/gw/orders/{orderId}->order-service|GET|http://order-service:8080/api/orders/{orderId}->inventory-service|GET|http://inventory-service:8080/api/inventory/items/{id}",
+      "metadata": {},
+      "originService": "gateway-service",
+      "finalDestinationService": "inventory-service"
+    },
+    {
+      "segments": [
+        {
+          "sourceService": "gateway-service",
+          "sourceRoot": "/services/gateway-service",
+          "sourceEndpointMethodKey": "gateway.GatewayController#showOrder[gateway.String]",
+          "sourceHttpMethod": "GET",
+          "sourcePath": "/gw/orders/{orderId}",
+          "sourceReturnType": "GatewayResponse",
+          "destinationService": "order-service",
+          "destinationHttpMethod": "GET",
+          "destinationUrl": "http://order-service:8080/api/orders/{orderId}",
+          "destinationReturnType": "OrderDto",
+          "destinationEndpointMethodKey": "order.OrderController#getOrder[order.String]",
+          "destinationEndpointHttpMethod": "GET",
+          "destinationEndpointPath": "/api/orders/{orderId}",
+          "destinationEndpointReturnType": "ResponseEntity<OrderDto>",
+          "destinationEndpointArguments": [
+            "@PathVariable String orderId"
+          ],
+          "sentPathVariables": [
+            "orderId"
+          ],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        },
+        {
+          "sourceService": "order-service",
+          "sourceRoot": "/services/order-service",
+          "sourceEndpointMethodKey": "order.OrderController#getOrder[order.String]",
+          "sourceHttpMethod": "GET",
+          "sourcePath": "/api/orders/{orderId}",
+          "sourceReturnType": "ResponseEntity<OrderDto>",
+          "destinationService": "inventory-service",
+          "destinationHttpMethod": "GET",
+          "destinationUrl": "http://inventory-service:8080/api/inventory/items/{itemId}",
+          "destinationReturnType": "Map",
+          "destinationEndpointMethodKey": "inventory.InventoryController#getItem[inventory.String, inventory.String]",
+          "destinationEndpointHttpMethod": "GET",
+          "destinationEndpointPath": "/api/inventory/items/{itemId}",
+          "destinationEndpointReturnType": "ResponseEntity<ItemDto>",
+          "destinationEndpointArguments": [
+            "@PathVariable String itemId",
+            "@RequestParam(required = false) String warehouse"
+          ],
+          "sentPathVariables": [
+            "itemId"
+          ],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        }
+      ],
+      "pathHash": "gateway-service|/gw/orders/{orderId}->order-service|GET|http://order-service:8080/api/orders/{orderId}->inventory-service|GET|http://inventory-service:8080/api/inventory/items/{itemId}",
+      "metadata": {},
+      "originService": "gateway-service",
+      "finalDestinationService": "inventory-service"
+    },
+    {
+      "segments": [
+        {
+          "sourceService": "gateway-service",
+          "sourceRoot": "/services/gateway-service",
+          "sourceEndpointMethodKey": "gateway.GatewayController#showOrder[gateway.String]",
+          "sourceHttpMethod": "GET",
+          "sourcePath": "/gw/orders/{orderId}",
+          "sourceReturnType": "GatewayResponse",
+          "destinationService": "inventory-service",
+          "destinationHttpMethod": "GET",
+          "destinationUrl": "http://inventory-service:8080/api/inventory/items/{itemId}",
+          "destinationReturnType": "ItemDto",
+          "destinationEndpointMethodKey": "inventory.InventoryController#getItem[inventory.String, inventory.String]",
+          "destinationEndpointHttpMethod": "GET",
+          "destinationEndpointPath": "/api/inventory/items/{itemId}",
+          "destinationEndpointReturnType": "ResponseEntity<ItemDto>",
+          "destinationEndpointArguments": [
+            "@PathVariable String itemId",
+            "@RequestParam(required = false) String warehouse"
+          ],
+          "sentPathVariables": [
+            "itemId"
+          ],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false,
+          "staticallyMissingArguments": [],
+          "staticallyOptionalButUnsentArguments": []
+        }
+      ],
+      "pathHash": "gateway-service|/gw/orders/{orderId}->inventory-service|GET|http://inventory-service:8080/api/inventory/items/{itemId}",
+      "metadata": {},
+      "originService": "gateway-service",
+      "finalDestinationService": "inventory-service"
+    },
+    {
+      "segments": [],
+      "pathHash": "",
+      "metadata": {},
+      "originService": "",
+      "finalDestinationService": ""
+    }
+  ],
+  "analyzedServices": [
+    "gateway-service",
+    "order-service",
+    "inventory-service",
+    "payment-service"
+  ],
+  "unresolvedServices": [
+    "legacy-billing"
+  ],
+  "staticTraceResult": null,
+  "staticTraceResults": {
+    "gateway-service": {
+      "endpointTraces": [
+        {
+          "sourceService": "gateway-service",
+          "sourceRoot": "/services/gateway-service",
+          "endpointMethodKey": "gateway.GatewayController#placeOrder[gateway.OrderRequest]",
+          "httpMethod": "POST",
+          "path": "/gw/orders",
+          "returnType": "GatewayResponse",
+          "endpointArguments": [
+            "@RequestBody OrderRequest request"
+          ],
+          "reachableMethodKeys": [],
+          "downstreamTargets": [
+            {
+              "httpMethod": "POST",
+              "url": "http://order-service:8080/api/orders",
+              "destinationService": "order-service",
+              "returnType": "OrderDto",
+              "sentPathVariables": [],
+              "sentQueryParameters": [],
+              "requestBodySent": false,
+              "headersSent": false
+            }
+          ]
+        },
+        {
+          "sourceService": "gateway-service",
+          "sourceRoot": "/services/gateway-service",
+          "endpointMethodKey": "gateway.GatewayController#showOrder[gateway.String]",
+          "httpMethod": "GET",
+          "path": "/gw/orders/{orderId}",
+          "returnType": "GatewayResponse",
+          "endpointArguments": [
+            "@PathVariable String orderId"
+          ],
+          "reachableMethodKeys": [],
+          "downstreamTargets": [
+            {
+              "httpMethod": "GET",
+              "url": "http://order-service:8080/api/orders/{orderId}",
+              "destinationService": "order-service",
+              "returnType": "OrderDto",
+              "sentPathVariables": [],
+              "sentQueryParameters": [],
+              "requestBodySent": false,
+              "headersSent": false
+            },
+            {
+              "httpMethod": "GET",
+              "url": "http://inventory-service:8080/api/inventory/items/{itemId}",
+              "destinationService": "inventory-service",
+              "returnType": "ItemDto",
+              "sentPathVariables": [],
+              "sentQueryParameters": [],
+              "requestBodySent": false,
+              "headersSent": false
+            }
+          ]
+        }
+      ],
+      "methodTraceCache": {},
+      "allTraceTargets": [
+        {
+          "httpMethod": "POST",
+          "url": "http://order-service:8080/api/orders",
+          "destinationService": "order-service",
+          "returnType": "OrderDto",
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false
+        },
+        {
+          "httpMethod": "GET",
+          "url": "http://order-service:8080/api/orders/{orderId}",
+          "destinationService": "order-service",
+          "returnType": "OrderDto",
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false
+        },
+        {
+          "httpMethod": "GET",
+          "url": "http://inventory-service:8080/api/inventory/items/{itemId}",
+          "destinationService": "inventory-service",
+          "returnType": "ItemDto",
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false
+        }
+      ]
+    },
+    "order-service": {
+      "endpointTraces": [
+        {
+          "sourceService": "order-service",
+          "sourceRoot": "/services/order-service",
+          "endpointMethodKey": "order.OrderController#createOrder[order.OrderRequest, org.springframework.http.HttpHeaders]",
+          "httpMethod": "POST",
+          "path": "/api/orders",
+          "returnType": "ResponseEntity<OrderDto>",
+          "endpointArguments": [
+            "@RequestBody OrderRequest request",
+            "@RequestHeader HttpHeaders headers"
+          ],
+          "reachableMethodKeys": [],
+          "downstreamTargets": [
+            {
+              "httpMethod": "GET",
+              "url": "http://inventory-service:8080/api/inventory/items/{itemId}",
+              "destinationService": "inventory-service",
+              "returnType": "ItemDto",
+              "sentPathVariables": [],
+              "sentQueryParameters": [],
+              "requestBodySent": false,
+              "headersSent": false
+            },
+            {
+              "httpMethod": "PUT",
+              "url": "http://inventory-service:8080/api/inventory/items/{itemId}",
+              "destinationService": "inventory-service",
+              "returnType": "ReservationDto",
+              "sentPathVariables": [],
+              "sentQueryParameters": [],
+              "requestBodySent": false,
+              "headersSent": false
+            },
+            {
+              "httpMethod": "POST",
+              "url": "http://payment-service:8080/api/payments",
+              "destinationService": "payment-service",
+              "returnType": "PaymentDto",
+              "sentPathVariables": [],
+              "sentQueryParameters": [],
+              "requestBodySent": false,
+              "headersSent": false
+            }
+          ]
+        },
+        {
+          "sourceService": "order-service",
+          "sourceRoot": "/services/order-service",
+          "endpointMethodKey": "order.OrderController#getOrder[order.String]",
+          "httpMethod": "GET",
+          "path": "/api/orders/{orderId}",
+          "returnType": "ResponseEntity<OrderDto>",
+          "endpointArguments": [
+            "@PathVariable String orderId"
+          ],
+          "reachableMethodKeys": [],
+          "downstreamTargets": [
+            {
+              "httpMethod": "GET",
+              "url": "http://inventory-service:8080/api/inventory/items/{id}",
+              "destinationService": "inventory-service",
+              "returnType": "ItemDto",
+              "sentPathVariables": [],
+              "sentQueryParameters": [],
+              "requestBodySent": false,
+              "headersSent": false
+            },
+            {
+              "httpMethod": "GET",
+              "url": "http://inventory-service:8080/api/inventory/items/{itemId}",
+              "destinationService": "inventory-service",
+              "returnType": "Map",
+              "sentPathVariables": [],
+              "sentQueryParameters": [],
+              "requestBodySent": false,
+              "headersSent": false
+            }
+          ]
+        },
+        {
+          "sourceService": "order-service",
+          "sourceRoot": "/services/order-service",
+          "endpointMethodKey": "order.OrderController#markPaid[order.String, order.PaymentConfirmation]",
+          "httpMethod": "POST",
+          "path": "/api/orders/{orderId}/paid",
+          "returnType": "ResponseEntity<Void>",
+          "endpointArguments": [
+            "@PathVariable String orderId",
+            "@RequestBody PaymentConfirmation confirmation"
+          ],
+          "reachableMethodKeys": [],
+          "downstreamTargets": []
+        }
+      ],
+      "methodTraceCache": {},
+      "allTraceTargets": [
+        {
+          "httpMethod": "GET",
+          "url": "http://inventory-service:8080/api/inventory/items/{itemId}",
+          "destinationService": "inventory-service",
+          "returnType": "ItemDto",
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false
+        },
+        {
+          "httpMethod": "PUT",
+          "url": "http://inventory-service:8080/api/inventory/items/{itemId}",
+          "destinationService": "inventory-service",
+          "returnType": "ReservationDto",
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false
+        },
+        {
+          "httpMethod": "POST",
+          "url": "http://payment-service:8080/api/payments",
+          "destinationService": "payment-service",
+          "returnType": "PaymentDto",
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false
+        },
+        {
+          "httpMethod": "GET",
+          "url": "http://inventory-service:8080/api/inventory/items/{id}",
+          "destinationService": "inventory-service",
+          "returnType": "ItemDto",
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false
+        },
+        {
+          "httpMethod": "GET",
+          "url": "http://inventory-service:8080/api/inventory/items/{itemId}",
+          "destinationService": "inventory-service",
+          "returnType": "Map",
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false
+        }
+      ]
+    },
+    "inventory-service": {
+      "endpointTraces": [
+        {
+          "sourceService": "inventory-service",
+          "sourceRoot": "/services/inventory-service",
+          "endpointMethodKey": "inventory.InventoryController#getItem[inventory.String, inventory.String]",
+          "httpMethod": "GET",
+          "path": "/api/inventory/items/{itemId}",
+          "returnType": "ResponseEntity<ItemDto>",
+          "endpointArguments": [
+            "@PathVariable String itemId",
+            "@RequestParam(required = false) String warehouse"
+          ],
+          "reachableMethodKeys": [],
+          "downstreamTargets": []
+        },
+        {
+          "sourceService": "inventory-service",
+          "sourceRoot": "/services/inventory-service",
+          "endpointMethodKey": "inventory.InventoryController#reserveItem[inventory.String, inventory.ReservationRequest]",
+          "httpMethod": "PUT",
+          "path": "/api/inventory/items/{itemId}",
+          "returnType": "ResponseEntity<ReservationDto>",
+          "endpointArguments": [
+            "@PathVariable String itemId",
+            "@RequestBody ReservationRequest reservation"
+          ],
+          "reachableMethodKeys": [],
+          "downstreamTargets": []
+        }
+      ],
+      "methodTraceCache": {},
+      "allTraceTargets": []
+    },
+    "payment-service": {
+      "endpointTraces": [
+        {
+          "sourceService": "payment-service",
+          "sourceRoot": "/services/payment-service",
+          "endpointMethodKey": "payment.PaymentController#pay[payment.PaymentRequest]",
+          "httpMethod": "POST",
+          "path": "/api/payments",
+          "returnType": "ResponseEntity<PaymentDto>",
+          "endpointArguments": [
+            "@RequestBody PaymentRequest payment"
+          ],
+          "reachableMethodKeys": [],
+          "downstreamTargets": [
+            {
+              "httpMethod": "POST",
+              "url": "http://order-service:8080/api/orders/{orderId}/paid",
+              "destinationService": "order-service",
+              "returnType": "Void",
+              "sentPathVariables": [],
+              "sentQueryParameters": [],
+              "requestBodySent": false,
+              "headersSent": false
+            },
+            {
+              "httpMethod": "POST",
+              "url": "http://legacy-billing:9000/billing/invoices?async=true",
+              "destinationService": "legacy-billing",
+              "returnType": "InvoiceDto",
+              "sentPathVariables": [],
+              "sentQueryParameters": [],
+              "requestBodySent": false,
+              "headersSent": false
+            }
+          ]
+        }
+      ],
+      "methodTraceCache": {},
+      "allTraceTargets": [
+        {
+          "httpMethod": "POST",
+          "url": "http://order-service:8080/api/orders/{orderId}/paid",
+          "destinationService": "order-service",
+          "returnType": "Void",
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false
+        },
+        {
+          "httpMethod": "POST",
+          "url": "http://legacy-billing:9000/billing/invoices?async=true",
+          "destinationService": "legacy-billing",
+          "returnType": "InvoiceDto",
+          "sentPathVariables": [],
+          "sentQueryParameters": [],
+          "requestBodySent": false,
+          "headersSent": false
+        }
+      ]
+    }
+  },
+  "allServiceNames": [
+    "gateway-service",
+    "order-service",
+    "inventory-service",
+    "payment-service",
+    "legacy-billing"
+  ]
+}

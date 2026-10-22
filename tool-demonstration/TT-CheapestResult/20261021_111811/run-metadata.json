@@ -1,0 +1,6 @@
+{
+  "totalDurationMillis" : 155454,
+  "testDurationMillis" : 153679,
+  "testServiceNames" : [ "ts-route-plan-service" ],
+  "coverageConfigFile" : "/Users/lenagregor/Documents/microservice-coverage/tool-evaluation/configs/TT-CheapestResult.json"
+}

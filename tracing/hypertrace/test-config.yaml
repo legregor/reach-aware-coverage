@@ -1,0 +1,17 @@
+serviceName: spring-service-hyper
+reporting:
+  endpoint: http://localhost:4317
+propagationFormats:
+    - "B3"
+    - "TRACE_CONTEXT"
+dataCapture:
+  httpHeaders:
+    request: true
+    response: true
+  httpBody:
+     request: true
+     response: true
+  rpcMetadata:
+     request: false
+  rpcBody:
+      request: false

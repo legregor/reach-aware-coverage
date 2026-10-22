@@ -1,0 +1,20 @@
+{
+  "configName": "TT-CheapestResult",
+  "globalExpectedStatusCodes": [
+    "status=1",
+    "status=0"
+  ],
+  "tests": [
+    {
+      "path": "plan/integration/post/SearchCheapestResultTest.java",
+      "fileName": "SearchCheapestResultTest.java",
+      "serviceName": "ts-route-plan-service",
+      "entryEndpoints": [
+        {
+          "method": "POST",
+          "path": "/api/v1/routeplanservice/routePlan/cheapestRoute"
+        }
+      ]
+    }
+  ]
+}

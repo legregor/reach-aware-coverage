@@ -1,0 +1,4 @@
+MICROSERVICES_ROOT=/path/to/train-ticket-with-coverage-results
+MICROSERVICES_PREFIX=ts-
+
+TOOL_ROOT=/path/to/repository

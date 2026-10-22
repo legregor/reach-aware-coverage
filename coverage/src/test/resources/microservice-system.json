@@ -1,0 +1,386 @@
+{
+  "microservices" : [ {
+    "name" : "ts-cancel-service",
+    "restCalls" : [ {
+      "method" : "POST",
+      "url" : "http://ts-notification-service:17853/api/v1/notifyservice/notification/order_cancel_success",
+      "returnType" : "Boolean"
+    }, {
+      "method" : "GET",
+      "url" : "http://ts-inside-payment-service:18673/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+      "returnType" : "edu.fudan.common.util.Response"
+    }, {
+      "method" : "GET",
+      "url" : "http://ts-user-service:12342/api/v1/userservice/users/id/{orderId}",
+      "returnType" : "new ParameterizedTypeReference<Response<User>>() {\n}"
+    }, {
+      "method" : "PUT",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order",
+      "returnType" : "edu.fudan.common.util.Response"
+    }, {
+      "method" : "PUT",
+      "url" : "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther",
+      "returnType" : "edu.fudan.common.util.Response"
+    }, {
+      "method" : "GET",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order/{orderId}",
+      "returnType" : "new ParameterizedTypeReference<Response<Order>>() {\n}"
+    }, {
+      "method" : "GET",
+      "url" : "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/{orderId}",
+      "returnType" : "new ParameterizedTypeReference<Response<Order>>() {\n}"
+    } ],
+    "restEndpoints" : [ {
+      "method" : "GET",
+      "path" : "/api/v1/cancelservice/welcome",
+      "arguments" : [ "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "java.lang.String"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/cancelservice/cancel/refound/{orderId}",
+      "arguments" : [ "@PathVariable String orderId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/cancelservice/cancel/{orderId}/{loginId}",
+      "arguments" : [ "@PathVariable String orderId", "@PathVariable String loginId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    } ]
+  }, {
+    "name" : "ts-order-service",
+    "restCalls" : [ {
+      "method" : "POST",
+      "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/namelist",
+      "returnType" : "new ParameterizedTypeReference<Response<List<String>>>() {\n}"
+    } ],
+    "restEndpoints" : [ {
+      "method" : "GET",
+      "path" : "/api/v1/orderservice/welcome",
+      "arguments" : [ ],
+      "returnType" : "java.lang.String"
+    }, {
+      "method" : "POST",
+      "path" : "/api/v1/orderservice/order/tickets",
+      "arguments" : [ "@RequestBody Seat seatRequest", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "POST",
+      "path" : "/api/v1/orderservice/order",
+      "arguments" : [ "@RequestBody Order createOrder", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "POST",
+      "path" : "/api/v1/orderservice/order/admin",
+      "arguments" : [ "@RequestBody Order order", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "POST",
+      "path" : "/api/v1/orderservice/order/query",
+      "arguments" : [ "@RequestBody OrderInfo qi", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "POST",
+      "path" : "/api/v1/orderservice/order/refresh",
+      "arguments" : [ "@RequestBody OrderInfo qi", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/orderservice/order/{travelDate}/{trainNumber}",
+      "arguments" : [ "@PathVariable String travelDate", "@PathVariable String trainNumber", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/orderservice/order/price/{orderId}",
+      "arguments" : [ "@PathVariable String orderId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/orderservice/order/orderPay/{orderId}",
+      "arguments" : [ "@PathVariable String orderId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/orderservice/order/{orderId}",
+      "arguments" : [ "@PathVariable String orderId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/orderservice/order/status/{orderId}/{status}",
+      "arguments" : [ "@PathVariable String orderId", "@PathVariable int status", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/orderservice/order/security/{checkDate}/{accountId}",
+      "arguments" : [ "@PathVariable String checkDate", "@PathVariable String accountId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "PUT",
+      "path" : "/api/v1/orderservice/order",
+      "arguments" : [ "@RequestBody Order orderInfo", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "PUT",
+      "path" : "/api/v1/orderservice/order/admin",
+      "arguments" : [ "@RequestBody Order order", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "DELETE",
+      "path" : "/api/v1/orderservice/order/{orderId}",
+      "arguments" : [ "@PathVariable String orderId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/orderservice/order",
+      "arguments" : [ "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    } ]
+  }, {
+    "name" : "ts-inside-payment-service",
+    "restCalls" : [ {
+      "method" : "GET",
+      "url" : "http://rest-service-external:16100/greet",
+      "returnType" : "Boolean"
+    }, {
+      "method" : "GET",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order/{var}",
+      "returnType" : "new ParameterizedTypeReference<Response<Order>>() {\n}"
+    }, {
+      "method" : "GET",
+      "url" : "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/{var}",
+      "returnType" : "new ParameterizedTypeReference<Response<Order>>() {\n}"
+    }, {
+      "method" : "POST",
+      "url" : "http://ts-payment-service:19001/api/v1/paymentservice/payment",
+      "returnType" : "edu.fudan.common.util.Response"
+    }, {
+      "method" : "GET",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order/status/{orderId}/{orderStatus}",
+      "returnType" : "edu.fudan.common.util.Response"
+    }, {
+      "method" : "GET",
+      "url" : "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/status/{orderId}/{orderStatus}",
+      "returnType" : "edu.fudan.common.util.Response"
+    } ],
+    "restEndpoints" : [ {
+      "method" : "GET",
+      "path" : "/api/v1/inside_pay_service/welcome",
+      "arguments" : [ ],
+      "returnType" : "java.lang.String"
+    }, {
+      "method" : "POST",
+      "path" : "/api/v1/inside_pay_service/inside_payment",
+      "arguments" : [ "@RequestBody PaymentInfo info", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "POST",
+      "path" : "/api/v1/inside_pay_service/inside_payment/account",
+      "arguments" : [ "@RequestBody AccountInfo info", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/inside_pay_service/inside_payment/{userId}/{money}",
+      "arguments" : [ "@PathVariable String userId", "@PathVariable String money", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/inside_pay_service/inside_payment/payment",
+      "arguments" : [ "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/inside_pay_service/inside_payment/account",
+      "arguments" : [ "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+      "arguments" : [ "@PathVariable String userId", "@PathVariable String money", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "POST",
+      "path" : "/api/v1/inside_pay_service/inside_payment/difference",
+      "arguments" : [ "@RequestBody PaymentInfo info", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/inside_pay_service/inside_payment/money",
+      "arguments" : [ "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    } ]
+  }, {
+    "name" : "ts-user-service",
+    "restCalls" : [ {
+      "method" : "DELETE",
+      "url" : "http://ts-auth-service:12340/api/v1/users/{userId}",
+      "returnType" : "edu.fudan.common.util.Response"
+    }, {
+      "method" : "POST",
+      "url" : "http://ts-auth-service:12340/api/v1/auth",
+      "returnType" : "new ParameterizedTypeReference<Response<AuthDto>>() {\n}"
+    } ],
+    "restEndpoints" : [ {
+      "method" : "GET",
+      "path" : "/api/v1/userservice/users/hello",
+      "arguments" : [ ],
+      "returnType" : "java.lang.String"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/userservice/users",
+      "arguments" : [ "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "ResponseEntity<Response>"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/userservice/users/{userName}",
+      "arguments" : [ "@PathVariable String userName", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "ResponseEntity<Response>"
+    }, {
+      "method" : "GET",
+      "path" : "/api/v1/userservice/users/id/{userId}",
+      "arguments" : [ "@PathVariable String userId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "ResponseEntity<Response>"
+    }, {
+      "method" : "POST",
+      "path" : "/api/v1/userservice/users/register",
+      "arguments" : [ "@RequestBody UserDto userDto", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "ResponseEntity<Response>"
+    }, {
+      "method" : "DELETE",
+      "path" : "/api/v1/userservice/users/{userId}",
+      "arguments" : [ "@PathVariable String userId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "ResponseEntity<Response>"
+    }, {
+      "method" : "PUT",
+      "path" : "/api/v1/userservice/users",
+      "arguments" : [ "@RequestBody UserDto user", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "ResponseEntity<Response>"
+    } ]
+  }, {
+    "name" : "ts-notification-service",
+    "restCalls" : [ ],
+    "restEndpoints" : [ {
+      "method" : "GET",
+      "path" : "/api/v1/notifyservice/welcome",
+      "arguments" : [ ],
+      "returnType" : "java.lang.String"
+    }, {
+      "method" : "POST",
+      "path" : "/api/v1/notifyservice/notification/preserve_success",
+      "arguments" : [ "@RequestBody NotifyInfo info", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "boolean"
+    }, {
+      "method" : "POST",
+      "path" : "/api/v1/notifyservice/notification/order_create_success",
+      "arguments" : [ "@RequestBody NotifyInfo info", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "boolean"
+    }, {
+      "method" : "POST",
+      "path" : "/api/v1/notifyservice/notification/order_changed_success",
+      "arguments" : [ "@RequestBody NotifyInfo info", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "boolean"
+    }, {
+      "method" : "POST",
+      "path" : "/api/v1/notifyservice/notification/order_cancel_success",
+      "arguments" : [ "@RequestBody NotifyInfo info", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "boolean"
+    } ]
+  } ],
+  "restConnections" : [ {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-order-service",
+    "call" : {
+      "method" : "PUT",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order",
+      "returnType" : "edu.fudan.common.util.Response"
+    },
+    "endpoint" : {
+      "method" : "PUT",
+      "path" : "/api/v1/orderservice/order",
+      "arguments" : [ "@RequestBody Order orderInfo", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }
+  }, {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-order-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order/{orderId}",
+      "returnType" : "new ParameterizedTypeReference<Response<Order>>() {\n}"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/orderservice/order/{orderId}",
+      "arguments" : [ "@PathVariable String orderId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }
+  }, {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-inside-payment-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-inside-payment-service:18673/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+      "returnType" : "edu.fudan.common.util.Response"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+      "arguments" : [ "@PathVariable String userId", "@PathVariable String money", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }
+  }, {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-user-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-user-service:12342/api/v1/userservice/users/id/{orderId}",
+      "returnType" : "new ParameterizedTypeReference<Response<User>>() {\n}"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/userservice/users/id/{userId}",
+      "arguments" : [ "@PathVariable String userId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "ResponseEntity<Response>"
+    }
+  }, {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-notification-service",
+    "call" : {
+      "method" : "POST",
+      "url" : "http://ts-notification-service:17853/api/v1/notifyservice/notification/order_cancel_success",
+      "returnType" : "Boolean"
+    },
+    "endpoint" : {
+      "method" : "POST",
+      "path" : "/api/v1/notifyservice/notification/order_cancel_success",
+      "arguments" : [ "@RequestBody NotifyInfo info", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "boolean"
+    }
+  }, {
+    "source" : "ts-inside-payment-service",
+    "destination" : "ts-order-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order/{var}",
+      "returnType" : "new ParameterizedTypeReference<Response<Order>>() {\n}"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/orderservice/order/{orderId}",
+      "arguments" : [ "@PathVariable String orderId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }
+  }, {
+    "source" : "ts-inside-payment-service",
+    "destination" : "ts-order-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order/status/{orderId}/{orderStatus}",
+      "returnType" : "edu.fudan.common.util.Response"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/orderservice/order/status/{orderId}/{status}",
+      "arguments" : [ "@PathVariable String orderId", "@PathVariable int status", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    }
+  } ]
+}

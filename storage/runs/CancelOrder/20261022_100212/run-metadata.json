@@ -1,0 +1,6 @@
+{
+  "totalDurationMillis" : 64864,
+  "testDurationMillis" : 64246,
+  "testServiceNames" : [ "ts-cancel-service" ],
+  "coverageConfigFile" : "/Users/lenagregor/Documents/reach-aware-coverage/storage/configs/CancelOrder.json"
+}

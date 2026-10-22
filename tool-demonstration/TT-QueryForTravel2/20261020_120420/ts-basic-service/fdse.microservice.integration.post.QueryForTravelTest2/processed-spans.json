@@ -1,0 +1,1408 @@
+[ {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "b4eadfac466aa5c7",
+  "parentSpanId" : "823df1999fc41ccf",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55650/api/v1/routeservice/routes/a3f256c1-0e43-4f7d-9c21-121bf258101f",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "ca3aa213e9290528",
+  "parentSpanId" : "d51e9c88e17e6c14",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "8b6b71d12add82e9",
+  "parentSpanId" : "9b18b5a06a0db9a0",
+  "name" : "TrainController.retrieve",
+  "service" : "ts-train-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "c62bae91818db19a",
+  "parentSpanId" : "b4eadfac466aa5c7",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"stations\":[\"nanjing\",\"suzhou\",\"shanghai\"],\"distances\":[0,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "0c5c686d5732e5ab",
+  "parentSpanId" : "5524d690e32e5403",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "5cbfbb75ebe3fa0a",
+  "parentSpanId" : "8c7c0d5e41a9baec",
+  "name" : "PriceController.query",
+  "service" : "ts-price-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "ef8c90cf9d01c62d",
+  "parentSpanId" : "823df1999fc41ccf",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Shang%20Hai",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "19b7520664098757",
+  "parentSpanId" : null,
+  "name" : "POST /api/v1/basicservice/basic/travel",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/basicservice/basic/travel",
+  "statusCode" : 200,
+  "requestBody" : "{\"trip\":{\"tripId\":null,\"trainTypeId\":\"GaoTieOne\",\"routeId\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"startingStationId\":\"\",\"stationsId\":null,\"terminalStationId\":\"\",\"startingTime\":\"2026-10-20T10:05:20.997+00:00\",\"endTime\":\"2026-10-20T10:05:20.997+00:00\"},\"startingPlace\":\"Nan Jing\",\"endPlace\":\"Shang Hai\",\"departureTime\":null}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"status\":true,\"percent\":1.0,\"trainType\":{\"id\":\"GaoTieOne\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":250},\"prices\":{\"confortClass\":\"250.0\",\"economyClass\":\"175.0\"}}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "dd3bfe73f027d9a1",
+  "parentSpanId" : "ca3aa213e9290528",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "dffa45a1d7af700c",
+  "parentSpanId" : "66def78e5b356680",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"shanghai\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "3b1ac8d3a9792e6f",
+  "parentSpanId" : "dc155009c03e1078",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "36e7e7e2a637bf78",
+  "parentSpanId" : "823df1999fc41ccf",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55653/api/v1/trainservice/trains/GaoTieOne",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "0b1d3ee261352b0a",
+  "parentSpanId" : "823df1999fc41ccf",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55660/api/v1/priceservice/prices/a3f256c1-0e43-4f7d-9c21-121bf258101f/GaoTieOne",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "823df1999fc41ccf",
+  "parentSpanId" : "f8e2488f15e0411e",
+  "name" : "BasicController.queryForTravel.execute",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "8c7c0d5e41a9baec",
+  "parentSpanId" : "0b1d3ee261352b0a",
+  "name" : "GET /api/v1/priceservice/prices/{routeId}/{trainType}",
+  "service" : "ts-price-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/priceservice/prices/{routeId}/{trainType}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"719287d6-d3e7-4b54-9a92-71d039748b22\",\"trainType\":\"GaoTieOne\",\"routeId\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"basicPriceRate\":0.7,\"firstClassPriceRate\":1.0}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "6d9fdc7f01c2a6a2",
+  "parentSpanId" : "823df1999fc41ccf",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "f8e2488f15e0411e",
+  "parentSpanId" : "19b7520664098757",
+  "name" : "BasicController.queryForTravel",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "df02d621feb3d65c",
+  "parentSpanId" : "dffa45a1d7af700c",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "9b18b5a06a0db9a0",
+  "parentSpanId" : "36e7e7e2a637bf78",
+  "name" : "GET /api/v1/trainservice/trains/{id}",
+  "service" : "ts-train-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/trainservice/trains/{id}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"GaoTieOne\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":250}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "5f7a8c2291f95e6c",
+  "parentSpanId" : "c62bae91818db19a",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "5524d690e32e5403",
+  "parentSpanId" : "6d9fdc7f01c2a6a2",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "dc155009c03e1078",
+  "parentSpanId" : "ef8c90cf9d01c62d",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"shanghai\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "d51e9c88e17e6c14",
+  "parentSpanId" : "823df1999fc41ccf",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "f2357193427e5fb83059b9dd888a65c5",
+  "spanId" : "66def78e5b356680",
+  "parentSpanId" : "823df1999fc41ccf",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Shang%20Hai",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "05efe53aa9a551b2",
+  "parentSpanId" : "573684d330652afa",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "b794d02d3c2b4bd0",
+  "parentSpanId" : "31990bdc92a89309",
+  "name" : "GET /api/v1/priceservice/prices/{routeId}/{trainType}",
+  "service" : "ts-price-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/priceservice/prices/{routeId}/{trainType}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"719287d6-d3e7-4b54-9a92-71d039748b22\",\"trainType\":\"GaoTieOne\",\"routeId\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"basicPriceRate\":0.7,\"firstClassPriceRate\":1.0}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "b2347ff71ba5de36",
+  "parentSpanId" : "b794d02d3c2b4bd0",
+  "name" : "PriceController.query",
+  "service" : "ts-price-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "ddf0766e16325ec9",
+  "parentSpanId" : "6fca158949312900",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/End%20not%20existing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "49425d8a26a63413",
+  "parentSpanId" : "a7374c6f4bec2747",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "782f5542b1ab03aa",
+  "parentSpanId" : "6fca158949312900",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55650/api/v1/routeservice/routes/a3f256c1-0e43-4f7d-9c21-121bf258101f",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "0e6556b257f46d1f",
+  "parentSpanId" : "6fca158949312900",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Start%20not%20existing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "1b5638ddeaaa20c7",
+  "parentSpanId" : "c21d4568401bc6c9",
+  "name" : "BasicController.queryForTravel",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "c21d4568401bc6c9",
+  "parentSpanId" : null,
+  "name" : "POST /api/v1/basicservice/basic/travel",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/basicservice/basic/travel",
+  "statusCode" : 200,
+  "requestBody" : "{\"trip\":{\"tripId\":null,\"trainTypeId\":\"GaoTieOne\",\"routeId\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"startingStationId\":\"\",\"stationsId\":null,\"terminalStationId\":\"\",\"startingTime\":\"2026-10-20T10:05:22.819+00:00\",\"endTime\":\"2026-10-20T10:05:22.819+00:00\"},\"startingPlace\":\"Start not existing\",\"endPlace\":\"End not existing\",\"departureTime\":null}",
+  "responseBody" : "{\"status\":0,\"msg\":\"Start place or end place not exist!\",\"data\":{\"status\":false,\"percent\":1.0,\"trainType\":{\"id\":\"GaoTieOne\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":250},\"prices\":{\"confortClass\":\"120.0\",\"economyClass\":\"95.0\"}}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "d0b2989af735d096",
+  "parentSpanId" : "f09ef189318ff8be",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "4615504aa0163331",
+  "parentSpanId" : "265b33d1318c5bac",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "a7374c6f4bec2747",
+  "parentSpanId" : "0e6556b257f46d1f",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Start not existing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "ac2b194da257806d",
+  "parentSpanId" : "6fca158949312900",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55653/api/v1/trainservice/trains/GaoTieOne",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "31990bdc92a89309",
+  "parentSpanId" : "6fca158949312900",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55660/api/v1/priceservice/prices/a3f256c1-0e43-4f7d-9c21-121bf258101f/GaoTieOne",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "6fca158949312900",
+  "parentSpanId" : "1b5638ddeaaa20c7",
+  "name" : "BasicController.queryForTravel.execute",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "cef0fcb6e1014063",
+  "parentSpanId" : "865d816078d869d1",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "6b94fc490242f5e8",
+  "parentSpanId" : "8125486db8ecc303",
+  "name" : "TrainController.retrieve",
+  "service" : "ts-train-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "265b33d1318c5bac",
+  "parentSpanId" : "15631150a9424c83",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"End not existing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "61552c0453431939",
+  "parentSpanId" : "6fca158949312900",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Start%20not%20existing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "15631150a9424c83",
+  "parentSpanId" : "6fca158949312900",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/End%20not%20existing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "865d816078d869d1",
+  "parentSpanId" : "61552c0453431939",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Start not existing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "f09ef189318ff8be",
+  "parentSpanId" : "ddf0766e16325ec9",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"End not existing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "8125486db8ecc303",
+  "parentSpanId" : "ac2b194da257806d",
+  "name" : "GET /api/v1/trainservice/trains/{id}",
+  "service" : "ts-train-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/trainservice/trains/{id}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"GaoTieOne\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":250}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "a3dea8edfe85dc738da06f8cb13810db",
+  "spanId" : "573684d330652afa",
+  "parentSpanId" : "782f5542b1ab03aa",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"stations\":[\"nanjing\",\"suzhou\",\"shanghai\"],\"distances\":[0,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "a7cb1a445c8fc95e",
+  "parentSpanId" : "7d7a82b09cb2d1d2",
+  "name" : "TrainController.retrieve",
+  "service" : "ts-train-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "7d7a82b09cb2d1d2",
+  "parentSpanId" : "e6ef12c7cf7ecd6f",
+  "name" : "GET /api/v1/trainservice/trains/{id}",
+  "service" : "ts-train-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/trainservice/trains/{id}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"here is no TrainType with the trainType id: NotAValidTrainType\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "e1b1b72a4c4b9b0b",
+  "parentSpanId" : "c1e41c388a41df7d",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "a86ff37929e75b85",
+  "parentSpanId" : "c1e41c388a41df7d",
+  "name" : "BasicController.queryForTravel.fallback",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "08e7d2a41f22ffdd",
+  "parentSpanId" : "56312d585e95ed81",
+  "name" : "additional-data",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "ce6ec94d819fd09e",
+  "parentSpanId" : "c1e41c388a41df7d",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Shang%20Hai",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "c92334e9cc206c40",
+  "parentSpanId" : "ce6ec94d819fd09e",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"shanghai\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "e1b58aa82a67b4c6",
+  "parentSpanId" : "0d0f5123865b2744",
+  "name" : "OnCommittedResponseWrapper.sendError",
+  "service" : "ts-price-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "0d0f5123865b2744",
+  "parentSpanId" : "8995a724a5a30b31",
+  "name" : "ResourceHttpRequestHandler.handleRequest",
+  "service" : "ts-price-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "5a9207345e21cfec",
+  "parentSpanId" : "8995a724a5a30b31",
+  "name" : "BasicErrorController.error",
+  "service" : "ts-price-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "0b225329684d76ea",
+  "parentSpanId" : null,
+  "name" : "POST /api/v1/basicservice/basic/travel",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/basicservice/basic/travel",
+  "statusCode" : 200,
+  "requestBody" : "{\"trip\":{\"tripId\":null,\"trainTypeId\":\"NotAValidTrainType\",\"routeId\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"startingStationId\":\"\",\"stationsId\":null,\"terminalStationId\":\"\",\"startingTime\":\"2026-10-20T10:05:22.887+00:00\",\"endTime\":\"2026-10-20T10:05:22.887+00:00\"},\"startingPlace\":\"Nan Jing\",\"endPlace\":\"Shang Hai\",\"departureTime\":null}",
+  "responseBody" : "{\"status\":null,\"msg\":null,\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "c1e41c388a41df7d",
+  "parentSpanId" : "3d26e696f18b4cfb",
+  "name" : "BasicController.queryForTravel.execute",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "8995a724a5a30b31",
+  "parentSpanId" : "56312d585e95ed81",
+  "name" : "GET /**",
+  "service" : "ts-price-service",
+  "httpMethod" : "GET",
+  "route" : "/**",
+  "statusCode" : 404,
+  "requestBody" : null,
+  "responseBody" : "{\"timestamp\":\"2026-10-20T10:05:22.937+00:00\",\"status\":404,\"error\":\"Not Found\",\"message\":\"\",\"path\":\"/api/v1/priceservice/prices/a3f256c1-0e43-4f7d-9c21-121bf258101f/\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "e6ef12c7cf7ecd6f",
+  "parentSpanId" : "c1e41c388a41df7d",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55653/api/v1/trainservice/trains/NotAValidTrainType",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "764dec383e81b339",
+  "parentSpanId" : "0df7dcb8dbd1cc6b",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "6b4218d3200f60c1",
+  "parentSpanId" : "c92334e9cc206c40",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "0df7dcb8dbd1cc6b",
+  "parentSpanId" : "e1b1b72a4c4b9b0b",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "f8a088e48ae7378b",
+  "parentSpanId" : "62154fb305583816",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "bf306d61cbb1950b",
+  "parentSpanId" : "c1e41c388a41df7d",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55650/api/v1/routeservice/routes/a3f256c1-0e43-4f7d-9c21-121bf258101f",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "56312d585e95ed81",
+  "parentSpanId" : "c1e41c388a41df7d",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 404,
+  "url" : "http://localhost:55660/api/v1/priceservice/prices/a3f256c1-0e43-4f7d-9c21-121bf258101f/",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "3d26e696f18b4cfb",
+  "parentSpanId" : "0b225329684d76ea",
+  "name" : "BasicController.queryForTravel",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "304b55462bc216881919a99568a1653e",
+  "spanId" : "62154fb305583816",
+  "parentSpanId" : "bf306d61cbb1950b",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"stations\":[\"nanjing\",\"suzhou\",\"shanghai\"],\"distances\":[0,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "7b2b6604155fc3d17b0b820a6bbce8ce",
+  "spanId" : "aa7e582b0b7d4158",
+  "parentSpanId" : "3583e0e8ac0cc43d",
+  "name" : "POST /api/v1/routeservice/routes",
+  "service" : "ts-route-service",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/routeservice/routes",
+  "statusCode" : 200,
+  "requestBody" : "{\"endStation\":\"b\",\"stationList\":\"a,b\",\"distanceList\":\"0,100\",\"startStation\":\"a\",\"id\":\"7b1e4c52-2f0a-4c8e-9d3b-5a6f8e2c1d90\"}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Modify success\",\"data\":{\"id\":\"7b1e4c52-2f0a-4c8e-9d3b-5a6f8e2c1d90\",\"stations\":[\"a\",\"b\"],\"distances\":[0,100],\"startStationId\":\"a\",\"terminalStationId\":\"b\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "7b2b6604155fc3d17b0b820a6bbce8ce",
+  "spanId" : "52a947ba01bdcf70",
+  "parentSpanId" : "aa7e582b0b7d4158",
+  "name" : "RouteController.createAndModifyRoute",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "7b2b6604155fc3d17b0b820a6bbce8ce",
+  "spanId" : "3583e0e8ac0cc43d",
+  "parentSpanId" : null,
+  "name" : "POST",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "POST",
+  "statusCode" : 200,
+  "url" : "http://localhost:55650/api/v1/routeservice/routes",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "41ab4264257011cacf403f8d09a88c9e",
+  "spanId" : "98559924b08ebf3a",
+  "parentSpanId" : "d7de83c8797c7e7d",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 0,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "41ab4264257011cacf403f8d09a88c9e",
+  "spanId" : "e2823562480323b4",
+  "parentSpanId" : "2df90ad5ea173ed7",
+  "name" : "BasicController.queryForTravel",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "41ab4264257011cacf403f8d09a88c9e",
+  "spanId" : "2df90ad5ea173ed7",
+  "parentSpanId" : null,
+  "name" : "POST /api/v1/basicservice/basic/travel",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/basicservice/basic/travel",
+  "statusCode" : 200,
+  "requestBody" : "{\"trip\":{\"tripId\":null,\"trainTypeId\":\"GaoTieOne\",\"routeId\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"startingStationId\":\"\",\"stationsId\":null,\"terminalStationId\":\"\",\"startingTime\":\"2026-10-20T10:05:24.648+00:00\",\"endTime\":\"2026-10-20T10:05:24.648+00:00\"},\"startingPlace\":\"Nan Jing\",\"endPlace\":\"Shang Hai\",\"departureTime\":null}",
+  "responseBody" : "{\"status\":null,\"msg\":null,\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "41ab4264257011cacf403f8d09a88c9e",
+  "spanId" : "d7de83c8797c7e7d",
+  "parentSpanId" : "e2823562480323b4",
+  "name" : "BasicController.queryForTravel.execute",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "41ab4264257011cacf403f8d09a88c9e",
+  "spanId" : "31e68f6fec73c44f",
+  "parentSpanId" : "d7de83c8797c7e7d",
+  "name" : "BasicController.queryForTravel.fallback",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "bb36b25418af7e2f",
+  "parentSpanId" : "e47f3a86ca21c413",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"No content with the routeId\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "9d685132c46c9289",
+  "parentSpanId" : "7e921280c932c94e",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "fbbe2d6a87c60fb8",
+  "parentSpanId" : "14fc40019c226367",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "a505de70be5a4ec5",
+  "parentSpanId" : "14fc40019c226367",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Shang%20Hai",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "14fc40019c226367",
+  "parentSpanId" : "6580c5f7bc3c4b4a",
+  "name" : "BasicController.queryForTravel.execute",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "dfe35463b539816d",
+  "parentSpanId" : "4a33ce71beed683a",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "7fd33756084b9b4a",
+  "parentSpanId" : "3e18a416601be747",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "1712b1781dd6532a",
+  "parentSpanId" : "43b2c27e175ce7a5",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"shanghai\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "fbc2c2587fabd9a8",
+  "parentSpanId" : "af0950456ceeb1ce",
+  "name" : "GET /api/v1/trainservice/trains/{id}",
+  "service" : "ts-train-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/trainservice/trains/{id}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"GaoTieOne\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":250}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "43b2c27e175ce7a5",
+  "parentSpanId" : "14fc40019c226367",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Shang%20Hai",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "af0950456ceeb1ce",
+  "parentSpanId" : "14fc40019c226367",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55653/api/v1/trainservice/trains/GaoTieOne",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "6580c5f7bc3c4b4a",
+  "parentSpanId" : "1afae64a52c20781",
+  "name" : "BasicController.queryForTravel",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "1afae64a52c20781",
+  "parentSpanId" : null,
+  "name" : "POST /api/v1/basicservice/basic/travel",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/basicservice/basic/travel",
+  "statusCode" : 200,
+  "requestBody" : "{\"trip\":{\"tripId\":null,\"trainTypeId\":\"GaoTieOne\",\"routeId\":\"invalid Id\",\"startingStationId\":\"\",\"stationsId\":null,\"terminalStationId\":\"\",\"startingTime\":\"2026-10-20T10:05:22.961+00:00\",\"endTime\":\"2026-10-20T10:05:22.961+00:00\"},\"startingPlace\":\"Nan Jing\",\"endPlace\":\"Shang Hai\",\"departureTime\":null}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"status\":true,\"percent\":1.0,\"trainType\":{\"id\":\"GaoTieOne\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":250},\"prices\":{\"confortClass\":\"120.0\",\"economyClass\":\"95.0\"}}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "acd6170e6a001078",
+  "parentSpanId" : "7fd33756084b9b4a",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "10c1805eb767c43f",
+  "parentSpanId" : "1712b1781dd6532a",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "7083d3ca5ac8d194",
+  "parentSpanId" : "fbc2c2587fabd9a8",
+  "name" : "TrainController.retrieve",
+  "service" : "ts-train-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "345823468be62ac0",
+  "parentSpanId" : "9b4e53df64a81063",
+  "name" : "PriceController.query",
+  "service" : "ts-price-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "dc0cc3a1b93cb111",
+  "parentSpanId" : "bb36b25418af7e2f",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "7e921280c932c94e",
+  "parentSpanId" : "a505de70be5a4ec5",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"shanghai\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "3e18a416601be747",
+  "parentSpanId" : "14fc40019c226367",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "e47f3a86ca21c413",
+  "parentSpanId" : "14fc40019c226367",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55650/api/v1/routeservice/routes/invalid%20Id",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "4a33ce71beed683a",
+  "parentSpanId" : "fbbe2d6a87c60fb8",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "9b4e53df64a81063",
+  "parentSpanId" : "b034000bb235f4ec",
+  "name" : "GET /api/v1/priceservice/prices/{routeId}/{trainType}",
+  "service" : "ts-price-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/priceservice/prices/{routeId}/{trainType}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"No that config\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "4a2ebc2693fb93bc5c2325b2eb899151",
+  "spanId" : "b034000bb235f4ec",
+  "parentSpanId" : "14fc40019c226367",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55660/api/v1/priceservice/prices/invalid%20Id/GaoTieOne",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "a2f08b8ddf86afa3",
+  "parentSpanId" : "0cb41aa76739803f",
+  "name" : "BasicController.queryForTravel.execute",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "6864052fc4e0995a",
+  "parentSpanId" : "0ab23750b34711b5",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "da7d010ec13bd80f",
+  "parentSpanId" : "657fe57653c9fe00",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "9363f0ad61efcf95",
+  "parentSpanId" : "518aa6f628db5ad5",
+  "name" : "TrainController.retrieve",
+  "service" : "ts-train-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "ed4e80add38c8b62",
+  "parentSpanId" : "a2f08b8ddf86afa3",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "ff30d74a308cc802",
+  "parentSpanId" : "a2f08b8ddf86afa3",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55660/api/v1/priceservice/prices/a3f256c1-0e43-4f7d-9c21-121bf258101f/GaoTieTwo",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "32dafa37f4b0e81d",
+  "parentSpanId" : "a2f08b8ddf86afa3",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Shang%20Hai",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "0ab23750b34711b5",
+  "parentSpanId" : "a2f08b8ddf86afa3",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "f691497b0ec6f3d8",
+  "parentSpanId" : null,
+  "name" : "POST /api/v1/basicservice/basic/travel",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/basicservice/basic/travel",
+  "statusCode" : 200,
+  "requestBody" : "{\"trip\":{\"tripId\":null,\"trainTypeId\":\"GaoTieTwo\",\"routeId\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"startingStationId\":\"\",\"stationsId\":null,\"terminalStationId\":\"\",\"startingTime\":\"2026-10-20T10:05:23.021+00:00\",\"endTime\":\"2026-10-20T10:05:23.021+00:00\"},\"startingPlace\":\"Nan Jing\",\"endPlace\":\"Shang Hai\",\"departureTime\":null}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"status\":true,\"percent\":1.0,\"trainType\":{\"id\":\"GaoTieTwo\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":200},\"prices\":{\"confortClass\":\"120.0\",\"economyClass\":\"95.0\"}}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "c3d25eb8e6089631",
+  "parentSpanId" : "32dafa37f4b0e81d",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"shanghai\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "0b8df978c723f881",
+  "parentSpanId" : "a5eed12d9da41d07",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "a5eed12d9da41d07",
+  "parentSpanId" : "ed4e80add38c8b62",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "518aa6f628db5ad5",
+  "parentSpanId" : "55b579cbd4ddb4b5",
+  "name" : "GET /api/v1/trainservice/trains/{id}",
+  "service" : "ts-train-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/trainservice/trains/{id}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"GaoTieTwo\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":200}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "9b0e4ea27a6e2f9b",
+  "parentSpanId" : "8a6edbe72285f3d9",
+  "name" : "PriceController.query",
+  "service" : "ts-price-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "55b8a88ede2166c1",
+  "parentSpanId" : "26329e27de911fe6",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "4e49f37affd91b2c",
+  "parentSpanId" : "c3d25eb8e6089631",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "55b579cbd4ddb4b5",
+  "parentSpanId" : "a2f08b8ddf86afa3",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55653/api/v1/trainservice/trains/GaoTieTwo",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "657fe57653c9fe00",
+  "parentSpanId" : "71fda5c0e77a92ea",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"shanghai\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "8a6edbe72285f3d9",
+  "parentSpanId" : "ff30d74a308cc802",
+  "name" : "GET /api/v1/priceservice/prices/{routeId}/{trainType}",
+  "service" : "ts-price-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/priceservice/prices/{routeId}/{trainType}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"No that config\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "26329e27de911fe6",
+  "parentSpanId" : "9216f26066b5c942",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"stations\":[\"nanjing\",\"suzhou\",\"shanghai\"],\"distances\":[0,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "627b474a8340abbb",
+  "parentSpanId" : "6864052fc4e0995a",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "71fda5c0e77a92ea",
+  "parentSpanId" : "a2f08b8ddf86afa3",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/Shang%20Hai",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "9216f26066b5c942",
+  "parentSpanId" : "a2f08b8ddf86afa3",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55650/api/v1/routeservice/routes/a3f256c1-0e43-4f7d-9c21-121bf258101f",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "2bd4a2cd81b5f531dadcdeacfae541ee",
+  "spanId" : "0cb41aa76739803f",
+  "parentSpanId" : "f691497b0ec6f3d8",
+  "name" : "BasicController.queryForTravel",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "003b8da44dfd8b4b655732ba8e990a1a",
+  "spanId" : "716b43442ff1f7fb",
+  "parentSpanId" : "0f9557a543f03615",
+  "name" : "POST /api/v1/priceservice/prices",
+  "service" : "ts-price-service",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/priceservice/prices",
+  "statusCode" : 201,
+  "requestBody" : "{\"basicPriceRate\":1.0,\"routeId\":\"7b1e4c52-2f0a-4c8e-9d3b-5a6f8e2c1d90\",\"trainType\":\"X\",\"firstClassPriceRate\":0.8}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Create success\",\"data\":{\"id\":\"ab58f008-3da2-4d07-95b9-b1d036f366f9\",\"trainType\":\"X\",\"routeId\":\"7b1e4c52-2f0a-4c8e-9d3b-5a6f8e2c1d90\",\"basicPriceRate\":1.0,\"firstClassPriceRate\":0.8}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "003b8da44dfd8b4b655732ba8e990a1a",
+  "spanId" : "24c47d93f0da051c",
+  "parentSpanId" : "716b43442ff1f7fb",
+  "name" : "PriceController.create",
+  "service" : "ts-price-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "003b8da44dfd8b4b655732ba8e990a1a",
+  "spanId" : "0f9557a543f03615",
+  "parentSpanId" : null,
+  "name" : "POST",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "POST",
+  "statusCode" : 201,
+  "url" : "http://localhost:55660/api/v1/priceservice/prices",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "ce5577efd92d9cf0",
+  "parentSpanId" : "bf9b5ba6aef51dc2",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "ba0b20ff290a68b0",
+  "parentSpanId" : "6bd1bdc89070c380",
+  "name" : "GET /api/v1/trainservice/trains/{id}",
+  "service" : "ts-train-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/trainservice/trains/{id}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"X\",\"economyClass\":0,\"confortClass\":0,\"averageSpeed\":1}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "3e6f4498014f1709",
+  "parentSpanId" : "d1edc958d3f83e88",
+  "name" : "GET /api/v1/priceservice/prices/{routeId}/{trainType}",
+  "service" : "ts-price-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/priceservice/prices/{routeId}/{trainType}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"ab58f008-3da2-4d07-95b9-b1d036f366f9\",\"trainType\":\"X\",\"routeId\":\"7b1e4c52-2f0a-4c8e-9d3b-5a6f8e2c1d90\",\"basicPriceRate\":1.0,\"firstClassPriceRate\":0.8}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "377ab3a6d6f828af",
+  "parentSpanId" : "85fade0d22331b03",
+  "name" : "BasicController.queryForTravel",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "9a10c170ee80713b",
+  "parentSpanId" : "3e6f4498014f1709",
+  "name" : "PriceController.query",
+  "service" : "ts-price-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "e378911b94c89496",
+  "parentSpanId" : "bbdd8f0cddd1b222",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/A",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "6bd1bdc89070c380",
+  "parentSpanId" : "bbdd8f0cddd1b222",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55653/api/v1/trainservice/trains/X",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "ab88c2d100e2f952",
+  "parentSpanId" : "bbdd8f0cddd1b222",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55650/api/v1/routeservice/routes/7b1e4c52-2f0a-4c8e-9d3b-5a6f8e2c1d90",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "d1edc958d3f83e88",
+  "parentSpanId" : "bbdd8f0cddd1b222",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55660/api/v1/priceservice/prices/7b1e4c52-2f0a-4c8e-9d3b-5a6f8e2c1d90/X",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "0d35dea29e9cac25",
+  "parentSpanId" : "bbdd8f0cddd1b222",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/B",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "bbdd8f0cddd1b222",
+  "parentSpanId" : "377ab3a6d6f828af",
+  "name" : "BasicController.queryForTravel.execute",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "03d716938b9fcc1a",
+  "parentSpanId" : "064c477ba1e24e41",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "bf9b5ba6aef51dc2",
+  "parentSpanId" : "bb702dbdb6b41507",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"b\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "dc362b43eb48ac4f",
+  "parentSpanId" : "b7c2e271c7fd1bfa",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "da47fbda0d9a6593",
+  "parentSpanId" : "ba0b20ff290a68b0",
+  "name" : "TrainController.retrieve",
+  "service" : "ts-train-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "85fade0d22331b03",
+  "parentSpanId" : null,
+  "name" : "POST /api/v1/basicservice/basic/travel",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/basicservice/basic/travel",
+  "statusCode" : 200,
+  "requestBody" : "{\"trip\":{\"tripId\":null,\"trainTypeId\":\"X\",\"routeId\":\"7b1e4c52-2f0a-4c8e-9d3b-5a6f8e2c1d90\",\"startingStationId\":\"\",\"stationsId\":null,\"terminalStationId\":\"\",\"startingTime\":\"2026-10-20T10:05:23.825+00:00\",\"endTime\":\"2026-10-20T10:05:23.825+00:00\"},\"startingPlace\":\"A\",\"endPlace\":\"B\",\"departureTime\":null}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"status\":true,\"percent\":1.0,\"trainType\":{\"id\":\"X\",\"economyClass\":0,\"confortClass\":0,\"averageSpeed\":1},\"prices\":{\"confortClass\":\"80.0\",\"economyClass\":\"100.0\"}}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "064c477ba1e24e41",
+  "parentSpanId" : "e378911b94c89496",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"a\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "b7c2e271c7fd1bfa",
+  "parentSpanId" : "ab88c2d100e2f952",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"7b1e4c52-2f0a-4c8e-9d3b-5a6f8e2c1d90\",\"stations\":[\"a\",\"b\"],\"distances\":[0,100],\"startStationId\":\"a\",\"terminalStationId\":\"b\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "bb702dbdb6b41507",
+  "parentSpanId" : "bbdd8f0cddd1b222",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/B",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "81a1375309ce6ccfd32d3a5f791d7acc",
+  "spanId" : "ec0711eca54c7ca4",
+  "parentSpanId" : "bbdd8f0cddd1b222",
+  "name" : "GET",
+  "service" : "ts-basic-service/fdse.microservice.integration.post.QueryForTravelTest2",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:55656/api/v1/stationservice/stations/id/A",
+  "kind" : "CLIENT"
+} ]

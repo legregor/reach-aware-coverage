@@ -1,0 +1,2467 @@
+{
+  "coveredConnections" : [ {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-order-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order/{orderId}",
+      "returnType" : "Response<Order>"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/orderservice/order/{orderId}",
+      "arguments" : [ "@PathVariable String orderId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "HttpEntity"
+    },
+    "calls" : [ {
+      "method" : "GET",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order/{orderId}",
+      "returnType" : "Response<Order>"
+    } ],
+    "requestElements" : [ "path:orderId" ],
+    "reachableRequestElements" : [ "path:orderId" ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : null,
+    "requestBodyOrigins" : [ ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  }, {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-order-service",
+    "call" : {
+      "method" : "PUT",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order",
+      "returnType" : "Response"
+    },
+    "endpoint" : {
+      "method" : "PUT",
+      "path" : "/api/v1/orderservice/order",
+      "arguments" : [ "@RequestBody Order orderInfo", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "HttpEntity"
+    },
+    "calls" : [ {
+      "method" : "PUT",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order",
+      "returnType" : "Response"
+    } ],
+    "requestElements" : [ "body:travelTime", "body:documentType", "body:contactsDocumentNumber", "body:contactsName", "body:seatNumber", "body:accountId", "body:coachNumber", "body:travelDate", "body:boughtDate", "body:seatClass", "body:price", "body:from", "body:id", "body:trainNumber", "body:to", "body:status" ],
+    "reachableRequestElements" : [ "body:travelTime", "body:documentType", "body:contactsDocumentNumber", "body:contactsName", "body:seatNumber", "body:accountId", "body:coachNumber", "body:travelDate", "body:boughtDate", "body:seatClass", "body:price", "body:from", "body:id", "body:trainNumber", "body:to", "body:status" ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : "cancel.entity.Order",
+    "requestBodyOrigins" : [ "all properties: return value of orderResult.getData() in CancelServiceImpl.cancelOrder", "all properties: return value of orderOtherResult.getData() in CancelServiceImpl.cancelOrder" ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ "body:coachNumber", "body:documentType", "body:seatClass", "body:status" ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  }, {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-order-other-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/{orderId}",
+      "returnType" : "Response<Order>"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/orderOtherService/orderOther/{orderId}",
+      "arguments" : [ "@PathVariable String orderId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "HttpEntity"
+    },
+    "calls" : [ {
+      "method" : "GET",
+      "url" : "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/{orderId}",
+      "returnType" : "Response<Order>"
+    } ],
+    "requestElements" : [ "path:orderId" ],
+    "reachableRequestElements" : [ "path:orderId" ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : null,
+    "requestBodyOrigins" : [ ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  }, {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-inside-payment-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-inside-payment-service:18673/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+      "returnType" : "Response"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+      "arguments" : [ "@PathVariable String userId", "@PathVariable String money", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "HttpEntity"
+    },
+    "calls" : [ {
+      "method" : "GET",
+      "url" : "http://ts-inside-payment-service:18673/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+      "returnType" : "Response"
+    } ],
+    "requestElements" : [ "path:userId", "path:money" ],
+    "reachableRequestElements" : [ "path:userId", "path:money" ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : null,
+    "requestBodyOrigins" : [ ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  }, {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-notification-service",
+    "call" : {
+      "method" : "POST",
+      "url" : "http://ts-notification-service:17853/api/v1/notifyservice/notification/order_cancel_success",
+      "returnType" : "Boolean"
+    },
+    "endpoint" : {
+      "method" : "POST",
+      "path" : "/api/v1/notifyservice/notification/order_cancel_success",
+      "arguments" : [ "@RequestBody NotifyInfo info", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "boolean"
+    },
+    "calls" : [ {
+      "method" : "POST",
+      "url" : "http://ts-notification-service:17853/api/v1/notifyservice/notification/order_cancel_success",
+      "returnType" : "Boolean"
+    } ],
+    "requestElements" : [ "body:date", "body:orderNumber", "body:seatClass", "body:price", "body:startingTime", "body:startingPlace", "body:email", "body:endPlace", "body:seatNumber", "body:username" ],
+    "reachableRequestElements" : [ "body:date", "body:orderNumber", "body:seatClass", "body:price", "body:startingTime", "body:startingPlace", "body:email", "body:endPlace", "body:seatNumber", "body:username" ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : "cancel.entity.NotifyInfo",
+    "requestBodyOrigins" : [ "new NotifyInfo() in CancelServiceImpl.cancelOrder", "10 setter call(s)/assignment(s) on notifyInfo in CancelServiceImpl.cancelOrder" ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  }, {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-order-other-service",
+    "call" : {
+      "method" : "PUT",
+      "url" : "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther",
+      "returnType" : "Response"
+    },
+    "endpoint" : {
+      "method" : "PUT",
+      "path" : "/api/v1/orderOtherService/orderOther",
+      "arguments" : [ "@RequestBody Order orderInfo", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "HttpEntity"
+    },
+    "calls" : [ {
+      "method" : "PUT",
+      "url" : "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther",
+      "returnType" : "Response"
+    } ],
+    "requestElements" : [ "body:travelTime", "body:documentType", "body:contactsDocumentNumber", "body:contactsName", "body:seatNumber", "body:accountId", "body:coachNumber", "body:travelDate", "body:boughtDate", "body:seatClass", "body:price", "body:from", "body:id", "body:trainNumber", "body:to", "body:status" ],
+    "reachableRequestElements" : [ "body:travelTime", "body:documentType", "body:contactsDocumentNumber", "body:contactsName", "body:seatNumber", "body:accountId", "body:coachNumber", "body:travelDate", "body:boughtDate", "body:seatClass", "body:price", "body:from", "body:id", "body:trainNumber", "body:to", "body:status" ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : "cancel.entity.Order",
+    "requestBodyOrigins" : [ "all properties: return value of orderResult.getData() in CancelServiceImpl.cancelOrder", "all properties: return value of orderOtherResult.getData() in CancelServiceImpl.cancelOrder" ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ "body:coachNumber", "body:documentType", "body:seatClass", "body:status" ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  }, {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-user-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-user-service:12342/api/v1/userservice/users/id/{orderId}",
+      "returnType" : "Response<User>"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/userservice/users/id/{userId}",
+      "arguments" : [ "@PathVariable String userId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "ResponseEntity<Response>"
+    },
+    "calls" : [ {
+      "method" : "GET",
+      "url" : "http://ts-user-service:12342/api/v1/userservice/users/id/{orderId}",
+      "returnType" : "Response<User>"
+    } ],
+    "requestElements" : [ "path:userId" ],
+    "reachableRequestElements" : [ "path:userId" ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : null,
+    "requestBodyOrigins" : [ ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  } ],
+  "uncoveredConnections" : [ ],
+  "connectionReports" : [ {
+    "connection" : {
+      "source" : "ts-cancel-service",
+      "destination" : "ts-order-service",
+      "call" : {
+        "method" : "GET",
+        "url" : "http://ts-order-service:12031/api/v1/orderservice/order/{orderId}",
+        "returnType" : "Response<Order>"
+      },
+      "endpoint" : {
+        "method" : "GET",
+        "path" : "/api/v1/orderservice/order/{orderId}",
+        "arguments" : [ "@PathVariable String orderId", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "HttpEntity"
+      },
+      "calls" : [ {
+        "method" : "GET",
+        "url" : "http://ts-order-service:12031/api/v1/orderservice/order/{orderId}",
+        "returnType" : "Response<Order>"
+      } ],
+      "requestElements" : [ "path:orderId" ],
+      "reachableRequestElements" : [ "path:orderId" ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : null,
+      "requestBodyOrigins" : [ ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 6,
+    "statusCodes" : [ 200, 200, 200, 200, 200, 200 ],
+    "requestBodies" : [ ],
+    "responseBodies" : [ "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-10-22T08:02:47.222+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":0,\"price\":\"100.0\"}}", "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d7\",\"boughtDate\":\"2026-10-22T08:02:47.218+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":2,\"price\":\"100.0\"}}", "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}", "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}", "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-10-22T08:02:47.226+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0ccf8330-4f74-488c-8572-9da813727e12\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":0,\"price\":\"100.0\"}}" ],
+    "bodySchemaApplicable" : false,
+    "bodySchemaCheckedCount" : 0,
+    "bodySchemaMatchedCount" : 0,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : null,
+    "requestBodySchemaChecks" : [ ],
+    "expectedStatusCodes" : [ "2xx", "4xx" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : false,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "optionalPooledCoveragePercentage" : null,
+      "optionalReachableCount" : 0,
+      "optionalCoveredCount" : 0,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "notRecordedElements" : [ ],
+      "notReachableElements" : [ ],
+      "coveredCount" : 1,
+      "reachableCount" : 1,
+      "coveredElements" : [ "path:orderId" ],
+      "uncoveredElements" : [ ],
+      "bodyNotRecordedReason" : null,
+      "bodySpecMissing" : false,
+      "interfaceMismatch" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "unexpectedElements" : [ ]
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ {
+        "element" : "path:orderId",
+        "partitions" : [ {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 100.0,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 1,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ ],
+        "notReachablePartitions" : [ "#empty" ]
+      } ],
+      "notApplicableReason" : null,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "constraintPooledCoveragePercentage" : null,
+      "constraintReachableCount" : 0,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : false,
+      "coveredCount" : 1,
+      "reachableCount" : 1
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "pooledCoveragePercentage" : 0.0,
+      "hierarchicalCoveragePercentage" : 0.0,
+      "optionalPooledCoveragePercentage" : 0.0,
+      "bodyNotRecordedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 19,
+      "uncoveredFields" : [ "200:body" ],
+      "optionalCoveredCount" : 0,
+      "coveredFields" : [ ],
+      "undocumentedStatusCodes" : [ ],
+      "optionalFieldCount" : 1,
+      "fieldCount" : 1,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "coveredCount" : 0,
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "responseCount" : 5,
+        "bodyRecorded" : true,
+        "coveredFields" : [ ],
+        "uncoveredFields" : [ "body" ],
+        "requiredFields" : [ ],
+        "returnedNotInSpec" : [ "status", "msg", "data", "data.id", "data.boughtDate", "data.travelDate", "data.travelTime", "data.accountId", "data.contactsName", "data.documentType", "data.contactsDocumentNumber", "data.trainNumber", "data.coachNumber", "data.seatClass", "data.seatNumber", "data.from", "data.to", "data.status", "data.price" ]
+      } ]
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ ],
+      "notApplicableReason" : "NO_COVERED_FIELDS",
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "constraintPooledCoveragePercentage" : null,
+      "constraintPartitionCount" : 0,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "partitionCount" : 0
+    },
+    "statusCodeClassCoveragePercentage" : 50.0,
+    "missingExpectedStatusCodes" : [ "4xx" ],
+    "uniqueRequestBodies" : [ ],
+    "uniqueResponseBodies" : [ "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-10-22T08:02:47.222+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":0,\"price\":\"100.0\"}}", "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d7\",\"boughtDate\":\"2026-10-22T08:02:47.218+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":2,\"price\":\"100.0\"}}", "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}", "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-10-22T08:02:47.226+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0ccf8330-4f74-488c-8572-9da813727e12\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":0,\"price\":\"100.0\"}}" ],
+    "uniqueStatusCodes" : [ 200 ],
+    "observedBodyOutcomes" : [ ],
+    "uniqueStatusCodeClasses" : [ "2xx" ]
+  }, {
+    "connection" : {
+      "source" : "ts-cancel-service",
+      "destination" : "ts-order-service",
+      "call" : {
+        "method" : "PUT",
+        "url" : "http://ts-order-service:12031/api/v1/orderservice/order",
+        "returnType" : "Response"
+      },
+      "endpoint" : {
+        "method" : "PUT",
+        "path" : "/api/v1/orderservice/order",
+        "arguments" : [ "@RequestBody Order orderInfo", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "HttpEntity"
+      },
+      "calls" : [ {
+        "method" : "PUT",
+        "url" : "http://ts-order-service:12031/api/v1/orderservice/order",
+        "returnType" : "Response"
+      } ],
+      "requestElements" : [ "body:travelTime", "body:documentType", "body:contactsDocumentNumber", "body:contactsName", "body:seatNumber", "body:accountId", "body:coachNumber", "body:travelDate", "body:boughtDate", "body:seatClass", "body:price", "body:from", "body:id", "body:trainNumber", "body:to", "body:status" ],
+      "reachableRequestElements" : [ "body:travelTime", "body:documentType", "body:contactsDocumentNumber", "body:contactsName", "body:seatNumber", "body:accountId", "body:coachNumber", "body:travelDate", "body:boughtDate", "body:seatClass", "body:price", "body:from", "body:id", "body:trainNumber", "body:to", "body:status" ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : "cancel.entity.Order",
+      "requestBodyOrigins" : [ "all properties: return value of orderResult.getData() in CancelServiceImpl.cancelOrder", "all properties: return value of orderOtherResult.getData() in CancelServiceImpl.cancelOrder" ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ "body:coachNumber", "body:documentType", "body:seatClass", "body:status" ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 2,
+    "statusCodes" : [ 200, 200 ],
+    "requestBodies" : [ "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-10-22T08:02:47.222+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}", "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-10-22T08:02:47.226+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0ccf8330-4f74-488c-8572-9da813727e12\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}" ],
+    "responseBodies" : [ "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-10-22T08:02:47.222+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}}", "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-10-22T08:02:47.226+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0ccf8330-4f74-488c-8572-9da813727e12\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}}" ],
+    "bodySchemaApplicable" : true,
+    "bodySchemaCheckedCount" : 2,
+    "bodySchemaMatchedCount" : 2,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : {
+      "type" : "object",
+      "properties" : {
+        "accountId" : {
+          "type" : "string"
+        },
+        "boughtDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "coachNumber" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "contactsDocumentNumber" : {
+          "type" : "string"
+        },
+        "contactsName" : {
+          "type" : "string"
+        },
+        "documentType" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "from" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "price" : {
+          "type" : "string"
+        },
+        "seatClass" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "seatNumber" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "to" : {
+          "type" : "string"
+        },
+        "trainNumber" : {
+          "type" : "string"
+        },
+        "travelDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "travelTime" : {
+          "type" : "string",
+          "format" : "date-time"
+        }
+      }
+    },
+    "requestBodySchemaChecks" : [ {
+      "requestBody" : "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-10-22T08:02:47.222+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}",
+      "matches" : true,
+      "mismatchReason" : null,
+      "presentFields" : [ "accountId", "boughtDate", "coachNumber", "contactsDocumentNumber", "contactsName", "documentType", "from", "id", "price", "seatClass", "seatNumber", "status", "to", "trainNumber", "travelDate", "travelTime" ],
+      "missingFields" : [ ]
+    }, {
+      "requestBody" : "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-10-22T08:02:47.226+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0ccf8330-4f74-488c-8572-9da813727e12\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}",
+      "matches" : true,
+      "mismatchReason" : null,
+      "presentFields" : [ "accountId", "boughtDate", "coachNumber", "contactsDocumentNumber", "contactsName", "documentType", "from", "id", "price", "seatClass", "seatNumber", "status", "to", "trainNumber", "travelDate", "travelTime" ],
+      "missingFields" : [ ]
+    } ],
+    "expectedStatusCodes" : [ "2xx", "4xx" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : false,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "optionalPooledCoveragePercentage" : 100.0,
+      "optionalReachableCount" : 16,
+      "optionalCoveredCount" : 16,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "notRecordedElements" : [ ],
+      "notReachableElements" : [ ],
+      "coveredCount" : 16,
+      "reachableCount" : 16,
+      "coveredElements" : [ "body:accountId", "body:boughtDate", "body:coachNumber", "body:contactsDocumentNumber", "body:contactsName", "body:documentType", "body:from", "body:id", "body:price", "body:seatClass", "body:seatNumber", "body:status", "body:to", "body:trainNumber", "body:travelDate", "body:travelTime" ],
+      "uncoveredElements" : [ ],
+      "bodyNotRecordedReason" : null,
+      "bodySpecMissing" : false,
+      "interfaceMismatch" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "unexpectedElements" : [ ]
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ {
+        "element" : "body:accountId",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:boughtDate",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#format",
+          "group" : "FORMAT",
+          "source" : "CONSTRAINT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 1,
+        "coveragePercentage" : 50.0,
+        "constraintCoveredCount" : 1,
+        "coveredCount" : 1,
+        "reachableCount" : 2,
+        "coveredPartitions" : [ "#format" ],
+        "uncoveredPartitions" : [ "#none" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:coachNumber",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#negative",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#zero",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#positive",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : true,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#positive" ],
+        "uncoveredPartitions" : [ "#negative", "#zero" ],
+        "notReachablePartitions" : [ "#none" ]
+      }, {
+        "element" : "body:contactsDocumentNumber",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:contactsName",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:documentType",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#negative",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#zero",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#positive",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : true,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#positive" ],
+        "uncoveredPartitions" : [ "#negative", "#zero" ],
+        "notReachablePartitions" : [ "#none" ]
+      }, {
+        "element" : "body:from",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:id",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:price",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:seatClass",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#negative",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#zero",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        }, {
+          "id" : "#positive",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : true,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#zero" ],
+        "uncoveredPartitions" : [ "#negative", "#positive" ],
+        "notReachablePartitions" : [ "#none" ]
+      }, {
+        "element" : "body:seatNumber",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:status",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#negative",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#zero",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#positive",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : true,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#positive" ],
+        "uncoveredPartitions" : [ "#negative", "#zero" ],
+        "notReachablePartitions" : [ "#none" ]
+      }, {
+        "element" : "body:to",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:trainNumber",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:travelDate",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#format",
+          "group" : "FORMAT",
+          "source" : "CONSTRAINT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 1,
+        "coveragePercentage" : 50.0,
+        "constraintCoveredCount" : 1,
+        "coveredCount" : 1,
+        "reachableCount" : 2,
+        "coveredPartitions" : [ "#format" ],
+        "uncoveredPartitions" : [ "#none" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:travelTime",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#format",
+          "group" : "FORMAT",
+          "source" : "CONSTRAINT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 1,
+        "coveragePercentage" : 50.0,
+        "constraintCoveredCount" : 1,
+        "coveredCount" : 1,
+        "reachableCount" : 2,
+        "coveredPartitions" : [ "#format" ],
+        "uncoveredPartitions" : [ "#none" ],
+        "notReachablePartitions" : [ ]
+      } ],
+      "notApplicableReason" : null,
+      "pooledCoveragePercentage" : 35.55555555555556,
+      "hierarchicalCoveragePercentage" : 36.45833333333333,
+      "constraintPooledCoveragePercentage" : 100.0,
+      "constraintReachableCount" : 3,
+      "constraintCoveredCount" : 3,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : false,
+      "coveredCount" : 16,
+      "reachableCount" : 45
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "pooledCoveragePercentage" : 0.0,
+      "hierarchicalCoveragePercentage" : 0.0,
+      "optionalPooledCoveragePercentage" : 0.0,
+      "bodyNotRecordedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 19,
+      "uncoveredFields" : [ "200:body" ],
+      "optionalCoveredCount" : 0,
+      "coveredFields" : [ ],
+      "undocumentedStatusCodes" : [ ],
+      "optionalFieldCount" : 1,
+      "fieldCount" : 1,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "coveredCount" : 0,
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "responseCount" : 2,
+        "bodyRecorded" : true,
+        "coveredFields" : [ ],
+        "uncoveredFields" : [ "body" ],
+        "requiredFields" : [ ],
+        "returnedNotInSpec" : [ "status", "msg", "data", "data.id", "data.boughtDate", "data.travelDate", "data.travelTime", "data.accountId", "data.contactsName", "data.documentType", "data.contactsDocumentNumber", "data.trainNumber", "data.coachNumber", "data.seatClass", "data.seatNumber", "data.from", "data.to", "data.status", "data.price" ]
+      } ]
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ ],
+      "notApplicableReason" : "NO_COVERED_FIELDS",
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "constraintPooledCoveragePercentage" : null,
+      "constraintPartitionCount" : 0,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "partitionCount" : 0
+    },
+    "statusCodeClassCoveragePercentage" : 50.0,
+    "missingExpectedStatusCodes" : [ "4xx" ],
+    "uniqueRequestBodies" : [ "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-10-22T08:02:47.222+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}", "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-10-22T08:02:47.226+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0ccf8330-4f74-488c-8572-9da813727e12\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}" ],
+    "uniqueResponseBodies" : [ "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-10-22T08:02:47.222+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}}", "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-10-22T08:02:47.226+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0ccf8330-4f74-488c-8572-9da813727e12\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}}" ],
+    "uniqueStatusCodes" : [ 200 ],
+    "observedBodyOutcomes" : [ ],
+    "uniqueStatusCodeClasses" : [ "2xx" ]
+  }, {
+    "connection" : {
+      "source" : "ts-cancel-service",
+      "destination" : "ts-order-other-service",
+      "call" : {
+        "method" : "GET",
+        "url" : "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/{orderId}",
+        "returnType" : "Response<Order>"
+      },
+      "endpoint" : {
+        "method" : "GET",
+        "path" : "/api/v1/orderOtherService/orderOther/{orderId}",
+        "arguments" : [ "@PathVariable String orderId", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "HttpEntity"
+      },
+      "calls" : [ {
+        "method" : "GET",
+        "url" : "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/{orderId}",
+        "returnType" : "Response<Order>"
+      } ],
+      "requestElements" : [ "path:orderId" ],
+      "reachableRequestElements" : [ "path:orderId" ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : null,
+      "requestBodyOrigins" : [ ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 3,
+    "statusCodes" : [ 200, 200, 200 ],
+    "requestBodies" : [ ],
+    "responseBodies" : [ "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d4\",\"boughtDate\":\"2026-10-22T08:02:34.818+00:00\",\"travelDate\":\"1970-01-02T10:17:36.799+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d4\",\"contactsName\":\"Test\",\"documentType\":1,\"contactsDocumentNumber\":\"Test\",\"trainNumber\":\"Z1234\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"6A\",\"from\":\"shanghai\",\"to\":\"taiyuan\",\"status\":2,\"price\":\"100\"}}", "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"boughtDate\":\"2026-10-22T08:02:34.806+00:00\",\"travelDate\":\"1970-01-02T10:17:36.799+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"contactsName\":\"Test\",\"documentType\":1,\"contactsDocumentNumber\":\"Test\",\"trainNumber\":\"K1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"6A\",\"from\":\"shanghai\",\"to\":\"taiyuan\",\"status\":0,\"price\":\"100\"}}", "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}" ],
+    "bodySchemaApplicable" : false,
+    "bodySchemaCheckedCount" : 0,
+    "bodySchemaMatchedCount" : 0,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : null,
+    "requestBodySchemaChecks" : [ ],
+    "expectedStatusCodes" : [ "2xx", "4xx" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : false,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "optionalPooledCoveragePercentage" : null,
+      "optionalReachableCount" : 0,
+      "optionalCoveredCount" : 0,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "notRecordedElements" : [ ],
+      "notReachableElements" : [ ],
+      "coveredCount" : 1,
+      "reachableCount" : 1,
+      "coveredElements" : [ "path:orderId" ],
+      "uncoveredElements" : [ ],
+      "bodyNotRecordedReason" : null,
+      "bodySpecMissing" : false,
+      "interfaceMismatch" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "unexpectedElements" : [ ]
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ {
+        "element" : "path:orderId",
+        "partitions" : [ {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 100.0,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 1,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ ],
+        "notReachablePartitions" : [ "#empty" ]
+      } ],
+      "notApplicableReason" : null,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "constraintPooledCoveragePercentage" : null,
+      "constraintReachableCount" : 0,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : false,
+      "coveredCount" : 1,
+      "reachableCount" : 1
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "pooledCoveragePercentage" : 0.0,
+      "hierarchicalCoveragePercentage" : 0.0,
+      "optionalPooledCoveragePercentage" : 0.0,
+      "bodyNotRecordedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 19,
+      "uncoveredFields" : [ "200:body" ],
+      "optionalCoveredCount" : 0,
+      "coveredFields" : [ ],
+      "undocumentedStatusCodes" : [ ],
+      "optionalFieldCount" : 1,
+      "fieldCount" : 1,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "coveredCount" : 0,
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "responseCount" : 3,
+        "bodyRecorded" : true,
+        "coveredFields" : [ ],
+        "uncoveredFields" : [ "body" ],
+        "requiredFields" : [ ],
+        "returnedNotInSpec" : [ "status", "msg", "data", "data.id", "data.boughtDate", "data.travelDate", "data.travelTime", "data.accountId", "data.contactsName", "data.documentType", "data.contactsDocumentNumber", "data.trainNumber", "data.coachNumber", "data.seatClass", "data.seatNumber", "data.from", "data.to", "data.status", "data.price" ]
+      } ]
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ ],
+      "notApplicableReason" : "NO_COVERED_FIELDS",
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "constraintPooledCoveragePercentage" : null,
+      "constraintPartitionCount" : 0,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "partitionCount" : 0
+    },
+    "statusCodeClassCoveragePercentage" : 50.0,
+    "missingExpectedStatusCodes" : [ "4xx" ],
+    "uniqueRequestBodies" : [ ],
+    "uniqueResponseBodies" : [ "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d4\",\"boughtDate\":\"2026-10-22T08:02:34.818+00:00\",\"travelDate\":\"1970-01-02T10:17:36.799+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d4\",\"contactsName\":\"Test\",\"documentType\":1,\"contactsDocumentNumber\":\"Test\",\"trainNumber\":\"Z1234\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"6A\",\"from\":\"shanghai\",\"to\":\"taiyuan\",\"status\":2,\"price\":\"100\"}}", "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"boughtDate\":\"2026-10-22T08:02:34.806+00:00\",\"travelDate\":\"1970-01-02T10:17:36.799+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"contactsName\":\"Test\",\"documentType\":1,\"contactsDocumentNumber\":\"Test\",\"trainNumber\":\"K1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"6A\",\"from\":\"shanghai\",\"to\":\"taiyuan\",\"status\":0,\"price\":\"100\"}}", "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}" ],
+    "uniqueStatusCodes" : [ 200 ],
+    "observedBodyOutcomes" : [ ],
+    "uniqueStatusCodeClasses" : [ "2xx" ]
+  }, {
+    "connection" : {
+      "source" : "ts-cancel-service",
+      "destination" : "ts-inside-payment-service",
+      "call" : {
+        "method" : "GET",
+        "url" : "http://ts-inside-payment-service:18673/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+        "returnType" : "Response"
+      },
+      "endpoint" : {
+        "method" : "GET",
+        "path" : "/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+        "arguments" : [ "@PathVariable String userId", "@PathVariable String money", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "HttpEntity"
+      },
+      "calls" : [ {
+        "method" : "GET",
+        "url" : "http://ts-inside-payment-service:18673/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+        "returnType" : "Response"
+      } ],
+      "requestElements" : [ "path:userId", "path:money" ],
+      "reachableRequestElements" : [ "path:userId", "path:money" ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : null,
+      "requestBodyOrigins" : [ ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 3,
+    "statusCodes" : [ 200, 200, 200 ],
+    "requestBodies" : [ ],
+    "responseBodies" : [ "{\"status\":1,\"msg\":\"Draw Back Money Success\",\"data\":null}", "{\"status\":1,\"msg\":\"Draw Back Money Success\",\"data\":null}", "{\"status\":1,\"msg\":\"Draw Back Money Success\",\"data\":null}" ],
+    "bodySchemaApplicable" : false,
+    "bodySchemaCheckedCount" : 0,
+    "bodySchemaMatchedCount" : 0,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : null,
+    "requestBodySchemaChecks" : [ ],
+    "expectedStatusCodes" : [ "2xx", "4xx" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : false,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "optionalPooledCoveragePercentage" : null,
+      "optionalReachableCount" : 0,
+      "optionalCoveredCount" : 0,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "notRecordedElements" : [ ],
+      "notReachableElements" : [ ],
+      "coveredCount" : 2,
+      "reachableCount" : 2,
+      "coveredElements" : [ "path:userId", "path:money" ],
+      "uncoveredElements" : [ ],
+      "bodyNotRecordedReason" : null,
+      "bodySpecMissing" : false,
+      "interfaceMismatch" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "unexpectedElements" : [ ]
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ {
+        "element" : "path:userId",
+        "partitions" : [ {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 100.0,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 1,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ ],
+        "notReachablePartitions" : [ "#empty" ]
+      }, {
+        "element" : "path:money",
+        "partitions" : [ {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 100.0,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 1,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ ],
+        "notReachablePartitions" : [ "#empty" ]
+      } ],
+      "notApplicableReason" : null,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "constraintPooledCoveragePercentage" : null,
+      "constraintReachableCount" : 0,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : false,
+      "coveredCount" : 2,
+      "reachableCount" : 2
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "pooledCoveragePercentage" : 0.0,
+      "hierarchicalCoveragePercentage" : 0.0,
+      "optionalPooledCoveragePercentage" : 0.0,
+      "bodyNotRecordedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 2,
+      "uncoveredFields" : [ "200:body" ],
+      "optionalCoveredCount" : 0,
+      "coveredFields" : [ ],
+      "undocumentedStatusCodes" : [ ],
+      "optionalFieldCount" : 1,
+      "fieldCount" : 1,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "coveredCount" : 0,
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "responseCount" : 3,
+        "bodyRecorded" : true,
+        "coveredFields" : [ ],
+        "uncoveredFields" : [ "body" ],
+        "requiredFields" : [ ],
+        "returnedNotInSpec" : [ "status", "msg" ]
+      } ]
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ ],
+      "notApplicableReason" : "NO_COVERED_FIELDS",
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "constraintPooledCoveragePercentage" : null,
+      "constraintPartitionCount" : 0,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "partitionCount" : 0
+    },
+    "statusCodeClassCoveragePercentage" : 50.0,
+    "missingExpectedStatusCodes" : [ "4xx" ],
+    "uniqueRequestBodies" : [ ],
+    "uniqueResponseBodies" : [ "{\"status\":1,\"msg\":\"Draw Back Money Success\",\"data\":null}" ],
+    "uniqueStatusCodes" : [ 200 ],
+    "observedBodyOutcomes" : [ ],
+    "uniqueStatusCodeClasses" : [ "2xx" ]
+  }, {
+    "connection" : {
+      "source" : "ts-cancel-service",
+      "destination" : "ts-notification-service",
+      "call" : {
+        "method" : "POST",
+        "url" : "http://ts-notification-service:17853/api/v1/notifyservice/notification/order_cancel_success",
+        "returnType" : "Boolean"
+      },
+      "endpoint" : {
+        "method" : "POST",
+        "path" : "/api/v1/notifyservice/notification/order_cancel_success",
+        "arguments" : [ "@RequestBody NotifyInfo info", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "boolean"
+      },
+      "calls" : [ {
+        "method" : "POST",
+        "url" : "http://ts-notification-service:17853/api/v1/notifyservice/notification/order_cancel_success",
+        "returnType" : "Boolean"
+      } ],
+      "requestElements" : [ "body:date", "body:orderNumber", "body:seatClass", "body:price", "body:startingTime", "body:startingPlace", "body:email", "body:endPlace", "body:seatNumber", "body:username" ],
+      "reachableRequestElements" : [ "body:date", "body:orderNumber", "body:seatClass", "body:price", "body:startingTime", "body:startingPlace", "body:email", "body:endPlace", "body:seatNumber", "body:username" ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : "cancel.entity.NotifyInfo",
+      "requestBodyOrigins" : [ "new NotifyInfo() in CancelServiceImpl.cancelOrder", "10 setter call(s)/assignment(s) on notifyInfo in CancelServiceImpl.cancelOrder" ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 1,
+    "statusCodes" : [ 200 ],
+    "requestBodies" : [ ],
+    "responseBodies" : [ ],
+    "bodySchemaApplicable" : false,
+    "bodySchemaCheckedCount" : 0,
+    "bodySchemaMatchedCount" : 0,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : null,
+    "requestBodySchemaChecks" : [ ],
+    "expectedStatusCodes" : [ "2xx", "4xx" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : true,
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "optionalPooledCoveragePercentage" : null,
+      "optionalReachableCount" : 0,
+      "optionalCoveredCount" : 0,
+      "notApplicable" : true,
+      "notApplicableReason" : "CALLEE_NOT_TRACED",
+      "notRecordedElements" : [ "body:date", "body:email", "body:endPlace", "body:orderNumber", "body:price", "body:seatClass", "body:seatNumber", "body:startingPlace", "body:startingTime", "body:username" ],
+      "notReachableElements" : [ ],
+      "coveredCount" : 0,
+      "reachableCount" : 0,
+      "coveredElements" : [ ],
+      "uncoveredElements" : [ ],
+      "bodyNotRecordedReason" : "CALLEE_NOT_TRACED",
+      "bodySpecMissing" : false,
+      "interfaceMismatch" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "unexpectedElements" : [ ]
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ ],
+      "notApplicableReason" : "CALLEE_NOT_TRACED",
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "constraintPooledCoveragePercentage" : null,
+      "constraintReachableCount" : 0,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "reachableCount" : 0
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "optionalPooledCoveragePercentage" : null,
+      "bodyNotRecordedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 0,
+      "uncoveredFields" : [ ],
+      "optionalCoveredCount" : 0,
+      "coveredFields" : [ ],
+      "undocumentedStatusCodes" : [ ],
+      "optionalFieldCount" : 0,
+      "fieldCount" : 0,
+      "notApplicable" : true,
+      "notApplicableReason" : "CALLEE_NOT_TRACED",
+      "coveredCount" : 0,
+      "statusCodes" : [ ]
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ ],
+      "notApplicableReason" : "CALLEE_NOT_TRACED",
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "constraintPooledCoveragePercentage" : null,
+      "constraintPartitionCount" : 0,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "partitionCount" : 0
+    },
+    "statusCodeClassCoveragePercentage" : 50.0,
+    "missingExpectedStatusCodes" : [ "4xx" ],
+    "uniqueRequestBodies" : [ ],
+    "uniqueResponseBodies" : [ ],
+    "uniqueStatusCodes" : [ 200 ],
+    "observedBodyOutcomes" : [ ],
+    "uniqueStatusCodeClasses" : [ "2xx" ]
+  }, {
+    "connection" : {
+      "source" : "ts-cancel-service",
+      "destination" : "ts-order-other-service",
+      "call" : {
+        "method" : "PUT",
+        "url" : "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther",
+        "returnType" : "Response"
+      },
+      "endpoint" : {
+        "method" : "PUT",
+        "path" : "/api/v1/orderOtherService/orderOther",
+        "arguments" : [ "@RequestBody Order orderInfo", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "HttpEntity"
+      },
+      "calls" : [ {
+        "method" : "PUT",
+        "url" : "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther",
+        "returnType" : "Response"
+      } ],
+      "requestElements" : [ "body:travelTime", "body:documentType", "body:contactsDocumentNumber", "body:contactsName", "body:seatNumber", "body:accountId", "body:coachNumber", "body:travelDate", "body:boughtDate", "body:seatClass", "body:price", "body:from", "body:id", "body:trainNumber", "body:to", "body:status" ],
+      "reachableRequestElements" : [ "body:travelTime", "body:documentType", "body:contactsDocumentNumber", "body:contactsName", "body:seatNumber", "body:accountId", "body:coachNumber", "body:travelDate", "body:boughtDate", "body:seatClass", "body:price", "body:from", "body:id", "body:trainNumber", "body:to", "body:status" ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : "cancel.entity.Order",
+      "requestBodyOrigins" : [ "all properties: return value of orderResult.getData() in CancelServiceImpl.cancelOrder", "all properties: return value of orderOtherResult.getData() in CancelServiceImpl.cancelOrder" ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ "body:coachNumber", "body:documentType", "body:seatClass", "body:status" ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 1,
+    "statusCodes" : [ 200 ],
+    "requestBodies" : [ "{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"boughtDate\":\"2026-10-22T08:02:34.806+00:00\",\"travelDate\":\"1970-01-02T10:17:36.799+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"contactsName\":\"Test\",\"documentType\":1,\"contactsDocumentNumber\":\"Test\",\"trainNumber\":\"K1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"6A\",\"from\":\"shanghai\",\"to\":\"taiyuan\",\"status\":4,\"price\":\"100\"}" ],
+    "responseBodies" : [ "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"boughtDate\":\"2026-10-22T08:02:34.806+00:00\",\"travelDate\":\"1970-01-02T10:17:36.799+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"contactsName\":\"Test\",\"documentType\":1,\"contactsDocumentNumber\":\"Test\",\"trainNumber\":\"K1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"6A\",\"from\":\"shanghai\",\"to\":\"taiyuan\",\"status\":4,\"price\":\"100\"}}" ],
+    "bodySchemaApplicable" : true,
+    "bodySchemaCheckedCount" : 1,
+    "bodySchemaMatchedCount" : 1,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : {
+      "type" : "object",
+      "properties" : {
+        "accountId" : {
+          "type" : "string"
+        },
+        "boughtDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "coachNumber" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "contactsDocumentNumber" : {
+          "type" : "string"
+        },
+        "contactsName" : {
+          "type" : "string"
+        },
+        "documentType" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "from" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "price" : {
+          "type" : "string"
+        },
+        "seatClass" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "seatNumber" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "to" : {
+          "type" : "string"
+        },
+        "trainNumber" : {
+          "type" : "string"
+        },
+        "travelDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "travelTime" : {
+          "type" : "string",
+          "format" : "date-time"
+        }
+      }
+    },
+    "requestBodySchemaChecks" : [ {
+      "requestBody" : "{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"boughtDate\":\"2026-10-22T08:02:34.806+00:00\",\"travelDate\":\"1970-01-02T10:17:36.799+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"contactsName\":\"Test\",\"documentType\":1,\"contactsDocumentNumber\":\"Test\",\"trainNumber\":\"K1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"6A\",\"from\":\"shanghai\",\"to\":\"taiyuan\",\"status\":4,\"price\":\"100\"}",
+      "matches" : true,
+      "mismatchReason" : null,
+      "presentFields" : [ "accountId", "boughtDate", "coachNumber", "contactsDocumentNumber", "contactsName", "documentType", "from", "id", "price", "seatClass", "seatNumber", "status", "to", "trainNumber", "travelDate", "travelTime" ],
+      "missingFields" : [ ]
+    } ],
+    "expectedStatusCodes" : [ "2xx", "4xx" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : false,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "optionalPooledCoveragePercentage" : 100.0,
+      "optionalReachableCount" : 16,
+      "optionalCoveredCount" : 16,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "notRecordedElements" : [ ],
+      "notReachableElements" : [ ],
+      "coveredCount" : 16,
+      "reachableCount" : 16,
+      "coveredElements" : [ "body:accountId", "body:boughtDate", "body:coachNumber", "body:contactsDocumentNumber", "body:contactsName", "body:documentType", "body:from", "body:id", "body:price", "body:seatClass", "body:seatNumber", "body:status", "body:to", "body:trainNumber", "body:travelDate", "body:travelTime" ],
+      "uncoveredElements" : [ ],
+      "bodyNotRecordedReason" : null,
+      "bodySpecMissing" : false,
+      "interfaceMismatch" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "unexpectedElements" : [ ]
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ {
+        "element" : "body:accountId",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:boughtDate",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#format",
+          "group" : "FORMAT",
+          "source" : "CONSTRAINT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 1,
+        "coveragePercentage" : 50.0,
+        "constraintCoveredCount" : 1,
+        "coveredCount" : 1,
+        "reachableCount" : 2,
+        "coveredPartitions" : [ "#format" ],
+        "uncoveredPartitions" : [ "#none" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:coachNumber",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#negative",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#zero",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#positive",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : true,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#positive" ],
+        "uncoveredPartitions" : [ "#negative", "#zero" ],
+        "notReachablePartitions" : [ "#none" ]
+      }, {
+        "element" : "body:contactsDocumentNumber",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:contactsName",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:documentType",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#negative",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#zero",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#positive",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : true,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#positive" ],
+        "uncoveredPartitions" : [ "#negative", "#zero" ],
+        "notReachablePartitions" : [ "#none" ]
+      }, {
+        "element" : "body:from",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:id",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:price",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:seatClass",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#negative",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#zero",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#positive",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : true,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#positive" ],
+        "uncoveredPartitions" : [ "#negative", "#zero" ],
+        "notReachablePartitions" : [ "#none" ]
+      }, {
+        "element" : "body:seatNumber",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:status",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#negative",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#zero",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#positive",
+          "group" : "SIGN",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : true,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#positive" ],
+        "uncoveredPartitions" : [ "#negative", "#zero" ],
+        "notReachablePartitions" : [ "#none" ]
+      }, {
+        "element" : "body:to",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:trainNumber",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 33.333333333333336,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 3,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ "#none", "#empty" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:travelDate",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#format",
+          "group" : "FORMAT",
+          "source" : "CONSTRAINT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 1,
+        "coveragePercentage" : 50.0,
+        "constraintCoveredCount" : 1,
+        "coveredCount" : 1,
+        "reachableCount" : 2,
+        "coveredPartitions" : [ "#format" ],
+        "uncoveredPartitions" : [ "#none" ],
+        "notReachablePartitions" : [ ]
+      }, {
+        "element" : "body:travelTime",
+        "partitions" : [ {
+          "id" : "#none",
+          "group" : "NO_VALUE",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : false
+        }, {
+          "id" : "#format",
+          "group" : "FORMAT",
+          "source" : "CONSTRAINT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 1,
+        "coveragePercentage" : 50.0,
+        "constraintCoveredCount" : 1,
+        "coveredCount" : 1,
+        "reachableCount" : 2,
+        "coveredPartitions" : [ "#format" ],
+        "uncoveredPartitions" : [ "#none" ],
+        "notReachablePartitions" : [ ]
+      } ],
+      "notApplicableReason" : null,
+      "pooledCoveragePercentage" : 35.55555555555556,
+      "hierarchicalCoveragePercentage" : 36.45833333333333,
+      "constraintPooledCoveragePercentage" : 100.0,
+      "constraintReachableCount" : 3,
+      "constraintCoveredCount" : 3,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : false,
+      "coveredCount" : 16,
+      "reachableCount" : 45
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "pooledCoveragePercentage" : 0.0,
+      "hierarchicalCoveragePercentage" : 0.0,
+      "optionalPooledCoveragePercentage" : 0.0,
+      "bodyNotRecordedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 19,
+      "uncoveredFields" : [ "200:body" ],
+      "optionalCoveredCount" : 0,
+      "coveredFields" : [ ],
+      "undocumentedStatusCodes" : [ ],
+      "optionalFieldCount" : 1,
+      "fieldCount" : 1,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "coveredCount" : 0,
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "responseCount" : 1,
+        "bodyRecorded" : true,
+        "coveredFields" : [ ],
+        "uncoveredFields" : [ "body" ],
+        "requiredFields" : [ ],
+        "returnedNotInSpec" : [ "status", "msg", "data", "data.id", "data.boughtDate", "data.travelDate", "data.travelTime", "data.accountId", "data.contactsName", "data.documentType", "data.contactsDocumentNumber", "data.trainNumber", "data.coachNumber", "data.seatClass", "data.seatNumber", "data.from", "data.to", "data.status", "data.price" ]
+      } ]
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ ],
+      "notApplicableReason" : "NO_COVERED_FIELDS",
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "constraintPooledCoveragePercentage" : null,
+      "constraintPartitionCount" : 0,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "partitionCount" : 0
+    },
+    "statusCodeClassCoveragePercentage" : 50.0,
+    "missingExpectedStatusCodes" : [ "4xx" ],
+    "uniqueRequestBodies" : [ "{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"boughtDate\":\"2026-10-22T08:02:34.806+00:00\",\"travelDate\":\"1970-01-02T10:17:36.799+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"contactsName\":\"Test\",\"documentType\":1,\"contactsDocumentNumber\":\"Test\",\"trainNumber\":\"K1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"6A\",\"from\":\"shanghai\",\"to\":\"taiyuan\",\"status\":4,\"price\":\"100\"}" ],
+    "uniqueResponseBodies" : [ "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"boughtDate\":\"2026-10-22T08:02:34.806+00:00\",\"travelDate\":\"1970-01-02T10:17:36.799+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d6\",\"contactsName\":\"Test\",\"documentType\":1,\"contactsDocumentNumber\":\"Test\",\"trainNumber\":\"K1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"6A\",\"from\":\"shanghai\",\"to\":\"taiyuan\",\"status\":4,\"price\":\"100\"}}" ],
+    "uniqueStatusCodes" : [ 200 ],
+    "observedBodyOutcomes" : [ ],
+    "uniqueStatusCodeClasses" : [ "2xx" ]
+  }, {
+    "connection" : {
+      "source" : "ts-cancel-service",
+      "destination" : "ts-user-service",
+      "call" : {
+        "method" : "GET",
+        "url" : "http://ts-user-service:12342/api/v1/userservice/users/id/{orderId}",
+        "returnType" : "Response<User>"
+      },
+      "endpoint" : {
+        "method" : "GET",
+        "path" : "/api/v1/userservice/users/id/{userId}",
+        "arguments" : [ "@PathVariable String userId", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "ResponseEntity<Response>"
+      },
+      "calls" : [ {
+        "method" : "GET",
+        "url" : "http://ts-user-service:12342/api/v1/userservice/users/id/{orderId}",
+        "returnType" : "Response<User>"
+      } ],
+      "requestElements" : [ "path:userId" ],
+      "reachableRequestElements" : [ "path:userId" ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : null,
+      "requestBodyOrigins" : [ ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 2,
+    "statusCodes" : [ 200, 200 ],
+    "requestBodies" : [ ],
+    "responseBodies" : [ "{\"status\":1,\"msg\":\"Find User Success\",\"data\":{\"userId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"userName\":\"fdse_microservice\",\"password\":\"111111\",\"gender\":1,\"documentType\":1,\"documentNum\":\"2135488099312X\",\"email\":\"fdse_microservice@163.com\"}}", "{\"status\":0,\"msg\":\"No User\",\"data\":null}" ],
+    "bodySchemaApplicable" : false,
+    "bodySchemaCheckedCount" : 0,
+    "bodySchemaMatchedCount" : 0,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : null,
+    "requestBodySchemaChecks" : [ ],
+    "expectedStatusCodes" : [ "2xx", "4xx" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : false,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "optionalPooledCoveragePercentage" : null,
+      "optionalReachableCount" : 0,
+      "optionalCoveredCount" : 0,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "notRecordedElements" : [ ],
+      "notReachableElements" : [ ],
+      "coveredCount" : 1,
+      "reachableCount" : 1,
+      "coveredElements" : [ "path:userId" ],
+      "uncoveredElements" : [ ],
+      "bodyNotRecordedReason" : null,
+      "bodySpecMissing" : false,
+      "interfaceMismatch" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "unexpectedElements" : [ ]
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ {
+        "element" : "path:userId",
+        "partitions" : [ {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintReachableCount" : 0,
+        "coveragePercentage" : 100.0,
+        "constraintCoveredCount" : 0,
+        "coveredCount" : 1,
+        "reachableCount" : 1,
+        "coveredPartitions" : [ "#non-empty" ],
+        "uncoveredPartitions" : [ ],
+        "notReachablePartitions" : [ "#empty" ]
+      } ],
+      "notApplicableReason" : null,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "constraintPooledCoveragePercentage" : null,
+      "constraintReachableCount" : 0,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : false,
+      "coveredCount" : 1,
+      "reachableCount" : 1
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "pooledCoveragePercentage" : 0.0,
+      "hierarchicalCoveragePercentage" : 0.0,
+      "optionalPooledCoveragePercentage" : 0.0,
+      "bodyNotRecordedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 10,
+      "uncoveredFields" : [ "200:body" ],
+      "optionalCoveredCount" : 0,
+      "coveredFields" : [ ],
+      "undocumentedStatusCodes" : [ ],
+      "optionalFieldCount" : 1,
+      "fieldCount" : 1,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "coveredCount" : 0,
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "responseCount" : 2,
+        "bodyRecorded" : true,
+        "coveredFields" : [ ],
+        "uncoveredFields" : [ "body" ],
+        "requiredFields" : [ ],
+        "returnedNotInSpec" : [ "status", "msg", "data", "data.userId", "data.userName", "data.password", "data.gender", "data.documentType", "data.documentNum", "data.email" ]
+      } ]
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ ],
+      "notApplicableReason" : "NO_COVERED_FIELDS",
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "constraintPooledCoveragePercentage" : null,
+      "constraintPartitionCount" : 0,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "partitionCount" : 0
+    },
+    "statusCodeClassCoveragePercentage" : 50.0,
+    "missingExpectedStatusCodes" : [ "4xx" ],
+    "uniqueRequestBodies" : [ ],
+    "uniqueResponseBodies" : [ "{\"status\":1,\"msg\":\"Find User Success\",\"data\":{\"userId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"userName\":\"fdse_microservice\",\"password\":\"111111\",\"gender\":1,\"documentType\":1,\"documentNum\":\"2135488099312X\",\"email\":\"fdse_microservice@163.com\"}}", "{\"status\":0,\"msg\":\"No User\",\"data\":null}" ],
+    "uniqueStatusCodes" : [ 200 ],
+    "observedBodyOutcomes" : [ ],
+    "uniqueStatusCodeClasses" : [ "2xx" ]
+  } ],
+  "excludedConnections" : [ ],
+  "executedExcludedConnections" : [ ],
+  "exclusionWarnings" : [ ],
+  "connectionsWithRequestValuePartitionCoverageNotApplicable" : 1,
+  "responseValuePartitionConstraintPooledCoveragePercentage" : null,
+  "responseValuePartitionMeanHierarchicalCoveragePercentage" : null,
+  "connectionsWithResponseValuePartitionCoverageNotApplicable" : 7,
+  "connectionCoveragePercentage" : 100.0,
+  "statusCodeClassCoveragePercentage" : 50.0,
+  "statusCodeClassMinCoveragePercentage" : 50.0,
+  "statusCodeClassMedianCoveragePercentage" : 50.0,
+  "requestElementPooledCoveragePercentage" : 100.0,
+  "connectionsWithRequestElements" : 6,
+  "requestElementNotApplicableReasons" : {
+    "CALLEE_NOT_TRACED" : 1
+  },
+  "connectionsWithBodyNotRecorded" : 1,
+  "connectionsWithInterfaceMismatch" : 0,
+  "connectionsWithRequestValuePartitions" : 6,
+  "responseFieldPooledCoveragePercentage" : 0.0,
+  "connectionsWithResponseFields" : 6,
+  "responseFieldNotApplicableReasons" : {
+    "CALLEE_NOT_TRACED" : 1
+  },
+  "responseFieldReturnedNotInSpecCount" : 88,
+  "connectionsWithResponseValuePartitions" : 0,
+  "connectionsWithBodySchema" : 2,
+  "connectionsWithCorrectStatusCodeClass" : 7,
+  "totalConnections" : 7,
+  "bodySchemaCheckedCount" : 3,
+  "bodySchemaMatchedCount" : 3,
+  "bodySchemaMissingCount" : 0,
+  "connectionsWithClientErrorStatusCodeClasses" : 0,
+  "coveredConnectionsStatusCodeClassCoveragePercentage" : 50.0,
+  "connectionsWithServerErrorStatusCodeClasses" : 0,
+  "requestElementMeanPooledCoveragePercentage" : 100.0,
+  "requestElementMeanHierarchicalCoveragePercentage" : 100.0,
+  "requestElementOptionalPooledCoveragePercentage" : 100.0,
+  "requestElementMinPooledCoveragePercentage" : 100.0,
+  "requestElementMedianPooledCoveragePercentage" : 100.0,
+  "connectionsWithRequestElementCoverageNotApplicable" : 1,
+  "requestValuePartitionPooledCoveragePercentage" : 38.94736842105263,
+  "requestValuePartitionConstraintPooledCoveragePercentage" : 100.0,
+  "requestValuePartitionConstraintSharePercentage" : 6.315789473684211,
+  "requestValuePartitionMeanPooledCoveragePercentage" : 78.51851851851852,
+  "requestValuePartitionMeanHierarchicalCoveragePercentage" : 78.81944444444444,
+  "requestValuePartitionMinPooledCoveragePercentage" : 35.55555555555556,
+  "requestValuePartitionMedianPooledCoveragePercentage" : 100.0,
+  "requestValuePartitionNotApplicableReasons" : {
+    "CALLEE_NOT_TRACED" : 1
+  },
+  "requestValuePartitionOutOfSpecValueCount" : 0,
+  "responseFieldMeanPooledCoveragePercentage" : 0.0,
+  "responseFieldMeanHierarchicalCoveragePercentage" : 0.0,
+  "responseFieldOptionalPooledCoveragePercentage" : 0.0,
+  "responseFieldMinPooledCoveragePercentage" : 0.0,
+  "responseFieldMedianPooledCoveragePercentage" : 0.0,
+  "connectionsWithResponseFieldCoverageNotApplicable" : 1,
+  "responseValuePartitionPooledCoveragePercentage" : null,
+  "responseValuePartitionConstraintSharePercentage" : null,
+  "responseValuePartitionMeanPooledCoveragePercentage" : null,
+  "responseValuePartitionMinPooledCoveragePercentage" : null,
+  "responseValuePartitionMedianPooledCoveragePercentage" : null,
+  "responseValuePartitionNotApplicableReasons" : {
+    "CALLEE_NOT_TRACED" : 1,
+    "NO_COVERED_FIELDS" : 6
+  },
+  "responseValuePartitionOutOfSpecValueCount" : 0
+}

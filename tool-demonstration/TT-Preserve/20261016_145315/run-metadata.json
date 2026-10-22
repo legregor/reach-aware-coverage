@@ -1,0 +1,6 @@
+{
+  "totalDurationMillis" : 242669,
+  "testDurationMillis" : 240990,
+  "testServiceNames" : [ "ts-preserve-service" ],
+  "coverageConfigFile" : "/Users/lenagregor/Documents/microservice-coverage/tool-evaluation/configs/TT-Preserve.json"
+}

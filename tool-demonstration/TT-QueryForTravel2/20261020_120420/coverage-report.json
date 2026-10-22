@@ -1,0 +1,1479 @@
+{
+  "coveredConnections" : [ {
+    "source" : "ts-basic-service",
+    "destination" : "ts-route-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/{routeId}",
+      "returnType" : "Response"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/routeservice/routes/{routeId}",
+      "arguments" : [ "@PathVariable String routeId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "HttpEntity"
+    },
+    "calls" : [ {
+      "method" : "GET",
+      "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/{routeId}",
+      "returnType" : "Response"
+    } ],
+    "requestElements" : [ "path:routeId" ],
+    "reachableRequestElements" : [ "path:routeId" ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : null,
+    "requestBodyOrigins" : [ ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  }, {
+    "source" : "ts-basic-service",
+    "destination" : "ts-station-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/{stationName}",
+      "returnType" : "Response"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+      "arguments" : [ "@PathVariable(value = \"stationNameForId\") String stationName", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "HttpEntity"
+    },
+    "calls" : [ {
+      "method" : "GET",
+      "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/{stationName}",
+      "returnType" : "Response"
+    } ],
+    "requestElements" : [ "path:stationNameForId" ],
+    "reachableRequestElements" : [ "path:stationNameForId" ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : null,
+    "requestBodyOrigins" : [ ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  }, {
+    "source" : "ts-basic-service",
+    "destination" : "ts-train-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-train-service:14567/api/v1/trainservice/trains/{trainTypeId}",
+      "returnType" : "Response"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/trainservice/trains/{id}",
+      "arguments" : [ "@PathVariable String id", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "HttpEntity"
+    },
+    "calls" : [ {
+      "method" : "GET",
+      "url" : "http://ts-train-service:14567/api/v1/trainservice/trains/{trainTypeId}",
+      "returnType" : "Response"
+    } ],
+    "requestElements" : [ "path:id" ],
+    "reachableRequestElements" : [ "path:id" ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : null,
+    "requestBodyOrigins" : [ ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  }, {
+    "source" : "ts-basic-service",
+    "destination" : "ts-price-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-price-service:16579/api/v1/priceservice/prices/{routeId}/{trainType}",
+      "returnType" : "Response"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/priceservice/prices/{routeId}/{trainType}",
+      "arguments" : [ "@PathVariable String routeId", "@PathVariable String trainType", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "HttpEntity"
+    },
+    "calls" : [ {
+      "method" : "GET",
+      "url" : "http://ts-price-service:16579/api/v1/priceservice/prices/{routeId}/{trainType}",
+      "returnType" : "Response"
+    } ],
+    "requestElements" : [ "path:routeId", "path:trainType" ],
+    "reachableRequestElements" : [ "path:routeId", "path:trainType" ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : null,
+    "requestBodyOrigins" : [ ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  } ],
+  "uncoveredConnections" : [ ],
+  "connectionReports" : [ {
+    "connection" : {
+      "source" : "ts-basic-service",
+      "destination" : "ts-route-service",
+      "call" : {
+        "method" : "GET",
+        "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/{routeId}",
+        "returnType" : "Response"
+      },
+      "endpoint" : {
+        "method" : "GET",
+        "path" : "/api/v1/routeservice/routes/{routeId}",
+        "arguments" : [ "@PathVariable String routeId", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "HttpEntity"
+      },
+      "calls" : [ {
+        "method" : "GET",
+        "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/{routeId}",
+        "returnType" : "Response"
+      } ],
+      "requestElements" : [ "path:routeId" ],
+      "reachableRequestElements" : [ "path:routeId" ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : null,
+      "requestBodyOrigins" : [ ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 6,
+    "statusCodes" : [ 200, 200, 200, 200, 200, 200 ],
+    "requestBodies" : [ ],
+    "responseBodies" : [ "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"stations\":[\"nanjing\",\"suzhou\",\"shanghai\"],\"distances\":[0,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}", "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"stations\":[\"nanjing\",\"suzhou\",\"shanghai\"],\"distances\":[0,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}", "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"stations\":[\"nanjing\",\"suzhou\",\"shanghai\"],\"distances\":[0,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}", "{\"status\":0,\"msg\":\"No content with the routeId\",\"data\":null}", "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"stations\":[\"nanjing\",\"suzhou\",\"shanghai\"],\"distances\":[0,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}", "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"7b1e4c52-2f0a-4c8e-9d3b-5a6f8e2c1d90\",\"stations\":[\"a\",\"b\"],\"distances\":[0,100],\"startStationId\":\"a\",\"terminalStationId\":\"b\"}}" ],
+    "bodySchemaApplicable" : false,
+    "bodySchemaCheckedCount" : 0,
+    "bodySchemaMatchedCount" : 0,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : null,
+    "requestBodySchemaChecks" : [ ],
+    "expectedStatusCodes" : [ "status=1", "status=0" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : false,
+      "optionalReachableCount" : 0,
+      "optionalCoveredCount" : 0,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "notRecordedElements" : [ ],
+      "notReachableElements" : [ ],
+      "coveredCount" : 1,
+      "reachableCount" : 1,
+      "coveredElements" : [ "path:routeId" ],
+      "uncoveredElements" : [ ],
+      "bodyNotRecordedReason" : null,
+      "bodySpecMissing" : false,
+      "interfaceMismatch" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "unexpectedElements" : [ ],
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "optionalPooledCoveragePercentage" : null
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ {
+        "element" : "path:routeId",
+        "partitions" : [ {
+          "id" : "#format",
+          "group" : "FORMAT",
+          "source" : "CONSTRAINT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ {
+          "value" : "invalid Id",
+          "reason" : "not a valid uuid",
+          "count" : 1
+        } ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintCoveredCount" : 1,
+        "coveragePercentage" : 100.0,
+        "coveredCount" : 1,
+        "reachableCount" : 1,
+        "coveredPartitions" : [ "#format" ],
+        "uncoveredPartitions" : [ ],
+        "notReachablePartitions" : [ ],
+        "constraintReachableCount" : 1
+      } ],
+      "notApplicableReason" : null,
+      "constraintCoveredCount" : 1,
+      "outOfSpecValueCount" : 1,
+      "notApplicable" : false,
+      "coveredCount" : 1,
+      "reachableCount" : 1,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "constraintPooledCoveragePercentage" : 100.0,
+      "constraintReachableCount" : 1
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "optionalFieldCount" : 0,
+      "optionalCoveredCount" : 0,
+      "coveredFields" : [ "200:status", "200:msg", "200:data", "200:data.id", "200:data.stations", "200:data.distances", "200:data.startStationId", "200:data.terminalStationId" ],
+      "uncoveredFields" : [ ],
+      "undocumentedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 0,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "coveredCount" : 8,
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "responseCount" : 6,
+        "bodyRecorded" : true,
+        "coveredFields" : [ "status", "msg", "data", "data.id", "data.stations", "data.distances", "data.startStationId", "data.terminalStationId" ],
+        "uncoveredFields" : [ ],
+        "requiredFields" : [ "status", "msg", "data", "data.id", "data.stations", "data.distances", "data.startStationId", "data.terminalStationId" ],
+        "returnedNotInSpec" : [ ]
+      } ],
+      "fieldCount" : 8,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "optionalPooledCoveragePercentage" : null,
+      "bodyNotRecordedStatusCodes" : [ ]
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "fields" : [ {
+          "element" : "200:status",
+          "partitions" : [ {
+            "id" : "#enum=0",
+            "group" : "ENUM",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#enum=1",
+            "group" : "ENUM",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#enum=0", "#enum=1" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        }, {
+          "element" : "200:msg",
+          "partitions" : [ {
+            "id" : "#enum=Success",
+            "group" : "ENUM",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#enum=No content with the routeId",
+            "group" : "ENUM",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#enum=Success", "#enum=No content with the routeId" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        }, {
+          "element" : "200:data",
+          "partitions" : [ {
+            "id" : "#none",
+            "group" : "NO_VALUE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 1,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 1,
+          "reachableCount" : 1,
+          "coveredPartitions" : [ "#none" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 1
+        }, {
+          "element" : "200:data.id",
+          "partitions" : [ {
+            "id" : "#format",
+            "group" : "FORMAT",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 1,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 1,
+          "reachableCount" : 1,
+          "coveredPartitions" : [ "#format" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 1
+        }, {
+          "element" : "200:data.stations",
+          "partitions" : [ {
+            "id" : "#size-min",
+            "group" : "SIZE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#size-above",
+            "group" : "SIZE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#size-min", "#size-above" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        }, {
+          "element" : "200:data.distances",
+          "partitions" : [ {
+            "id" : "#size-min",
+            "group" : "SIZE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#size-above",
+            "group" : "SIZE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#size-min", "#size-above" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        }, {
+          "element" : "200:data.startStationId",
+          "partitions" : [ {
+            "id" : "#len-min",
+            "group" : "LENGTH",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#len-above",
+            "group" : "LENGTH",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#len-min", "#len-above" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        }, {
+          "element" : "200:data.terminalStationId",
+          "partitions" : [ {
+            "id" : "#len-min",
+            "group" : "LENGTH",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#len-above",
+            "group" : "LENGTH",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#len-min", "#len-above" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        } ]
+      } ],
+      "notApplicableReason" : null,
+      "constraintCoveredCount" : 14,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : false,
+      "coveredCount" : 14,
+      "partitionCount" : 14,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "constraintPooledCoveragePercentage" : 100.0,
+      "constraintPartitionCount" : 14
+    },
+    "uniqueRequestBodies" : [ ],
+    "uniqueResponseBodies" : [ "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"stations\":[\"nanjing\",\"suzhou\",\"shanghai\"],\"distances\":[0,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}", "{\"status\":0,\"msg\":\"No content with the routeId\",\"data\":null}", "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"7b1e4c52-2f0a-4c8e-9d3b-5a6f8e2c1d90\",\"stations\":[\"a\",\"b\"],\"distances\":[0,100],\"startStationId\":\"a\",\"terminalStationId\":\"b\"}}" ],
+    "uniqueStatusCodes" : [ 200 ],
+    "observedBodyOutcomes" : [ "status=1", "status=0" ],
+    "uniqueStatusCodeClasses" : [ "2xx" ],
+    "statusCodeClassCoveragePercentage" : 100.0,
+    "missingExpectedStatusCodes" : [ ]
+  }, {
+    "connection" : {
+      "source" : "ts-basic-service",
+      "destination" : "ts-station-service",
+      "call" : {
+        "method" : "GET",
+        "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/{stationName}",
+        "returnType" : "Response"
+      },
+      "endpoint" : {
+        "method" : "GET",
+        "path" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+        "arguments" : [ "@PathVariable(value = \"stationNameForId\") String stationName", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "HttpEntity"
+      },
+      "calls" : [ {
+        "method" : "GET",
+        "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/{stationName}",
+        "returnType" : "Response"
+      } ],
+      "requestElements" : [ "path:stationNameForId" ],
+      "reachableRequestElements" : [ "path:stationNameForId" ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : null,
+      "requestBodyOrigins" : [ ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 22,
+    "statusCodes" : [ 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200 ],
+    "requestBodies" : [ ],
+    "responseBodies" : [ "{\"status\":1,\"msg\":\"Success\",\"data\":\"shanghai\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"shanghai\"}", "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"End not existing\"}", "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Start not existing\"}", "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Start not existing\"}", "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"End not existing\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"shanghai\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"shanghai\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"shanghai\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"shanghai\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"shanghai\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"a\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"b\"}" ],
+    "bodySchemaApplicable" : false,
+    "bodySchemaCheckedCount" : 0,
+    "bodySchemaMatchedCount" : 0,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : null,
+    "requestBodySchemaChecks" : [ ],
+    "expectedStatusCodes" : [ "status=1", "status=0" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : false,
+      "optionalReachableCount" : 0,
+      "optionalCoveredCount" : 0,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "notRecordedElements" : [ ],
+      "notReachableElements" : [ ],
+      "coveredCount" : 1,
+      "reachableCount" : 1,
+      "coveredElements" : [ "path:stationNameForId" ],
+      "uncoveredElements" : [ ],
+      "bodyNotRecordedReason" : null,
+      "bodySpecMissing" : false,
+      "interfaceMismatch" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "unexpectedElements" : [ ],
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "optionalPooledCoveragePercentage" : null
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ {
+        "element" : "path:stationNameForId",
+        "partitions" : [ {
+          "id" : "#len-min",
+          "group" : "LENGTH",
+          "source" : "CONSTRAINT",
+          "reachable" : true,
+          "covered" : true
+        }, {
+          "id" : "#len-above",
+          "group" : "LENGTH",
+          "source" : "CONSTRAINT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintCoveredCount" : 2,
+        "coveragePercentage" : 100.0,
+        "coveredCount" : 2,
+        "reachableCount" : 2,
+        "coveredPartitions" : [ "#len-min", "#len-above" ],
+        "uncoveredPartitions" : [ ],
+        "notReachablePartitions" : [ ],
+        "constraintReachableCount" : 2
+      } ],
+      "notApplicableReason" : null,
+      "constraintCoveredCount" : 2,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : false,
+      "coveredCount" : 2,
+      "reachableCount" : 2,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "constraintPooledCoveragePercentage" : 100.0,
+      "constraintReachableCount" : 2
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "optionalFieldCount" : 0,
+      "optionalCoveredCount" : 0,
+      "coveredFields" : [ "200:status", "200:msg", "200:data" ],
+      "uncoveredFields" : [ ],
+      "undocumentedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 0,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "coveredCount" : 3,
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "responseCount" : 20,
+        "bodyRecorded" : true,
+        "coveredFields" : [ "status", "msg", "data" ],
+        "uncoveredFields" : [ ],
+        "requiredFields" : [ "status", "msg", "data" ],
+        "returnedNotInSpec" : [ ]
+      } ],
+      "fieldCount" : 3,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "optionalPooledCoveragePercentage" : null,
+      "bodyNotRecordedStatusCodes" : [ ]
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "fields" : [ {
+          "element" : "200:status",
+          "partitions" : [ {
+            "id" : "#enum=0",
+            "group" : "ENUM",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#enum=1",
+            "group" : "ENUM",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#enum=0", "#enum=1" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        }, {
+          "element" : "200:msg",
+          "partitions" : [ {
+            "id" : "#enum=Success",
+            "group" : "ENUM",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#enum=Not exists",
+            "group" : "ENUM",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#enum=Success", "#enum=Not exists" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        }, {
+          "element" : "200:data",
+          "partitions" : [ {
+            "id" : "#len-min",
+            "group" : "LENGTH",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#len-above",
+            "group" : "LENGTH",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#len-min", "#len-above" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        } ]
+      } ],
+      "notApplicableReason" : null,
+      "constraintCoveredCount" : 6,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : false,
+      "coveredCount" : 6,
+      "partitionCount" : 6,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "constraintPooledCoveragePercentage" : 100.0,
+      "constraintPartitionCount" : 6
+    },
+    "uniqueRequestBodies" : [ ],
+    "uniqueResponseBodies" : [ "{\"status\":1,\"msg\":\"Success\",\"data\":\"shanghai\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}", "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"End not existing\"}", "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Start not existing\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"a\"}", "{\"status\":1,\"msg\":\"Success\",\"data\":\"b\"}" ],
+    "uniqueStatusCodes" : [ 200 ],
+    "observedBodyOutcomes" : [ "status=1", "status=0" ],
+    "uniqueStatusCodeClasses" : [ "2xx" ],
+    "statusCodeClassCoveragePercentage" : 100.0,
+    "missingExpectedStatusCodes" : [ ]
+  }, {
+    "connection" : {
+      "source" : "ts-basic-service",
+      "destination" : "ts-train-service",
+      "call" : {
+        "method" : "GET",
+        "url" : "http://ts-train-service:14567/api/v1/trainservice/trains/{trainTypeId}",
+        "returnType" : "Response"
+      },
+      "endpoint" : {
+        "method" : "GET",
+        "path" : "/api/v1/trainservice/trains/{id}",
+        "arguments" : [ "@PathVariable String id", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "HttpEntity"
+      },
+      "calls" : [ {
+        "method" : "GET",
+        "url" : "http://ts-train-service:14567/api/v1/trainservice/trains/{trainTypeId}",
+        "returnType" : "Response"
+      } ],
+      "requestElements" : [ "path:id" ],
+      "reachableRequestElements" : [ "path:id" ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : null,
+      "requestBodyOrigins" : [ ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 6,
+    "statusCodes" : [ 200, 200, 200, 200, 200, 200 ],
+    "requestBodies" : [ ],
+    "responseBodies" : [ "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"GaoTieOne\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":250}}", "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"GaoTieOne\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":250}}", "{\"status\":0,\"msg\":\"here is no TrainType with the trainType id: NotAValidTrainType\",\"data\":null}", "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"GaoTieOne\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":250}}", "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"GaoTieTwo\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":200}}", "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"X\",\"economyClass\":0,\"confortClass\":0,\"averageSpeed\":1}}" ],
+    "bodySchemaApplicable" : false,
+    "bodySchemaCheckedCount" : 0,
+    "bodySchemaMatchedCount" : 0,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : null,
+    "requestBodySchemaChecks" : [ ],
+    "expectedStatusCodes" : [ "status=1", "status=0" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : false,
+      "optionalReachableCount" : 0,
+      "optionalCoveredCount" : 0,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "notRecordedElements" : [ ],
+      "notReachableElements" : [ ],
+      "coveredCount" : 1,
+      "reachableCount" : 1,
+      "coveredElements" : [ "path:id" ],
+      "uncoveredElements" : [ ],
+      "bodyNotRecordedReason" : null,
+      "bodySpecMissing" : false,
+      "interfaceMismatch" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "unexpectedElements" : [ ],
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "optionalPooledCoveragePercentage" : null
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ {
+        "element" : "path:id",
+        "partitions" : [ {
+          "id" : "#len-min",
+          "group" : "LENGTH",
+          "source" : "CONSTRAINT",
+          "reachable" : true,
+          "covered" : true
+        }, {
+          "id" : "#len-above",
+          "group" : "LENGTH",
+          "source" : "CONSTRAINT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintCoveredCount" : 2,
+        "coveragePercentage" : 100.0,
+        "coveredCount" : 2,
+        "reachableCount" : 2,
+        "coveredPartitions" : [ "#len-min", "#len-above" ],
+        "uncoveredPartitions" : [ ],
+        "notReachablePartitions" : [ ],
+        "constraintReachableCount" : 2
+      } ],
+      "notApplicableReason" : null,
+      "constraintCoveredCount" : 2,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : false,
+      "coveredCount" : 2,
+      "reachableCount" : 2,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "constraintPooledCoveragePercentage" : 100.0,
+      "constraintReachableCount" : 2
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "optionalFieldCount" : 0,
+      "optionalCoveredCount" : 0,
+      "coveredFields" : [ "200:status", "200:msg", "200:data", "200:data.id", "200:data.economyClass", "200:data.confortClass", "200:data.averageSpeed" ],
+      "uncoveredFields" : [ ],
+      "undocumentedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 0,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "coveredCount" : 7,
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "responseCount" : 6,
+        "bodyRecorded" : true,
+        "coveredFields" : [ "status", "msg", "data", "data.id", "data.economyClass", "data.confortClass", "data.averageSpeed" ],
+        "uncoveredFields" : [ ],
+        "requiredFields" : [ "status", "msg", "data", "data.id", "data.economyClass", "data.confortClass", "data.averageSpeed" ],
+        "returnedNotInSpec" : [ ]
+      } ],
+      "fieldCount" : 7,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "optionalPooledCoveragePercentage" : null,
+      "bodyNotRecordedStatusCodes" : [ ]
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "fields" : [ {
+          "element" : "200:status",
+          "partitions" : [ {
+            "id" : "#enum=0",
+            "group" : "ENUM",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#enum=1",
+            "group" : "ENUM",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#enum=0", "#enum=1" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        }, {
+          "element" : "200:msg",
+          "partitions" : [ {
+            "id" : "#pattern",
+            "group" : "PATTERN",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 1,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 1,
+          "reachableCount" : 1,
+          "coveredPartitions" : [ "#pattern" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 1
+        }, {
+          "element" : "200:data",
+          "partitions" : [ {
+            "id" : "#none",
+            "group" : "NO_VALUE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 1,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 1,
+          "reachableCount" : 1,
+          "coveredPartitions" : [ "#none" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 1
+        }, {
+          "element" : "200:data.id",
+          "partitions" : [ {
+            "id" : "#len-min",
+            "group" : "LENGTH",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#len-above",
+            "group" : "LENGTH",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#len-min", "#len-above" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        }, {
+          "element" : "200:data.economyClass",
+          "partitions" : [ {
+            "id" : "#min",
+            "group" : "RANGE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#above",
+            "group" : "RANGE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#min", "#above" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        }, {
+          "element" : "200:data.confortClass",
+          "partitions" : [ {
+            "id" : "#min",
+            "group" : "RANGE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#above",
+            "group" : "RANGE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#min", "#above" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        }, {
+          "element" : "200:data.averageSpeed",
+          "partitions" : [ {
+            "id" : "#min",
+            "group" : "RANGE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#above",
+            "group" : "RANGE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#min", "#above" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        } ]
+      } ],
+      "notApplicableReason" : null,
+      "constraintCoveredCount" : 12,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : false,
+      "coveredCount" : 12,
+      "partitionCount" : 12,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "constraintPooledCoveragePercentage" : 100.0,
+      "constraintPartitionCount" : 12
+    },
+    "uniqueRequestBodies" : [ ],
+    "uniqueResponseBodies" : [ "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"GaoTieOne\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":250}}", "{\"status\":0,\"msg\":\"here is no TrainType with the trainType id: NotAValidTrainType\",\"data\":null}", "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"GaoTieTwo\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":200}}", "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"X\",\"economyClass\":0,\"confortClass\":0,\"averageSpeed\":1}}" ],
+    "uniqueStatusCodes" : [ 200 ],
+    "observedBodyOutcomes" : [ "status=1", "status=0" ],
+    "uniqueStatusCodeClasses" : [ "2xx" ],
+    "statusCodeClassCoveragePercentage" : 100.0,
+    "missingExpectedStatusCodes" : [ ]
+  }, {
+    "connection" : {
+      "source" : "ts-basic-service",
+      "destination" : "ts-price-service",
+      "call" : {
+        "method" : "GET",
+        "url" : "http://ts-price-service:16579/api/v1/priceservice/prices/{routeId}/{trainType}",
+        "returnType" : "Response"
+      },
+      "endpoint" : {
+        "method" : "GET",
+        "path" : "/api/v1/priceservice/prices/{routeId}/{trainType}",
+        "arguments" : [ "@PathVariable String routeId", "@PathVariable String trainType", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "HttpEntity"
+      },
+      "calls" : [ {
+        "method" : "GET",
+        "url" : "http://ts-price-service:16579/api/v1/priceservice/prices/{routeId}/{trainType}",
+        "returnType" : "Response"
+      } ],
+      "requestElements" : [ "path:routeId", "path:trainType" ],
+      "reachableRequestElements" : [ "path:routeId", "path:trainType" ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : null,
+      "requestBodyOrigins" : [ ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 5,
+    "statusCodes" : [ 200, 200, 200, 200, 200 ],
+    "requestBodies" : [ ],
+    "responseBodies" : [ "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"719287d6-d3e7-4b54-9a92-71d039748b22\",\"trainType\":\"GaoTieOne\",\"routeId\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"basicPriceRate\":0.7,\"firstClassPriceRate\":1.0}}", "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"719287d6-d3e7-4b54-9a92-71d039748b22\",\"trainType\":\"GaoTieOne\",\"routeId\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"basicPriceRate\":0.7,\"firstClassPriceRate\":1.0}}", "{\"status\":0,\"msg\":\"No that config\",\"data\":null}", "{\"status\":0,\"msg\":\"No that config\",\"data\":null}", "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"ab58f008-3da2-4d07-95b9-b1d036f366f9\",\"trainType\":\"X\",\"routeId\":\"7b1e4c52-2f0a-4c8e-9d3b-5a6f8e2c1d90\",\"basicPriceRate\":1.0,\"firstClassPriceRate\":0.8}}" ],
+    "bodySchemaApplicable" : false,
+    "bodySchemaCheckedCount" : 0,
+    "bodySchemaMatchedCount" : 0,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : null,
+    "requestBodySchemaChecks" : [ ],
+    "expectedStatusCodes" : [ "status=1", "status=0" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : false,
+      "optionalReachableCount" : 0,
+      "optionalCoveredCount" : 0,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "notRecordedElements" : [ ],
+      "notReachableElements" : [ ],
+      "coveredCount" : 2,
+      "reachableCount" : 2,
+      "coveredElements" : [ "path:routeId", "path:trainType" ],
+      "uncoveredElements" : [ ],
+      "bodyNotRecordedReason" : null,
+      "bodySpecMissing" : false,
+      "interfaceMismatch" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "unexpectedElements" : [ ],
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "optionalPooledCoveragePercentage" : null
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ {
+        "element" : "path:routeId",
+        "partitions" : [ {
+          "id" : "#format",
+          "group" : "FORMAT",
+          "source" : "CONSTRAINT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ {
+          "value" : "invalid Id",
+          "reason" : "not a valid uuid",
+          "count" : 1
+        } ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintCoveredCount" : 1,
+        "coveragePercentage" : 100.0,
+        "coveredCount" : 1,
+        "reachableCount" : 1,
+        "coveredPartitions" : [ "#format" ],
+        "uncoveredPartitions" : [ ],
+        "notReachablePartitions" : [ ],
+        "constraintReachableCount" : 1
+      }, {
+        "element" : "path:trainType",
+        "partitions" : [ {
+          "id" : "#len-min",
+          "group" : "LENGTH",
+          "source" : "CONSTRAINT",
+          "reachable" : true,
+          "covered" : true
+        }, {
+          "id" : "#len-above",
+          "group" : "LENGTH",
+          "source" : "CONSTRAINT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "constraintCoveredCount" : 2,
+        "coveragePercentage" : 100.0,
+        "coveredCount" : 2,
+        "reachableCount" : 2,
+        "coveredPartitions" : [ "#len-min", "#len-above" ],
+        "uncoveredPartitions" : [ ],
+        "notReachablePartitions" : [ ],
+        "constraintReachableCount" : 2
+      } ],
+      "notApplicableReason" : null,
+      "constraintCoveredCount" : 3,
+      "outOfSpecValueCount" : 1,
+      "notApplicable" : false,
+      "coveredCount" : 3,
+      "reachableCount" : 3,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "constraintPooledCoveragePercentage" : 100.0,
+      "constraintReachableCount" : 3
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "optionalFieldCount" : 0,
+      "optionalCoveredCount" : 0,
+      "coveredFields" : [ "200:status", "200:msg", "200:data", "200:data.id", "200:data.trainType", "200:data.routeId", "200:data.basicPriceRate", "200:data.firstClassPriceRate" ],
+      "uncoveredFields" : [ ],
+      "undocumentedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 0,
+      "notApplicable" : false,
+      "notApplicableReason" : null,
+      "coveredCount" : 8,
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "responseCount" : 5,
+        "bodyRecorded" : true,
+        "coveredFields" : [ "status", "msg", "data", "data.id", "data.trainType", "data.routeId", "data.basicPriceRate", "data.firstClassPriceRate" ],
+        "uncoveredFields" : [ ],
+        "requiredFields" : [ "status", "msg", "data", "data.id", "data.trainType", "data.routeId", "data.basicPriceRate", "data.firstClassPriceRate" ],
+        "returnedNotInSpec" : [ ]
+      } ],
+      "fieldCount" : 8,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "optionalPooledCoveragePercentage" : null,
+      "bodyNotRecordedStatusCodes" : [ ]
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "fields" : [ {
+          "element" : "200:status",
+          "partitions" : [ {
+            "id" : "#enum=0",
+            "group" : "ENUM",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#enum=1",
+            "group" : "ENUM",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#enum=0", "#enum=1" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        }, {
+          "element" : "200:msg",
+          "partitions" : [ {
+            "id" : "#enum=Success",
+            "group" : "ENUM",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#enum=No that config",
+            "group" : "ENUM",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#enum=Success", "#enum=No that config" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        }, {
+          "element" : "200:data",
+          "partitions" : [ {
+            "id" : "#none",
+            "group" : "NO_VALUE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 1,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 1,
+          "reachableCount" : 1,
+          "coveredPartitions" : [ "#none" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 1
+        }, {
+          "element" : "200:data.id",
+          "partitions" : [ {
+            "id" : "#format",
+            "group" : "FORMAT",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 1,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 1,
+          "reachableCount" : 1,
+          "coveredPartitions" : [ "#format" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 1
+        }, {
+          "element" : "200:data.trainType",
+          "partitions" : [ {
+            "id" : "#len-min",
+            "group" : "LENGTH",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#len-above",
+            "group" : "LENGTH",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#len-min", "#len-above" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        }, {
+          "element" : "200:data.routeId",
+          "partitions" : [ {
+            "id" : "#format",
+            "group" : "FORMAT",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 1,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 1,
+          "reachableCount" : 1,
+          "coveredPartitions" : [ "#format" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 1
+        }, {
+          "element" : "200:data.basicPriceRate",
+          "partitions" : [ {
+            "id" : "#interior",
+            "group" : "RANGE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#max",
+            "group" : "RANGE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#interior", "#max" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        }, {
+          "element" : "200:data.firstClassPriceRate",
+          "partitions" : [ {
+            "id" : "#interior",
+            "group" : "RANGE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          }, {
+            "id" : "#max",
+            "group" : "RANGE",
+            "source" : "CONSTRAINT",
+            "reachable" : true,
+            "covered" : true
+          } ],
+          "outOfSpecValues" : [ ],
+          "staticConstants" : null,
+          "neverNull" : false,
+          "outOfSpecConstants" : [ ],
+          "constraintCoveredCount" : 2,
+          "coveragePercentage" : 100.0,
+          "coveredCount" : 2,
+          "reachableCount" : 2,
+          "coveredPartitions" : [ "#interior", "#max" ],
+          "uncoveredPartitions" : [ ],
+          "notReachablePartitions" : [ ],
+          "constraintReachableCount" : 2
+        } ]
+      } ],
+      "notApplicableReason" : null,
+      "constraintCoveredCount" : 13,
+      "outOfSpecValueCount" : 0,
+      "notApplicable" : false,
+      "coveredCount" : 13,
+      "partitionCount" : 13,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "constraintPooledCoveragePercentage" : 100.0,
+      "constraintPartitionCount" : 13
+    },
+    "uniqueRequestBodies" : [ ],
+    "uniqueResponseBodies" : [ "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"719287d6-d3e7-4b54-9a92-71d039748b22\",\"trainType\":\"GaoTieOne\",\"routeId\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"basicPriceRate\":0.7,\"firstClassPriceRate\":1.0}}", "{\"status\":0,\"msg\":\"No that config\",\"data\":null}", "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"ab58f008-3da2-4d07-95b9-b1d036f366f9\",\"trainType\":\"X\",\"routeId\":\"7b1e4c52-2f0a-4c8e-9d3b-5a6f8e2c1d90\",\"basicPriceRate\":1.0,\"firstClassPriceRate\":0.8}}" ],
+    "uniqueStatusCodes" : [ 200 ],
+    "observedBodyOutcomes" : [ "status=1", "status=0" ],
+    "uniqueStatusCodeClasses" : [ "2xx" ],
+    "statusCodeClassCoveragePercentage" : 100.0,
+    "missingExpectedStatusCodes" : [ ]
+  } ],
+  "excludedConnections" : [ ],
+  "executedExcludedConnections" : [ ],
+  "exclusionWarnings" : [ ],
+  "totalConnections" : 4,
+  "bodySchemaCheckedCount" : 0,
+  "bodySchemaMatchedCount" : 0,
+  "bodySchemaMissingCount" : 0,
+  "connectionCoveragePercentage" : 100.0,
+  "statusCodeClassCoveragePercentage" : 100.0,
+  "statusCodeClassMinCoveragePercentage" : 100.0,
+  "statusCodeClassMedianCoveragePercentage" : 100.0,
+  "requestElementPooledCoveragePercentage" : 100.0,
+  "connectionsWithRequestElements" : 4,
+  "requestElementNotApplicableReasons" : { },
+  "connectionsWithBodyNotRecorded" : 0,
+  "connectionsWithInterfaceMismatch" : 0,
+  "connectionsWithRequestValuePartitions" : 4,
+  "responseFieldPooledCoveragePercentage" : 100.0,
+  "connectionsWithResponseFields" : 4,
+  "responseFieldNotApplicableReasons" : { },
+  "responseFieldReturnedNotInSpecCount" : 0,
+  "connectionsWithResponseValuePartitions" : 4,
+  "connectionsWithBodySchema" : 0,
+  "connectionsWithCorrectStatusCodeClass" : 4,
+  "connectionsWithClientErrorStatusCodeClasses" : 0,
+  "coveredConnectionsStatusCodeClassCoveragePercentage" : 100.0,
+  "connectionsWithServerErrorStatusCodeClasses" : 0,
+  "requestElementMeanPooledCoveragePercentage" : 100.0,
+  "requestElementMeanHierarchicalCoveragePercentage" : 100.0,
+  "requestElementOptionalPooledCoveragePercentage" : null,
+  "requestElementMinPooledCoveragePercentage" : 100.0,
+  "requestElementMedianPooledCoveragePercentage" : 100.0,
+  "connectionsWithRequestElementCoverageNotApplicable" : 0,
+  "requestValuePartitionPooledCoveragePercentage" : 100.0,
+  "requestValuePartitionConstraintPooledCoveragePercentage" : 100.0,
+  "requestValuePartitionConstraintSharePercentage" : 100.0,
+  "requestValuePartitionMeanPooledCoveragePercentage" : 100.0,
+  "requestValuePartitionMeanHierarchicalCoveragePercentage" : 100.0,
+  "requestValuePartitionMinPooledCoveragePercentage" : 100.0,
+  "requestValuePartitionMedianPooledCoveragePercentage" : 100.0,
+  "requestValuePartitionNotApplicableReasons" : { },
+  "requestValuePartitionOutOfSpecValueCount" : 2,
+  "responseFieldMeanPooledCoveragePercentage" : 100.0,
+  "responseFieldMeanHierarchicalCoveragePercentage" : 100.0,
+  "responseFieldOptionalPooledCoveragePercentage" : null,
+  "responseFieldMinPooledCoveragePercentage" : 100.0,
+  "responseFieldMedianPooledCoveragePercentage" : 100.0,
+  "connectionsWithResponseFieldCoverageNotApplicable" : 0,
+  "responseValuePartitionPooledCoveragePercentage" : 100.0,
+  "responseValuePartitionConstraintSharePercentage" : 100.0,
+  "responseValuePartitionMeanPooledCoveragePercentage" : 100.0,
+  "responseValuePartitionMinPooledCoveragePercentage" : 100.0,
+  "responseValuePartitionMedianPooledCoveragePercentage" : 100.0,
+  "responseValuePartitionNotApplicableReasons" : { },
+  "responseValuePartitionOutOfSpecValueCount" : 0,
+  "connectionsWithRequestValuePartitionCoverageNotApplicable" : 0,
+  "responseValuePartitionConstraintPooledCoveragePercentage" : 100.0,
+  "responseValuePartitionMeanHierarchicalCoveragePercentage" : 100.0,
+  "connectionsWithResponseValuePartitionCoverageNotApplicable" : 0
+}

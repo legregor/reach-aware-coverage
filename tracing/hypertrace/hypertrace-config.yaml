@@ -1,0 +1,18 @@
+serviceName: service_name
+reporting:
+  endpoint: http://host.docker.internal:4317
+propagationFormats:
+    - "B3"
+    - "TRACE_CONTEXT"
+    - "BAGGAGE"
+dataCapture:
+  httpHeaders:
+    request: true
+    response: true
+  httpBody:
+     request: true
+     response: true
+  rpcMetadata:
+     request: false
+  rpcBody:
+      request: false

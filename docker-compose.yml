@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  jaeger:
+    container_name: jaeger
+    image: jaegertracing/all-in-one:1.69.0
+    environment:
+      COLLECTOR_ZIPKIN_HTTP_PORT: "9411"
+      COLLECTOR_OTLP_ENABLED: "true"
+    ports:
+      - "6831:6831/udp"   # Jaeger Thrift compact
+      - "6832:6832/udp"   # Jaeger Thrift binary
+      - "5778:5778"       # Agent configuration
+      - "16686:16686"     # UI / Query
+      - "16685:16685"     # gRPC Query
+      - "4317:4317"       # OTLP gRPC
+      - "4318:4318"       # OTLP HTTP
+      - "14250:14250"     # gRPC Collector
+      - "14268:14268"     # HTTP Collector
+      - "14269:14269"     # Metrics
+      - "9411:9411"       # Zipkin     
+
+
+  # otel-collector:
+  #   image: otel/opentelemetry-collector-contrib:latest
+  #   container_name: otel-collector
+  #   volumes:
+  #     - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
+  #   command: ["--config=/etc/otel-collector-config.yaml"]
+  #   ports:
+  #     - "4317:4317"     # OTLP gRPC exposed on host
+  #   depends_on:
+  #     - jaeger
+

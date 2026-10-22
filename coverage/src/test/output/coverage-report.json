@@ -1,0 +1,1059 @@
+{
+  "coveredConnections" : [ {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-order-service",
+    "call" : {
+      "method" : "PUT",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order",
+      "returnType" : "edu.fudan.common.util.Response"
+    },
+    "endpoint" : {
+      "method" : "PUT",
+      "path" : "/api/v1/orderservice/order",
+      "arguments" : [ "@RequestBody Order orderInfo", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    },
+    "calls" : [ {
+      "method" : "PUT",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order",
+      "returnType" : "edu.fudan.common.util.Response"
+    } ],
+    "requestElements" : [ ],
+    "reachableRequestElements" : [ ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : null,
+    "requestBodyOrigins" : [ ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  }, {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-order-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order/{orderId}",
+      "returnType" : "new ParameterizedTypeReference<Response<Order>>() {\n}"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/orderservice/order/{orderId}",
+      "arguments" : [ "@PathVariable String orderId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    },
+    "calls" : [ {
+      "method" : "GET",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order/{orderId}",
+      "returnType" : "new ParameterizedTypeReference<Response<Order>>() {\n}"
+    } ],
+    "requestElements" : [ ],
+    "reachableRequestElements" : [ ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : null,
+    "requestBodyOrigins" : [ ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  }, {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-inside-payment-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-inside-payment-service:18673/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+      "returnType" : "edu.fudan.common.util.Response"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+      "arguments" : [ "@PathVariable String userId", "@PathVariable String money", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    },
+    "calls" : [ {
+      "method" : "GET",
+      "url" : "http://ts-inside-payment-service:18673/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+      "returnType" : "edu.fudan.common.util.Response"
+    } ],
+    "requestElements" : [ ],
+    "reachableRequestElements" : [ ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : null,
+    "requestBodyOrigins" : [ ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  }, {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-user-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-user-service:12342/api/v1/userservice/users/id/{orderId}",
+      "returnType" : "new ParameterizedTypeReference<Response<User>>() {\n}"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/userservice/users/id/{userId}",
+      "arguments" : [ "@PathVariable String userId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "ResponseEntity<Response>"
+    },
+    "calls" : [ {
+      "method" : "GET",
+      "url" : "http://ts-user-service:12342/api/v1/userservice/users/id/{orderId}",
+      "returnType" : "new ParameterizedTypeReference<Response<User>>() {\n}"
+    } ],
+    "requestElements" : [ ],
+    "reachableRequestElements" : [ ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : null,
+    "requestBodyOrigins" : [ ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  }, {
+    "source" : "ts-cancel-service",
+    "destination" : "ts-notification-service",
+    "call" : {
+      "method" : "POST",
+      "url" : "http://ts-notification-service:17853/api/v1/notifyservice/notification/order_cancel_success",
+      "returnType" : "Boolean"
+    },
+    "endpoint" : {
+      "method" : "POST",
+      "path" : "/api/v1/notifyservice/notification/order_cancel_success",
+      "arguments" : [ "@RequestBody NotifyInfo info", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "boolean"
+    },
+    "calls" : [ {
+      "method" : "POST",
+      "url" : "http://ts-notification-service:17853/api/v1/notifyservice/notification/order_cancel_success",
+      "returnType" : "Boolean"
+    } ],
+    "requestElements" : [ ],
+    "reachableRequestElements" : [ ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : null,
+    "requestBodyOrigins" : [ ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  } ],
+  "uncoveredConnections" : [ {
+    "source" : "ts-inside-payment-service",
+    "destination" : "ts-order-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order/{var}",
+      "returnType" : "new ParameterizedTypeReference<Response<Order>>() {\n}"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/orderservice/order/{orderId}",
+      "arguments" : [ "@PathVariable String orderId", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    },
+    "calls" : [ {
+      "method" : "GET",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order/{var}",
+      "returnType" : "new ParameterizedTypeReference<Response<Order>>() {\n}"
+    } ],
+    "requestElements" : [ ],
+    "reachableRequestElements" : [ ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : null,
+    "requestBodyOrigins" : [ ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  }, {
+    "source" : "ts-inside-payment-service",
+    "destination" : "ts-order-service",
+    "call" : {
+      "method" : "GET",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order/status/{orderId}/{orderStatus}",
+      "returnType" : "edu.fudan.common.util.Response"
+    },
+    "endpoint" : {
+      "method" : "GET",
+      "path" : "/api/v1/orderservice/order/status/{orderId}/{status}",
+      "arguments" : [ "@PathVariable String orderId", "@PathVariable int status", "@RequestHeader HttpHeaders headers" ],
+      "returnType" : "org.springframework.http.HttpEntity"
+    },
+    "calls" : [ {
+      "method" : "GET",
+      "url" : "http://ts-order-service:12031/api/v1/orderservice/order/status/{orderId}/{orderStatus}",
+      "returnType" : "edu.fudan.common.util.Response"
+    } ],
+    "requestElements" : [ ],
+    "reachableRequestElements" : [ ],
+    "notReachableRequestElements" : [ ],
+    "requestBodyType" : null,
+    "requestBodyOrigins" : [ ],
+    "requestElementConstants" : { },
+    "neverNullRequestElements" : [ ],
+    "neverSentArguments" : [ ],
+    "staticallyMissingArguments" : [ ]
+  } ],
+  "connectionReports" : [ {
+    "connection" : {
+      "source" : "ts-cancel-service",
+      "destination" : "ts-order-service",
+      "call" : {
+        "method" : "PUT",
+        "url" : "http://ts-order-service:12031/api/v1/orderservice/order",
+        "returnType" : "edu.fudan.common.util.Response"
+      },
+      "endpoint" : {
+        "method" : "PUT",
+        "path" : "/api/v1/orderservice/order",
+        "arguments" : [ "@RequestBody Order orderInfo", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "org.springframework.http.HttpEntity"
+      },
+      "calls" : [ {
+        "method" : "PUT",
+        "url" : "http://ts-order-service:12031/api/v1/orderservice/order",
+        "returnType" : "edu.fudan.common.util.Response"
+      } ],
+      "requestElements" : [ ],
+      "reachableRequestElements" : [ ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : null,
+      "requestBodyOrigins" : [ ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 2,
+    "statusCodes" : [ 200, 200 ],
+    "requestBodies" : [ "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-05-12T16:01:15.094+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}", "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-05-12T16:01:15.098+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"c000e38f-5e6b-48e9-be9c-ea7573aec9fd\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}" ],
+    "responseBodies" : [ "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-05-12T16:01:15.094+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}}", "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-05-12T16:01:15.098+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"c000e38f-5e6b-48e9-be9c-ea7573aec9fd\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}}" ],
+    "bodySchemaApplicable" : true,
+    "bodySchemaCheckedCount" : 2,
+    "bodySchemaMatchedCount" : 2,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : {
+      "type" : "object",
+      "properties" : {
+        "accountId" : {
+          "type" : "string"
+        },
+        "boughtDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "coachNumber" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "contactsDocumentNumber" : {
+          "type" : "string"
+        },
+        "contactsName" : {
+          "type" : "string"
+        },
+        "documentType" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "from" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "price" : {
+          "type" : "string"
+        },
+        "seatClass" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "seatNumber" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "to" : {
+          "type" : "string"
+        },
+        "trainNumber" : {
+          "type" : "string"
+        },
+        "travelDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "travelTime" : {
+          "type" : "string",
+          "format" : "date-time"
+        }
+      }
+    },
+    "requestBodySchemaChecks" : [ {
+      "requestBody" : "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-05-12T16:01:15.094+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}",
+      "matches" : true,
+      "mismatchReason" : null,
+      "presentFields" : [ "accountId", "boughtDate", "coachNumber", "contactsDocumentNumber", "contactsName", "documentType", "from", "id", "price", "seatClass", "seatNumber", "status", "to", "trainNumber", "travelDate", "travelTime" ],
+      "missingFields" : [ ]
+    }, {
+      "requestBody" : "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-05-12T16:01:15.098+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"c000e38f-5e6b-48e9-be9c-ea7573aec9fd\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}",
+      "matches" : true,
+      "mismatchReason" : null,
+      "presentFields" : [ "accountId", "boughtDate", "coachNumber", "contactsDocumentNumber", "contactsName", "documentType", "from", "id", "price", "seatClass", "seatNumber", "status", "to", "trainNumber", "travelDate", "travelTime" ],
+      "missingFields" : [ ]
+    } ],
+    "expectedStatusCodes" : [ "2xx", "4xx", "500" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : false,
+      "optionalPooledCoveragePercentage" : null,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "reachableCount" : 0,
+      "bodySpecMissing" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "coveredElements" : [ ],
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "notApplicableReason" : "NONE_REACHABLE",
+      "optionalCoveredCount" : 0,
+      "optionalReachableCount" : 0,
+      "interfaceMismatch" : false,
+      "bodyNotRecordedReason" : null,
+      "uncoveredElements" : [ ],
+      "notReachableElements" : [ "body:accountId", "body:boughtDate", "body:coachNumber", "body:contactsDocumentNumber", "body:contactsName", "body:documentType", "body:from", "body:id", "body:price", "body:seatClass", "body:seatNumber", "body:status", "body:to", "body:trainNumber", "body:travelDate", "body:travelTime" ],
+      "notRecordedElements" : [ ],
+      "unexpectedElements" : [ ]
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ ],
+      "notApplicableReason" : "NONE_REACHABLE",
+      "constraintPooledCoveragePercentage" : null,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "reachableCount" : 0,
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "constraintCoveredCount" : 0,
+      "constraintReachableCount" : 0,
+      "outOfSpecValueCount" : 0
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "optionalPooledCoveragePercentage" : 0.0,
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "responseCount" : 2,
+        "bodyRecorded" : true,
+        "coveredFields" : [ ],
+        "uncoveredFields" : [ "body" ],
+        "requiredFields" : [ ],
+        "returnedNotInSpec" : [ "status", "msg", "data", "data.id", "data.boughtDate", "data.travelDate", "data.travelTime", "data.accountId", "data.contactsName", "data.documentType", "data.contactsDocumentNumber", "data.trainNumber", "data.coachNumber", "data.seatClass", "data.seatNumber", "data.from", "data.to", "data.status", "data.price" ]
+      } ],
+      "fieldCount" : 1,
+      "notApplicable" : false,
+      "coveredCount" : 0,
+      "coveredFields" : [ ],
+      "uncoveredFields" : [ "200:body" ],
+      "pooledCoveragePercentage" : 0.0,
+      "hierarchicalCoveragePercentage" : 0.0,
+      "notApplicableReason" : null,
+      "optionalFieldCount" : 1,
+      "optionalCoveredCount" : 0,
+      "undocumentedStatusCodes" : [ ],
+      "bodyNotRecordedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 19
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ ],
+      "notApplicableReason" : "NO_COVERED_FIELDS",
+      "constraintPooledCoveragePercentage" : null,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "partitionCount" : 0,
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "constraintPartitionCount" : 0
+    },
+    "statusCodeClassCoveragePercentage" : 33.33333333333333,
+    "missingExpectedStatusCodes" : [ "4xx", "500" ],
+    "uniqueStatusCodes" : [ 200 ],
+    "uniqueRequestBodies" : [ "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-05-12T16:01:15.094+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}", "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-05-12T16:01:15.098+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"c000e38f-5e6b-48e9-be9c-ea7573aec9fd\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}" ],
+    "uniqueResponseBodies" : [ "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-05-12T16:01:15.094+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}}", "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-05-12T16:01:15.098+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"c000e38f-5e6b-48e9-be9c-ea7573aec9fd\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}}" ],
+    "uniqueStatusCodeClasses" : [ "2xx" ],
+    "observedBodyOutcomes" : [ ]
+  }, {
+    "connection" : {
+      "source" : "ts-cancel-service",
+      "destination" : "ts-order-service",
+      "call" : {
+        "method" : "GET",
+        "url" : "http://ts-order-service:12031/api/v1/orderservice/order/{orderId}",
+        "returnType" : "new ParameterizedTypeReference<Response<Order>>() {\n}"
+      },
+      "endpoint" : {
+        "method" : "GET",
+        "path" : "/api/v1/orderservice/order/{orderId}",
+        "arguments" : [ "@PathVariable String orderId", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "org.springframework.http.HttpEntity"
+      },
+      "calls" : [ {
+        "method" : "GET",
+        "url" : "http://ts-order-service:12031/api/v1/orderservice/order/{orderId}",
+        "returnType" : "new ParameterizedTypeReference<Response<Order>>() {\n}"
+      } ],
+      "requestElements" : [ ],
+      "reachableRequestElements" : [ ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : null,
+      "requestBodyOrigins" : [ ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 6,
+    "statusCodes" : [ 200, 200, 200, 200, 200, 200 ],
+    "requestBodies" : [ ],
+    "responseBodies" : [ "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}", "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-05-12T16:01:15.094+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":0,\"price\":\"100.0\"}}", "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d7\",\"boughtDate\":\"2026-05-12T16:01:15.085+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":2,\"price\":\"100.0\"}}", "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}", "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}", "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-05-12T16:01:15.098+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"c000e38f-5e6b-48e9-be9c-ea7573aec9fd\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":0,\"price\":\"100.0\"}}" ],
+    "bodySchemaApplicable" : false,
+    "bodySchemaCheckedCount" : 0,
+    "bodySchemaMatchedCount" : 0,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : null,
+    "requestBodySchemaChecks" : [ ],
+    "expectedStatusCodes" : [ "2xx", "4xx", "500" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : false,
+      "optionalPooledCoveragePercentage" : null,
+      "notApplicable" : false,
+      "coveredCount" : 1,
+      "reachableCount" : 1,
+      "bodySpecMissing" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "coveredElements" : [ "path:orderId" ],
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "notApplicableReason" : null,
+      "optionalCoveredCount" : 0,
+      "optionalReachableCount" : 0,
+      "interfaceMismatch" : false,
+      "bodyNotRecordedReason" : null,
+      "uncoveredElements" : [ ],
+      "notReachableElements" : [ ],
+      "notRecordedElements" : [ ],
+      "unexpectedElements" : [ ]
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ {
+        "element" : "path:orderId",
+        "partitions" : [ {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "coveredCount" : 1,
+        "reachableCount" : 1,
+        "constraintCoveredCount" : 0,
+        "constraintReachableCount" : 0,
+        "uncoveredPartitions" : [ ],
+        "coveredPartitions" : [ "#non-empty" ],
+        "coveragePercentage" : 100.0,
+        "notReachablePartitions" : [ "#empty" ]
+      } ],
+      "notApplicableReason" : null,
+      "constraintPooledCoveragePercentage" : null,
+      "notApplicable" : false,
+      "coveredCount" : 1,
+      "reachableCount" : 1,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "constraintCoveredCount" : 0,
+      "constraintReachableCount" : 0,
+      "outOfSpecValueCount" : 0
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "optionalPooledCoveragePercentage" : 0.0,
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "responseCount" : 6,
+        "bodyRecorded" : true,
+        "coveredFields" : [ ],
+        "uncoveredFields" : [ "body" ],
+        "requiredFields" : [ ],
+        "returnedNotInSpec" : [ "status", "msg", "data", "data.id", "data.boughtDate", "data.travelDate", "data.travelTime", "data.accountId", "data.contactsName", "data.documentType", "data.contactsDocumentNumber", "data.trainNumber", "data.coachNumber", "data.seatClass", "data.seatNumber", "data.from", "data.to", "data.status", "data.price" ]
+      } ],
+      "fieldCount" : 1,
+      "notApplicable" : false,
+      "coveredCount" : 0,
+      "coveredFields" : [ ],
+      "uncoveredFields" : [ "200:body" ],
+      "pooledCoveragePercentage" : 0.0,
+      "hierarchicalCoveragePercentage" : 0.0,
+      "notApplicableReason" : null,
+      "optionalFieldCount" : 1,
+      "optionalCoveredCount" : 0,
+      "undocumentedStatusCodes" : [ ],
+      "bodyNotRecordedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 19
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ ],
+      "notApplicableReason" : "NO_COVERED_FIELDS",
+      "constraintPooledCoveragePercentage" : null,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "partitionCount" : 0,
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "constraintPartitionCount" : 0
+    },
+    "statusCodeClassCoveragePercentage" : 33.33333333333333,
+    "missingExpectedStatusCodes" : [ "4xx", "500" ],
+    "uniqueStatusCodes" : [ 200 ],
+    "uniqueRequestBodies" : [ ],
+    "uniqueResponseBodies" : [ "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}", "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2026-05-12T16:01:15.094+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":0,\"price\":\"100.0\"}}", "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d7\",\"boughtDate\":\"2026-05-12T16:01:15.085+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":2,\"price\":\"100.0\"}}", "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2026-05-12T16:01:15.098+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"c000e38f-5e6b-48e9-be9c-ea7573aec9fd\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":0,\"price\":\"100.0\"}}" ],
+    "uniqueStatusCodeClasses" : [ "2xx" ],
+    "observedBodyOutcomes" : [ ]
+  }, {
+    "connection" : {
+      "source" : "ts-cancel-service",
+      "destination" : "ts-inside-payment-service",
+      "call" : {
+        "method" : "GET",
+        "url" : "http://ts-inside-payment-service:18673/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+        "returnType" : "edu.fudan.common.util.Response"
+      },
+      "endpoint" : {
+        "method" : "GET",
+        "path" : "/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+        "arguments" : [ "@PathVariable String userId", "@PathVariable String money", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "org.springframework.http.HttpEntity"
+      },
+      "calls" : [ {
+        "method" : "GET",
+        "url" : "http://ts-inside-payment-service:18673/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+        "returnType" : "edu.fudan.common.util.Response"
+      } ],
+      "requestElements" : [ ],
+      "reachableRequestElements" : [ ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : null,
+      "requestBodyOrigins" : [ ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 3,
+    "statusCodes" : [ 200, 200, 200 ],
+    "requestBodies" : [ ],
+    "responseBodies" : [ "{\"status\":1,\"msg\":\"Draw Back Money Success\",\"data\":null}", "{\"status\":1,\"msg\":\"Draw Back Money Success\",\"data\":null}", "{\"status\":1,\"msg\":\"Draw Back Money Success\",\"data\":null}" ],
+    "bodySchemaApplicable" : false,
+    "bodySchemaCheckedCount" : 0,
+    "bodySchemaMatchedCount" : 0,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : null,
+    "requestBodySchemaChecks" : [ ],
+    "expectedStatusCodes" : [ "2xx", "4xx", "500" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : false,
+      "optionalPooledCoveragePercentage" : null,
+      "notApplicable" : false,
+      "coveredCount" : 2,
+      "reachableCount" : 2,
+      "bodySpecMissing" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "coveredElements" : [ "path:userId", "path:money" ],
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "notApplicableReason" : null,
+      "optionalCoveredCount" : 0,
+      "optionalReachableCount" : 0,
+      "interfaceMismatch" : false,
+      "bodyNotRecordedReason" : null,
+      "uncoveredElements" : [ ],
+      "notReachableElements" : [ ],
+      "notRecordedElements" : [ ],
+      "unexpectedElements" : [ ]
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ {
+        "element" : "path:userId",
+        "partitions" : [ {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "coveredCount" : 1,
+        "reachableCount" : 1,
+        "constraintCoveredCount" : 0,
+        "constraintReachableCount" : 0,
+        "uncoveredPartitions" : [ ],
+        "coveredPartitions" : [ "#non-empty" ],
+        "coveragePercentage" : 100.0,
+        "notReachablePartitions" : [ "#empty" ]
+      }, {
+        "element" : "path:money",
+        "partitions" : [ {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "coveredCount" : 1,
+        "reachableCount" : 1,
+        "constraintCoveredCount" : 0,
+        "constraintReachableCount" : 0,
+        "uncoveredPartitions" : [ ],
+        "coveredPartitions" : [ "#non-empty" ],
+        "coveragePercentage" : 100.0,
+        "notReachablePartitions" : [ "#empty" ]
+      } ],
+      "notApplicableReason" : null,
+      "constraintPooledCoveragePercentage" : null,
+      "notApplicable" : false,
+      "coveredCount" : 2,
+      "reachableCount" : 2,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "constraintCoveredCount" : 0,
+      "constraintReachableCount" : 0,
+      "outOfSpecValueCount" : 0
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "optionalPooledCoveragePercentage" : 0.0,
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "responseCount" : 3,
+        "bodyRecorded" : true,
+        "coveredFields" : [ ],
+        "uncoveredFields" : [ "body" ],
+        "requiredFields" : [ ],
+        "returnedNotInSpec" : [ "status", "msg" ]
+      } ],
+      "fieldCount" : 1,
+      "notApplicable" : false,
+      "coveredCount" : 0,
+      "coveredFields" : [ ],
+      "uncoveredFields" : [ "200:body" ],
+      "pooledCoveragePercentage" : 0.0,
+      "hierarchicalCoveragePercentage" : 0.0,
+      "notApplicableReason" : null,
+      "optionalFieldCount" : 1,
+      "optionalCoveredCount" : 0,
+      "undocumentedStatusCodes" : [ ],
+      "bodyNotRecordedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 2
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ ],
+      "notApplicableReason" : "NO_COVERED_FIELDS",
+      "constraintPooledCoveragePercentage" : null,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "partitionCount" : 0,
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "constraintPartitionCount" : 0
+    },
+    "statusCodeClassCoveragePercentage" : 33.33333333333333,
+    "missingExpectedStatusCodes" : [ "4xx", "500" ],
+    "uniqueStatusCodes" : [ 200 ],
+    "uniqueRequestBodies" : [ ],
+    "uniqueResponseBodies" : [ "{\"status\":1,\"msg\":\"Draw Back Money Success\",\"data\":null}" ],
+    "uniqueStatusCodeClasses" : [ "2xx" ],
+    "observedBodyOutcomes" : [ ]
+  }, {
+    "connection" : {
+      "source" : "ts-cancel-service",
+      "destination" : "ts-user-service",
+      "call" : {
+        "method" : "GET",
+        "url" : "http://ts-user-service:12342/api/v1/userservice/users/id/{orderId}",
+        "returnType" : "new ParameterizedTypeReference<Response<User>>() {\n}"
+      },
+      "endpoint" : {
+        "method" : "GET",
+        "path" : "/api/v1/userservice/users/id/{userId}",
+        "arguments" : [ "@PathVariable String userId", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "ResponseEntity<Response>"
+      },
+      "calls" : [ {
+        "method" : "GET",
+        "url" : "http://ts-user-service:12342/api/v1/userservice/users/id/{orderId}",
+        "returnType" : "new ParameterizedTypeReference<Response<User>>() {\n}"
+      } ],
+      "requestElements" : [ ],
+      "reachableRequestElements" : [ ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : null,
+      "requestBodyOrigins" : [ ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 2,
+    "statusCodes" : [ 200, 200 ],
+    "requestBodies" : [ ],
+    "responseBodies" : [ "{\"status\":1,\"msg\":\"Find User Success\",\"data\":{\"userId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"userName\":\"fdse_microservice\",\"password\":\"111111\",\"gender\":1,\"documentType\":1,\"documentNum\":\"2135488099312X\",\"email\":\"fdse_microservice@163.com\"}}", "{\"status\":0,\"msg\":\"No User\",\"data\":null}" ],
+    "bodySchemaApplicable" : false,
+    "bodySchemaCheckedCount" : 0,
+    "bodySchemaMatchedCount" : 0,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : null,
+    "requestBodySchemaChecks" : [ ],
+    "expectedStatusCodes" : [ "2xx", "4xx", "500" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : false,
+      "optionalPooledCoveragePercentage" : null,
+      "notApplicable" : false,
+      "coveredCount" : 1,
+      "reachableCount" : 1,
+      "bodySpecMissing" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "coveredElements" : [ "path:userId" ],
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "notApplicableReason" : null,
+      "optionalCoveredCount" : 0,
+      "optionalReachableCount" : 0,
+      "interfaceMismatch" : false,
+      "bodyNotRecordedReason" : null,
+      "uncoveredElements" : [ ],
+      "notReachableElements" : [ ],
+      "notRecordedElements" : [ ],
+      "unexpectedElements" : [ ]
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ {
+        "element" : "path:userId",
+        "partitions" : [ {
+          "id" : "#empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : false,
+          "covered" : false
+        }, {
+          "id" : "#non-empty",
+          "group" : "EMPTY",
+          "source" : "TYPE_DEFAULT",
+          "reachable" : true,
+          "covered" : true
+        } ],
+        "outOfSpecValues" : [ ],
+        "staticConstants" : null,
+        "neverNull" : false,
+        "outOfSpecConstants" : [ ],
+        "coveredCount" : 1,
+        "reachableCount" : 1,
+        "constraintCoveredCount" : 0,
+        "constraintReachableCount" : 0,
+        "uncoveredPartitions" : [ ],
+        "coveredPartitions" : [ "#non-empty" ],
+        "coveragePercentage" : 100.0,
+        "notReachablePartitions" : [ "#empty" ]
+      } ],
+      "notApplicableReason" : null,
+      "constraintPooledCoveragePercentage" : null,
+      "notApplicable" : false,
+      "coveredCount" : 1,
+      "reachableCount" : 1,
+      "pooledCoveragePercentage" : 100.0,
+      "hierarchicalCoveragePercentage" : 100.0,
+      "constraintCoveredCount" : 0,
+      "constraintReachableCount" : 0,
+      "outOfSpecValueCount" : 0
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "optionalPooledCoveragePercentage" : 0.0,
+      "statusCodes" : [ {
+        "statusCode" : 200,
+        "specKey" : "200",
+        "responseCount" : 2,
+        "bodyRecorded" : true,
+        "coveredFields" : [ ],
+        "uncoveredFields" : [ "body" ],
+        "requiredFields" : [ ],
+        "returnedNotInSpec" : [ "status", "msg", "data", "data.userId", "data.userName", "data.password", "data.gender", "data.documentType", "data.documentNum", "data.email" ]
+      } ],
+      "fieldCount" : 1,
+      "notApplicable" : false,
+      "coveredCount" : 0,
+      "coveredFields" : [ ],
+      "uncoveredFields" : [ "200:body" ],
+      "pooledCoveragePercentage" : 0.0,
+      "hierarchicalCoveragePercentage" : 0.0,
+      "notApplicableReason" : null,
+      "optionalFieldCount" : 1,
+      "optionalCoveredCount" : 0,
+      "undocumentedStatusCodes" : [ ],
+      "bodyNotRecordedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 10
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ ],
+      "notApplicableReason" : "NO_COVERED_FIELDS",
+      "constraintPooledCoveragePercentage" : null,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "partitionCount" : 0,
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "constraintPartitionCount" : 0
+    },
+    "statusCodeClassCoveragePercentage" : 33.33333333333333,
+    "missingExpectedStatusCodes" : [ "4xx", "500" ],
+    "uniqueStatusCodes" : [ 200 ],
+    "uniqueRequestBodies" : [ ],
+    "uniqueResponseBodies" : [ "{\"status\":1,\"msg\":\"Find User Success\",\"data\":{\"userId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"userName\":\"fdse_microservice\",\"password\":\"111111\",\"gender\":1,\"documentType\":1,\"documentNum\":\"2135488099312X\",\"email\":\"fdse_microservice@163.com\"}}", "{\"status\":0,\"msg\":\"No User\",\"data\":null}" ],
+    "uniqueStatusCodeClasses" : [ "2xx" ],
+    "observedBodyOutcomes" : [ ]
+  }, {
+    "connection" : {
+      "source" : "ts-cancel-service",
+      "destination" : "ts-notification-service",
+      "call" : {
+        "method" : "POST",
+        "url" : "http://ts-notification-service:17853/api/v1/notifyservice/notification/order_cancel_success",
+        "returnType" : "Boolean"
+      },
+      "endpoint" : {
+        "method" : "POST",
+        "path" : "/api/v1/notifyservice/notification/order_cancel_success",
+        "arguments" : [ "@RequestBody NotifyInfo info", "@RequestHeader HttpHeaders headers" ],
+        "returnType" : "boolean"
+      },
+      "calls" : [ {
+        "method" : "POST",
+        "url" : "http://ts-notification-service:17853/api/v1/notifyservice/notification/order_cancel_success",
+        "returnType" : "Boolean"
+      } ],
+      "requestElements" : [ ],
+      "reachableRequestElements" : [ ],
+      "notReachableRequestElements" : [ ],
+      "requestBodyType" : null,
+      "requestBodyOrigins" : [ ],
+      "requestElementConstants" : { },
+      "neverNullRequestElements" : [ ],
+      "neverSentArguments" : [ ],
+      "staticallyMissingArguments" : [ ]
+    },
+    "count" : 1,
+    "statusCodes" : [ 200 ],
+    "requestBodies" : [ ],
+    "responseBodies" : [ ],
+    "bodySchemaApplicable" : false,
+    "bodySchemaCheckedCount" : 0,
+    "bodySchemaMatchedCount" : 0,
+    "bodySchemaMissingCount" : 0,
+    "bodySchemaMismatchReason" : null,
+    "bodySchema" : null,
+    "requestBodySchemaChecks" : [ ],
+    "expectedStatusCodes" : [ "2xx", "4xx", "500" ],
+    "requestElementCoverage" : {
+      "bodyNotRecorded" : false,
+      "optionalPooledCoveragePercentage" : null,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "reachableCount" : 0,
+      "bodySpecMissing" : false,
+      "onlyInSpec" : [ ],
+      "onlyInCaller" : [ ],
+      "coveredElements" : [ ],
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "notApplicableReason" : "NONE_REACHABLE",
+      "optionalCoveredCount" : 0,
+      "optionalReachableCount" : 0,
+      "interfaceMismatch" : false,
+      "bodyNotRecordedReason" : null,
+      "uncoveredElements" : [ ],
+      "notReachableElements" : [ "body:date", "body:email", "body:endPlace", "body:orderNumber", "body:price", "body:seatClass", "body:seatNumber", "body:startingPlace", "body:startingTime", "body:username" ],
+      "notRecordedElements" : [ ],
+      "unexpectedElements" : [ ]
+    },
+    "requestValuePartitionCoverage" : {
+      "elements" : [ ],
+      "notApplicableReason" : "NONE_REACHABLE",
+      "constraintPooledCoveragePercentage" : null,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "reachableCount" : 0,
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "constraintCoveredCount" : 0,
+      "constraintReachableCount" : 0,
+      "outOfSpecValueCount" : 0
+    },
+    "responseFieldCoverage" : {
+      "ignoredStatusCodes" : [ ],
+      "optionalPooledCoveragePercentage" : null,
+      "statusCodes" : [ ],
+      "fieldCount" : 0,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "coveredFields" : [ ],
+      "uncoveredFields" : [ ],
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "notApplicableReason" : "CALLEE_NOT_TRACED",
+      "optionalFieldCount" : 0,
+      "optionalCoveredCount" : 0,
+      "undocumentedStatusCodes" : [ ],
+      "bodyNotRecordedStatusCodes" : [ ],
+      "returnedNotInSpecCount" : 0
+    },
+    "responseValuePartitionCoverage" : {
+      "statusCodes" : [ ],
+      "notApplicableReason" : "CALLEE_NOT_TRACED",
+      "constraintPooledCoveragePercentage" : null,
+      "notApplicable" : true,
+      "coveredCount" : 0,
+      "partitionCount" : 0,
+      "pooledCoveragePercentage" : null,
+      "hierarchicalCoveragePercentage" : null,
+      "constraintCoveredCount" : 0,
+      "outOfSpecValueCount" : 0,
+      "constraintPartitionCount" : 0
+    },
+    "statusCodeClassCoveragePercentage" : 33.33333333333333,
+    "missingExpectedStatusCodes" : [ "4xx", "500" ],
+    "uniqueStatusCodes" : [ 200 ],
+    "uniqueRequestBodies" : [ ],
+    "uniqueResponseBodies" : [ ],
+    "uniqueStatusCodeClasses" : [ "2xx" ],
+    "observedBodyOutcomes" : [ ]
+  } ],
+  "excludedConnections" : [ ],
+  "executedExcludedConnections" : [ ],
+  "exclusionWarnings" : [ ],
+  "connectionsWithResponseFieldCoverageNotApplicable" : 1,
+  "coveredConnectionsStatusCodeClassCoveragePercentage" : 33.33333333333333,
+  "requestElementMeanHierarchicalCoveragePercentage" : 100.0,
+  "connectionsWithRequestElementCoverageNotApplicable" : 2,
+  "requestValuePartitionConstraintPooledCoveragePercentage" : null,
+  "requestValuePartitionMeanPooledCoveragePercentage" : 100.0,
+  "requestValuePartitionMeanHierarchicalCoveragePercentage" : 100.0,
+  "requestValuePartitionMinPooledCoveragePercentage" : 100.0,
+  "requestValuePartitionMedianPooledCoveragePercentage" : 100.0,
+  "connectionsWithRequestValuePartitionCoverageNotApplicable" : 2,
+  "responseValuePartitionConstraintPooledCoveragePercentage" : null,
+  "responseValuePartitionMeanPooledCoveragePercentage" : null,
+  "responseValuePartitionMeanHierarchicalCoveragePercentage" : null,
+  "responseValuePartitionMinPooledCoveragePercentage" : null,
+  "responseValuePartitionMedianPooledCoveragePercentage" : null,
+  "connectionsWithResponseValuePartitionCoverageNotApplicable" : 5,
+  "statusCodeClassMinCoveragePercentage" : 33.33333333333333,
+  "statusCodeClassMedianCoveragePercentage" : 33.33333333333333,
+  "statusCodeClassCoveragePercentage" : 23.809523809523803,
+  "responseFieldPooledCoveragePercentage" : 0.0,
+  "responseFieldMeanPooledCoveragePercentage" : 0.0,
+  "responseFieldMeanHierarchicalCoveragePercentage" : 0.0,
+  "responseFieldOptionalPooledCoveragePercentage" : 0.0,
+  "responseFieldMinPooledCoveragePercentage" : 0.0,
+  "responseFieldMedianPooledCoveragePercentage" : 0.0,
+  "responseFieldReturnedNotInSpecCount" : 50,
+  "responseFieldNotApplicableReasons" : {
+    "CALLEE_NOT_TRACED" : 1
+  },
+  "connectionsWithCorrectStatusCodeClass" : 5,
+  "connectionsWithClientErrorStatusCodeClasses" : 0,
+  "connectionsWithServerErrorStatusCodeClasses" : 0,
+  "requestElementPooledCoveragePercentage" : 100.0,
+  "requestElementOptionalPooledCoveragePercentage" : null,
+  "requestElementMeanPooledCoveragePercentage" : 100.0,
+  "requestElementMinPooledCoveragePercentage" : 100.0,
+  "requestElementMedianPooledCoveragePercentage" : 100.0,
+  "requestElementNotApplicableReasons" : {
+    "NONE_REACHABLE" : 2
+  },
+  "connectionsWithInterfaceMismatch" : 0,
+  "requestValuePartitionPooledCoveragePercentage" : 100.0,
+  "requestValuePartitionConstraintSharePercentage" : 0.0,
+  "connectionsWithRequestValuePartitions" : 3,
+  "requestValuePartitionNotApplicableReasons" : {
+    "NONE_REACHABLE" : 2
+  },
+  "requestValuePartitionOutOfSpecValueCount" : 0,
+  "responseValuePartitionPooledCoveragePercentage" : null,
+  "responseValuePartitionConstraintSharePercentage" : null,
+  "connectionsWithResponseValuePartitions" : 0,
+  "responseValuePartitionNotApplicableReasons" : {
+    "CALLEE_NOT_TRACED" : 1,
+    "NO_COVERED_FIELDS" : 4
+  },
+  "responseValuePartitionOutOfSpecValueCount" : 0,
+  "bodySchemaCheckedCount" : 2,
+  "bodySchemaMatchedCount" : 2,
+  "bodySchemaMissingCount" : 0,
+  "connectionsWithResponseFields" : 4,
+  "totalConnections" : 7,
+  "connectionCoveragePercentage" : 71.42857142857143,
+  "connectionsWithBodySchema" : 1,
+  "connectionsWithRequestElements" : 3,
+  "connectionsWithBodyNotRecorded" : 0
+}

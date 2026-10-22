@@ -1,0 +1,3611 @@
+{
+ "rootService": "ts-preserve-service",
+ "paths": [
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-assurance-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-assurance-service:18888/api/v1/assuranceservice/assurances/{assuranceType}/{orderId}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "assurance.controller.AssuranceController#createNewAssurance[assurance.controller.int, assurance.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/assuranceservice/assurances/{typeIndex}/{orderId}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable int typeIndex",
+      "@PathVariable String orderId",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "assuranceType",
+      "orderId"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable int typeIndex"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-assurance-service|GET|http://ts-assurance-service:18888/api/v1/assuranceservice/assurances/{assuranceType}/{orderId}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-food-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-food-service:18856/api/v1/foodservice/orders",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "foodsearch.controller.FoodController#createFoodOrder[foodsearch.entity.FoodOrder, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/foodservice/orders",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody FoodOrder addFoodOrder",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.FoodOrder",
+     "bodyProperties": [
+      "id",
+      "orderId",
+      "foodType",
+      "stationName",
+      "storeName",
+      "foodName",
+      "price"
+     ],
+     "reachableBodyProperties": [
+      "orderId",
+      "foodType",
+      "stationName",
+      "storeName",
+      "foodName",
+      "price"
+     ],
+     "notReachableBodyProperties": [
+      "id"
+     ],
+     "bodyOrigins": [
+      "new FoodOrder() in PreserveServiceImpl.preserve",
+      "6 setter call(s)/assignment(s) on foodOrder in PreserveServiceImpl.preserve"
+     ]
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-food-service|POST|http://ts-food-service:18856/api/v1/foodservice/orders",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-travel-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/travelservice/trip_detail",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-route-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-route-service:11178/api/v1/routeservice/routes/{routeId}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "route.controller.RouteController#queryById[route.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/routeservice/routes/{routeId}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String routeId",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "routeId"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail->ts-route-service|GET|http://ts-route-service:11178/api/v1/routeservice/routes/{routeId}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-travel-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/travelservice/trip_detail",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-ticketinfo-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/ticketinfoservice/ticketinfo",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "travel.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Travel() in TravelServiceImpl.getTickets",
+      "4 setter call(s)/assignment(s) on query in TravelServiceImpl.getTickets"
+     ]
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail->ts-ticketinfo-service|POST|http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-travel-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/travelservice/trip_detail",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-ticketinfo-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/{stationName}",
+     "destinationReturnType": "Response<String>",
+     "destinationEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForStationId[ticketinfo.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/ticketinfoservice/ticketinfo/{name}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String name",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "stationName"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable String name"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    },
+    {
+     "sourceService": "ts-ticketinfo-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForStationId[ticketinfo.controller.String, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "GET",
+     "sourcePath": "/api/v1/ticketinfoservice/ticketinfo/{name}",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-basic-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-basic-service:15680/api/v1/basicservice/basic/{name}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForStationId[fdse.microservice.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/basicservice/basic/{stationName}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String stationName",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "name"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable String stationName"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    },
+    {
+     "sourceService": "ts-basic-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForStationId[fdse.microservice.controller.String, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "GET",
+     "sourcePath": "/api/v1/basicservice/basic/{stationName}",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-station-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-station-service:12345/api/v1/stationservice/stations/id/{stationName}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.StationController#queryForStationId[fdse.microservice.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/stationservice/stations/id/{stationNameForId}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable(value = \"stationNameForId\") String stationName",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "stationName"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable(value = \"stationNameForId\") String stationName"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail->ts-ticketinfo-service|GET|http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/{stationName}->ts-basic-service|GET|http://ts-basic-service:15680/api/v1/basicservice/basic/{name}->ts-station-service|GET|http://ts-station-service:12345/api/v1/stationservice/stations/id/{stationName}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-travel-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/travelservice/trip_detail",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-ticketinfo-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/ticketinfoservice/ticketinfo",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "travel.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Travel() in TravelServiceImpl.getTickets",
+      "4 setter call(s)/assignment(s) on query in TravelServiceImpl.getTickets"
+     ]
+    },
+    {
+     "sourceService": "ts-ticketinfo-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/ticketinfoservice/ticketinfo",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-basic-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-basic-service:15680/api/v1/basicservice/basic/travel",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/basicservice/basic/travel",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "ticketinfo.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "all properties: parameter info of TicketInfoController.queryForTravel (no call site found)"
+     ]
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail->ts-ticketinfo-service|POST|http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo->ts-basic-service|POST|http://ts-basic-service:15680/api/v1/basicservice/basic/travel",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-user-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-user-service:12342/api/v1/userservice/users/id/{accountId}",
+     "destinationReturnType": "Response<User>",
+     "destinationEndpointMethodKey": "user.controller.UserController#getUserByUserId[user.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/userservice/users/id/{userId}",
+     "destinationEndpointReturnType": "ResponseEntity<Response>",
+     "destinationEndpointArguments": [
+      "@PathVariable String userId",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "accountId"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable String userId"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-user-service|GET|http://ts-user-service:12342/api/v1/userservice/users/id/{accountId}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-seat-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-seat-service:18898/api/v1/seatservice/seats",
+     "destinationReturnType": "Response<Ticket>",
+     "destinationEndpointMethodKey": "seat.controller.SeatController#create[seat.entity.Seat, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/seatservice/seats",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Seat seatRequest",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.Seat",
+     "bodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "reachableBodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Seat() in PreserveServiceImpl.dipatchSeat",
+      "5 setter call(s)/assignment(s) on seatRequest in PreserveServiceImpl.dipatchSeat"
+     ]
+    },
+    {
+     "sourceService": "ts-seat-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "seat.controller.SeatController#create[seat.entity.Seat, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/seatservice/seats",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-order-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-order-service:12031/api/v1/orderservice/order/tickets",
+     "destinationReturnType": "Response<LeftTicketInfo>",
+     "destinationEndpointMethodKey": "order.controller.OrderController#getTicketListByDateAndTripId[order.controller.Seat, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/orderservice/order/tickets",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Seat seatRequest",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@RequestBody Seat seatRequest"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "seat.entity.Seat",
+     "bodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "reachableBodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "all properties: parameter seatRequest of SeatController.create (no call site found)",
+      "recursive call of SeatServiceImpl.distributeSeat"
+     ]
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-seat-service|POST|http://ts-seat-service:18898/api/v1/seatservice/seats->ts-order-service|POST|http://ts-order-service:12031/api/v1/orderservice/order/tickets",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-travel-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/travelservice/trip_detail",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-seat-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-seat-service:18898/api/v1/seatservice/seats/left_tickets",
+     "destinationReturnType": "Response<Integer>",
+     "destinationEndpointMethodKey": "seat.controller.SeatController#getLeftTicketOfInterval[seat.entity.Seat, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/seatservice/seats/left_tickets",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Seat seatRequest",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "travel.entity.Seat",
+     "bodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "reachableBodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Seat() in TravelServiceImpl.getRestTicketNumber",
+      "5 setter call(s)/assignment(s) on seatRequest in TravelServiceImpl.getRestTicketNumber"
+     ]
+    },
+    {
+     "sourceService": "ts-seat-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "seat.controller.SeatController#getLeftTicketOfInterval[seat.entity.Seat, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/seatservice/seats/left_tickets",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-order-other-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/tickets",
+     "destinationReturnType": "Response<LeftTicketInfo>",
+     "destinationEndpointMethodKey": "other.controller.OrderOtherController#getTicketListByDateAndTripId[other.controller.Seat, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/orderOtherService/orderOther/tickets",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Seat seatRequest",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@RequestBody Seat seatRequest"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "seat.entity.Seat",
+     "bodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "reachableBodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "all properties: parameter seatRequest of SeatController.getLeftTicketOfInterval (no call site found)",
+      "recursive call of SeatServiceImpl.getLeftTicketOfInterval"
+     ]
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail->ts-seat-service|POST|http://ts-seat-service:18898/api/v1/seatservice/seats/left_tickets->ts-order-other-service|POST|http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/tickets",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-travel-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/travelservice/trip_detail",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-ticketinfo-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/ticketinfoservice/ticketinfo",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "travel.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Travel() in TravelServiceImpl.getTickets",
+      "4 setter call(s)/assignment(s) on query in TravelServiceImpl.getTickets"
+     ]
+    },
+    {
+     "sourceService": "ts-ticketinfo-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/ticketinfoservice/ticketinfo",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-basic-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-basic-service:15680/api/v1/basicservice/basic/travel",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/basicservice/basic/travel",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "ticketinfo.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "all properties: parameter info of TicketInfoController.queryForTravel (no call site found)"
+     ]
+    },
+    {
+     "sourceService": "ts-basic-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/basicservice/basic/travel",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-price-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-price-service:16579/api/v1/priceservice/prices/{routeId}/{trainType}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "price.controller.PriceController#query[price.controller.String, price.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/priceservice/prices/{routeId}/{trainType}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String routeId",
+      "@PathVariable String trainType",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "routeId",
+      "trainType"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail->ts-ticketinfo-service|POST|http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo->ts-basic-service|POST|http://ts-basic-service:15680/api/v1/basicservice/basic/travel->ts-price-service|GET|http://ts-price-service:16579/api/v1/priceservice/prices/{routeId}/{trainType}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-travel-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/travelservice/trip_detail",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-seat-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-seat-service:18898/api/v1/seatservice/seats/left_tickets",
+     "destinationReturnType": "Response<Integer>",
+     "destinationEndpointMethodKey": "seat.controller.SeatController#getLeftTicketOfInterval[seat.entity.Seat, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/seatservice/seats/left_tickets",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Seat seatRequest",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "travel.entity.Seat",
+     "bodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "reachableBodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Seat() in TravelServiceImpl.getRestTicketNumber",
+      "5 setter call(s)/assignment(s) on seatRequest in TravelServiceImpl.getRestTicketNumber"
+     ]
+    },
+    {
+     "sourceService": "ts-seat-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "seat.controller.SeatController#getLeftTicketOfInterval[seat.entity.Seat, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/seatservice/seats/left_tickets",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-order-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-order-service:12031/api/v1/orderservice/order/tickets",
+     "destinationReturnType": "Response<LeftTicketInfo>",
+     "destinationEndpointMethodKey": "order.controller.OrderController#getTicketListByDateAndTripId[order.controller.Seat, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/orderservice/order/tickets",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Seat seatRequest",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@RequestBody Seat seatRequest"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "seat.entity.Seat",
+     "bodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "reachableBodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "all properties: parameter seatRequest of SeatController.getLeftTicketOfInterval (no call site found)",
+      "recursive call of SeatServiceImpl.getLeftTicketOfInterval"
+     ]
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail->ts-seat-service|POST|http://ts-seat-service:18898/api/v1/seatservice/seats/left_tickets->ts-order-service|POST|http://ts-order-service:12031/api/v1/orderservice/order/tickets",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-ticketinfo-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo",
+     "destinationReturnType": "Response<TravelResult>",
+     "destinationEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/ticketinfoservice/ticketinfo",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Travel() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on query in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-ticketinfo-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/ticketinfoservice/ticketinfo",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-basic-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-basic-service:15680/api/v1/basicservice/basic/travel",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/basicservice/basic/travel",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "ticketinfo.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "all properties: parameter info of TicketInfoController.queryForTravel (no call site found)"
+     ]
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-ticketinfo-service|POST|http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo->ts-basic-service|POST|http://ts-basic-service:15680/api/v1/basicservice/basic/travel",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-security-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-security-service:11188/api/v1/securityservice/securityConfigs/{accountId}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "security.controller.SecurityController#check[security.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/securityservice/securityConfigs/{accountId}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String accountId",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "accountId"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    },
+    {
+     "sourceService": "ts-security-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "security.controller.SecurityController#check[security.controller.String, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "GET",
+     "sourcePath": "/api/v1/securityservice/securityConfigs/{accountId}",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-order-other-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/security/{checkDate}/{accountId}",
+     "destinationReturnType": "Response<OrderSecurity>",
+     "destinationEndpointMethodKey": "other.controller.OrderOtherController#securityInfoCheck[other.controller.String, other.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/orderOtherService/orderOther/security/{checkDate}/{accountId}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String checkDate",
+      "@PathVariable String accountId",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "checkDate",
+      "accountId"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-security-service|GET|http://ts-security-service:11188/api/v1/securityservice/securityConfigs/{accountId}->ts-order-other-service|GET|http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/security/{checkDate}/{accountId}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-seat-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-seat-service:18898/api/v1/seatservice/seats",
+     "destinationReturnType": "Response<Ticket>",
+     "destinationEndpointMethodKey": "seat.controller.SeatController#create[seat.entity.Seat, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/seatservice/seats",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Seat seatRequest",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.Seat",
+     "bodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "reachableBodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Seat() in PreserveServiceImpl.dipatchSeat",
+      "5 setter call(s)/assignment(s) on seatRequest in PreserveServiceImpl.dipatchSeat"
+     ]
+    },
+    {
+     "sourceService": "ts-seat-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "seat.controller.SeatController#create[seat.entity.Seat, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/seatservice/seats",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-order-other-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/tickets",
+     "destinationReturnType": "Response<LeftTicketInfo>",
+     "destinationEndpointMethodKey": "other.controller.OrderOtherController#getTicketListByDateAndTripId[other.controller.Seat, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/orderOtherService/orderOther/tickets",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Seat seatRequest",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@RequestBody Seat seatRequest"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "seat.entity.Seat",
+     "bodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "reachableBodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "all properties: parameter seatRequest of SeatController.create (no call site found)",
+      "recursive call of SeatServiceImpl.distributeSeat"
+     ]
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-seat-service|POST|http://ts-seat-service:18898/api/v1/seatservice/seats->ts-order-other-service|POST|http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/tickets",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-seat-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-seat-service:18898/api/v1/seatservice/seats",
+     "destinationReturnType": "Response<Ticket>",
+     "destinationEndpointMethodKey": "seat.controller.SeatController#create[seat.entity.Seat, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/seatservice/seats",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Seat seatRequest",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.Seat",
+     "bodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "reachableBodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Seat() in PreserveServiceImpl.dipatchSeat",
+      "5 setter call(s)/assignment(s) on seatRequest in PreserveServiceImpl.dipatchSeat"
+     ]
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-seat-service|POST|http://ts-seat-service:18898/api/v1/seatservice/seats",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-consign-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-consign-service:16111/api/v1/consignservice/consigns",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "consign.controller.ConsignController#insertConsign[consign.entity.Consign, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/consignservice/consigns",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Consign request",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.Consign",
+     "bodyProperties": [
+      "id",
+      "orderId",
+      "accountId",
+      "handleDate",
+      "targetDate",
+      "from",
+      "to",
+      "consignee",
+      "phone",
+      "weight",
+      "within"
+     ],
+     "reachableBodyProperties": [
+      "orderId",
+      "accountId",
+      "handleDate",
+      "targetDate",
+      "from",
+      "to",
+      "consignee",
+      "phone",
+      "weight",
+      "within"
+     ],
+     "notReachableBodyProperties": [
+      "id"
+     ],
+     "bodyOrigins": [
+      "new Consign() in PreserveServiceImpl.preserve",
+      "10 setter call(s)/assignment(s) on consignRequest in PreserveServiceImpl.preserve"
+     ]
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-consign-service|POST|http://ts-consign-service:16111/api/v1/consignservice/consigns",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-ticketinfo-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo",
+     "destinationReturnType": "Response<TravelResult>",
+     "destinationEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/ticketinfoservice/ticketinfo",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Travel() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on query in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-ticketinfo-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/ticketinfoservice/ticketinfo",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-basic-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-basic-service:15680/api/v1/basicservice/basic/travel",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/basicservice/basic/travel",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "ticketinfo.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "all properties: parameter info of TicketInfoController.queryForTravel (no call site found)"
+     ]
+    },
+    {
+     "sourceService": "ts-basic-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/basicservice/basic/travel",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-price-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-price-service:16579/api/v1/priceservice/prices/{routeId}/{trainType}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "price.controller.PriceController#query[price.controller.String, price.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/priceservice/prices/{routeId}/{trainType}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String routeId",
+      "@PathVariable String trainType",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "routeId",
+      "trainType"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-ticketinfo-service|POST|http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo->ts-basic-service|POST|http://ts-basic-service:15680/api/v1/basicservice/basic/travel->ts-price-service|GET|http://ts-price-service:16579/api/v1/priceservice/prices/{routeId}/{trainType}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-order-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-order-service:12031/api/v1/orderservice/order",
+     "destinationReturnType": "Response<Order>",
+     "destinationEndpointMethodKey": "order.controller.OrderController#createNewOrder[order.controller.Order, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/orderservice/order",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Order createOrder",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.Order",
+     "bodyProperties": [
+      "id",
+      "boughtDate",
+      "travelDate",
+      "travelTime",
+      "accountId",
+      "contactsName",
+      "documentType",
+      "contactsDocumentNumber",
+      "trainNumber",
+      "coachNumber",
+      "seatClass",
+      "seatNumber",
+      "from",
+      "to",
+      "status",
+      "price"
+     ],
+     "reachableBodyProperties": [
+      "id",
+      "boughtDate",
+      "travelDate",
+      "travelTime",
+      "accountId",
+      "contactsName",
+      "documentType",
+      "contactsDocumentNumber",
+      "trainNumber",
+      "coachNumber",
+      "seatClass",
+      "seatNumber",
+      "from",
+      "to",
+      "status",
+      "price"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Order() in PreserveServiceImpl.preserve",
+      "19 setter call(s)/assignment(s) on order in PreserveServiceImpl.preserve"
+     ]
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-order-service|POST|http://ts-order-service:12031/api/v1/orderservice/order",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-security-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-security-service:11188/api/v1/securityservice/securityConfigs/{accountId}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "security.controller.SecurityController#check[security.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/securityservice/securityConfigs/{accountId}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String accountId",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "accountId"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-security-service|GET|http://ts-security-service:11188/api/v1/securityservice/securityConfigs/{accountId}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-travel-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/travelservice/trip_detail",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-ticketinfo-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/{stationName}",
+     "destinationReturnType": "Response<String>",
+     "destinationEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForStationId[ticketinfo.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/ticketinfoservice/ticketinfo/{name}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String name",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "stationName"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable String name"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    },
+    {
+     "sourceService": "ts-ticketinfo-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForStationId[ticketinfo.controller.String, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "GET",
+     "sourcePath": "/api/v1/ticketinfoservice/ticketinfo/{name}",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-basic-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-basic-service:15680/api/v1/basicservice/basic/{name}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForStationId[fdse.microservice.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/basicservice/basic/{stationName}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String stationName",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "name"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable String stationName"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail->ts-ticketinfo-service|GET|http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/{stationName}->ts-basic-service|GET|http://ts-basic-service:15680/api/v1/basicservice/basic/{name}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-travel-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/travelservice/trip_detail",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-ticketinfo-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/ticketinfoservice/ticketinfo",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "travel.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Travel() in TravelServiceImpl.getTickets",
+      "4 setter call(s)/assignment(s) on query in TravelServiceImpl.getTickets"
+     ]
+    },
+    {
+     "sourceService": "ts-ticketinfo-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/ticketinfoservice/ticketinfo",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-basic-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-basic-service:15680/api/v1/basicservice/basic/travel",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/basicservice/basic/travel",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "ticketinfo.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "all properties: parameter info of TicketInfoController.queryForTravel (no call site found)"
+     ]
+    },
+    {
+     "sourceService": "ts-basic-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/basicservice/basic/travel",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-route-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-route-service:11178/api/v1/routeservice/routes/{routeId}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "route.controller.RouteController#queryById[route.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/routeservice/routes/{routeId}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String routeId",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "routeId"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail->ts-ticketinfo-service|POST|http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo->ts-basic-service|POST|http://ts-basic-service:15680/api/v1/basicservice/basic/travel->ts-route-service|GET|http://ts-route-service:11178/api/v1/routeservice/routes/{routeId}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-notification-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-notification-service:17853/api/v1/notifyservice/notification/preserve_success",
+     "destinationReturnType": "Boolean",
+     "destinationEndpointMethodKey": "notification.controller.NotificationController#preserve_success[notification.entity.NotifyInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/notifyservice/notification/preserve_success",
+     "destinationEndpointReturnType": "boolean",
+     "destinationEndpointArguments": [
+      "@RequestBody NotifyInfo info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.NotifyInfo",
+     "bodyProperties": [
+      "email",
+      "orderNumber",
+      "username",
+      "startingPlace",
+      "endPlace",
+      "startingTime",
+      "date",
+      "seatClass",
+      "seatNumber",
+      "price"
+     ],
+     "reachableBodyProperties": [
+      "email",
+      "orderNumber",
+      "username",
+      "startingPlace",
+      "endPlace",
+      "startingTime",
+      "date",
+      "seatClass",
+      "seatNumber",
+      "price"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new NotifyInfo() in PreserveServiceImpl.preserve",
+      "10 setter call(s)/assignment(s) on notifyInfo in PreserveServiceImpl.preserve"
+     ]
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-notification-service|POST|http://ts-notification-service:17853/api/v1/notifyservice/notification/preserve_success",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-station-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-station-service:12345/api/v1/stationservice/stations/id/{stationName}",
+     "destinationReturnType": "Response<String>",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.StationController#queryForStationId[fdse.microservice.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/stationservice/stations/id/{stationNameForId}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable(value = \"stationNameForId\") String stationName",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "stationName"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable(value = \"stationNameForId\") String stationName"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-station-service|GET|http://ts-station-service:12345/api/v1/stationservice/stations/id/{stationName}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-ticketinfo-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo",
+     "destinationReturnType": "Response<TravelResult>",
+     "destinationEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/ticketinfoservice/ticketinfo",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Travel() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on query in PreserveServiceImpl.preserve"
+     ]
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-ticketinfo-service|POST|http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-ticketinfo-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo",
+     "destinationReturnType": "Response<TravelResult>",
+     "destinationEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/ticketinfoservice/ticketinfo",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Travel() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on query in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-ticketinfo-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/ticketinfoservice/ticketinfo",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-basic-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-basic-service:15680/api/v1/basicservice/basic/travel",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/basicservice/basic/travel",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "ticketinfo.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "all properties: parameter info of TicketInfoController.queryForTravel (no call site found)"
+     ]
+    },
+    {
+     "sourceService": "ts-basic-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/basicservice/basic/travel",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-station-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-station-service:12345/api/v1/stationservice/stations/id/{stationName}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.StationController#queryForStationId[fdse.microservice.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/stationservice/stations/id/{stationNameForId}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable(value = \"stationNameForId\") String stationName",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "stationName"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable(value = \"stationNameForId\") String stationName"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-ticketinfo-service|POST|http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo->ts-basic-service|POST|http://ts-basic-service:15680/api/v1/basicservice/basic/travel->ts-station-service|GET|http://ts-station-service:12345/api/v1/stationservice/stations/id/{stationName}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-travel-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/travelservice/trip_detail",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-ticketinfo-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/{stationName}",
+     "destinationReturnType": "Response<String>",
+     "destinationEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForStationId[ticketinfo.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/ticketinfoservice/ticketinfo/{name}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String name",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "stationName"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable String name"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail->ts-ticketinfo-service|GET|http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/{stationName}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-contacts-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-contacts-service:12347/api/v1/contactservice/contacts/{contactsId}",
+     "destinationReturnType": "Response<Contacts>",
+     "destinationEndpointMethodKey": "contacts.controller.ContactsController#getContactsByContactsId[contacts.controller.String, contacts.controller.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/contactservice/contacts/{id}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String id",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "contactsId"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable String id"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-contacts-service|GET|http://ts-contacts-service:12347/api/v1/contactservice/contacts/{contactsId}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-ticketinfo-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo",
+     "destinationReturnType": "Response<TravelResult>",
+     "destinationEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/ticketinfoservice/ticketinfo",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Travel() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on query in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-ticketinfo-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/ticketinfoservice/ticketinfo",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-basic-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-basic-service:15680/api/v1/basicservice/basic/travel",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/basicservice/basic/travel",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "ticketinfo.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "all properties: parameter info of TicketInfoController.queryForTravel (no call site found)"
+     ]
+    },
+    {
+     "sourceService": "ts-basic-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/basicservice/basic/travel",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-route-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-route-service:11178/api/v1/routeservice/routes/{routeId}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "route.controller.RouteController#queryById[route.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/routeservice/routes/{routeId}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String routeId",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "routeId"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-ticketinfo-service|POST|http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo->ts-basic-service|POST|http://ts-basic-service:15680/api/v1/basicservice/basic/travel->ts-route-service|GET|http://ts-route-service:11178/api/v1/routeservice/routes/{routeId}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-travel-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/travelservice/trip_detail",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-train-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-train-service:14567/api/v1/trainservice/trains/{trainTypeId}",
+     "destinationReturnType": "Response<TrainType>",
+     "destinationEndpointMethodKey": "train.controller.TrainController#retrieve[train.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/trainservice/trains/{id}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String id",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "trainTypeId"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable String id"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail->ts-train-service|GET|http://ts-train-service:14567/api/v1/trainservice/trains/{trainTypeId}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-travel-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/travelservice/trip_detail",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-ticketinfo-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/ticketinfoservice/ticketinfo",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "travel.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Travel() in TravelServiceImpl.getTickets",
+      "4 setter call(s)/assignment(s) on query in TravelServiceImpl.getTickets"
+     ]
+    },
+    {
+     "sourceService": "ts-ticketinfo-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/ticketinfoservice/ticketinfo",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-basic-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-basic-service:15680/api/v1/basicservice/basic/travel",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/basicservice/basic/travel",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "ticketinfo.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "all properties: parameter info of TicketInfoController.queryForTravel (no call site found)"
+     ]
+    },
+    {
+     "sourceService": "ts-basic-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/basicservice/basic/travel",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-train-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-train-service:14567/api/v1/trainservice/trains/{trainTypeId}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "train.controller.TrainController#retrieve[train.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/trainservice/trains/{id}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String id",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "trainTypeId"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable String id"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail->ts-ticketinfo-service|POST|http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo->ts-basic-service|POST|http://ts-basic-service:15680/api/v1/basicservice/basic/travel->ts-train-service|GET|http://ts-train-service:14567/api/v1/trainservice/trains/{trainTypeId}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-ticketinfo-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo",
+     "destinationReturnType": "Response<TravelResult>",
+     "destinationEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/ticketinfoservice/ticketinfo",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Travel() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on query in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-ticketinfo-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/ticketinfoservice/ticketinfo",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-basic-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-basic-service:15680/api/v1/basicservice/basic/travel",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/basicservice/basic/travel",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "ticketinfo.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "all properties: parameter info of TicketInfoController.queryForTravel (no call site found)"
+     ]
+    },
+    {
+     "sourceService": "ts-basic-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/basicservice/basic/travel",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-train-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-train-service:14567/api/v1/trainservice/trains/{trainTypeId}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "train.controller.TrainController#retrieve[train.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/trainservice/trains/{id}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String id",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "trainTypeId"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable String id"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-ticketinfo-service|POST|http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo->ts-basic-service|POST|http://ts-basic-service:15680/api/v1/basicservice/basic/travel->ts-train-service|GET|http://ts-train-service:14567/api/v1/trainservice/trains/{trainTypeId}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-travel-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/travelservice/trip_detail",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-seat-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-seat-service:18898/api/v1/seatservice/seats/left_tickets",
+     "destinationReturnType": "Response<Integer>",
+     "destinationEndpointMethodKey": "seat.controller.SeatController#getLeftTicketOfInterval[seat.entity.Seat, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/seatservice/seats/left_tickets",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Seat seatRequest",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "travel.entity.Seat",
+     "bodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "reachableBodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Seat() in TravelServiceImpl.getRestTicketNumber",
+      "5 setter call(s)/assignment(s) on seatRequest in TravelServiceImpl.getRestTicketNumber"
+     ]
+    },
+    {
+     "sourceService": "ts-seat-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "seat.controller.SeatController#getLeftTicketOfInterval[seat.entity.Seat, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/seatservice/seats/left_tickets",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-config-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-config-service:15679/api/v1/configservice/configs/DirectTicketAllocationProportion",
+     "destinationReturnType": "Response<Config>",
+     "destinationEndpointMethodKey": "config.controller.ConfigController#retrieve[config.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/configservice/configs/{configName}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String configName",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable String configName"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail->ts-seat-service|POST|http://ts-seat-service:18898/api/v1/seatservice/seats/left_tickets->ts-config-service|GET|http://ts-config-service:15679/api/v1/configservice/configs/DirectTicketAllocationProportion",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-travel-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/travelservice/trip_detail",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-seat-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-seat-service:18898/api/v1/seatservice/seats/left_tickets",
+     "destinationReturnType": "Response<Integer>",
+     "destinationEndpointMethodKey": "seat.controller.SeatController#getLeftTicketOfInterval[seat.entity.Seat, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/seatservice/seats/left_tickets",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Seat seatRequest",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "travel.entity.Seat",
+     "bodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "reachableBodyProperties": [
+      "travelDate",
+      "trainNumber",
+      "startStation",
+      "destStation",
+      "seatType"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Seat() in TravelServiceImpl.getRestTicketNumber",
+      "5 setter call(s)/assignment(s) on seatRequest in TravelServiceImpl.getRestTicketNumber"
+     ]
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail->ts-seat-service|POST|http://ts-seat-service:18898/api/v1/seatservice/seats/left_tickets",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-travel-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-travel-service:12346/api/v1/travelservice/trip_detail",
+     "destinationReturnType": "Response<TripAllDetail>",
+     "destinationEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/travelservice/trip_detail",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody TripAllDetailInfo gtdi",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "preserve.entity.TripAllDetailInfo",
+     "bodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "reachableBodyProperties": [
+      "tripId",
+      "travelDate",
+      "from",
+      "to"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new TripAllDetailInfo() in PreserveServiceImpl.preserve",
+      "4 setter call(s)/assignment(s) on gtdi in PreserveServiceImpl.preserve"
+     ]
+    },
+    {
+     "sourceService": "ts-travel-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "travel.controller.TravelController#getTripAllDetailInfo[travel.controller.TripAllDetailInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/travelservice/trip_detail",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-ticketinfo-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/ticketinfoservice/ticketinfo",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "travel.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "new Travel() in TravelServiceImpl.getTickets",
+      "4 setter call(s)/assignment(s) on query in TravelServiceImpl.getTickets"
+     ]
+    },
+    {
+     "sourceService": "ts-ticketinfo-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "ticketinfo.controller.TicketInfoController#queryForTravel[ticketinfo.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/ticketinfoservice/ticketinfo",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-basic-service",
+     "destinationHttpMethod": "POST",
+     "destinationUrl": "http://ts-basic-service:15680/api/v1/basicservice/basic/travel",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "POST",
+     "destinationEndpointPath": "/api/v1/basicservice/basic/travel",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@RequestBody Travel info",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [],
+     "sentQueryParameters": [],
+     "requestBodySent": true,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "OBJECT",
+     "bodyType": "ticketinfo.entity.Travel",
+     "bodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "reachableBodyProperties": [
+      "trip",
+      "startingPlace",
+      "endPlace",
+      "departureTime"
+     ],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": [
+      "all properties: parameter info of TicketInfoController.queryForTravel (no call site found)"
+     ]
+    },
+    {
+     "sourceService": "ts-basic-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "fdse.microservice.controller.BasicController#queryForTravel[fdse.microservice.entity.Travel, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/basicservice/basic/travel",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-station-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-station-service:12345/api/v1/stationservice/stations/id/{stationName}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "fdse.microservice.controller.StationController#queryForStationId[fdse.microservice.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/stationservice/stations/id/{stationNameForId}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable(value = \"stationNameForId\") String stationName",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "stationName"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [
+      "@PathVariable(value = \"stationNameForId\") String stationName"
+     ],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-travel-service|POST|http://ts-travel-service:12346/api/v1/travelservice/trip_detail->ts-ticketinfo-service|POST|http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo->ts-basic-service|POST|http://ts-basic-service:15680/api/v1/basicservice/basic/travel->ts-station-service|GET|http://ts-station-service:12345/api/v1/stationservice/stations/id/{stationName}",
+   "metadata": {}
+  },
+  {
+   "segments": [
+    {
+     "sourceService": "ts-preserve-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "preserve.controller.PreserveController#preserve[preserve.controller.OrderTicketsInfo, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "POST",
+     "sourcePath": "/api/v1/preserveservice/preserve",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-security-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-security-service:11188/api/v1/securityservice/securityConfigs/{accountId}",
+     "destinationReturnType": "Response",
+     "destinationEndpointMethodKey": "security.controller.SecurityController#check[security.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/securityservice/securityConfigs/{accountId}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String accountId",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "accountId"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    },
+    {
+     "sourceService": "ts-security-service",
+     "sourceRoot": null,
+     "sourceEndpointMethodKey": "security.controller.SecurityController#check[security.controller.String, org.springframework.http.HttpHeaders]",
+     "sourceHttpMethod": "GET",
+     "sourcePath": "/api/v1/securityservice/securityConfigs/{accountId}",
+     "sourceReturnType": "HttpEntity",
+     "destinationService": "ts-order-service",
+     "destinationHttpMethod": "GET",
+     "destinationUrl": "http://ts-order-service:12031/api/v1/orderservice/order/security/{checkDate}/{accountId}",
+     "destinationReturnType": "Response<OrderSecurity>",
+     "destinationEndpointMethodKey": "order.controller.OrderController#securityInfoCheck[order.controller.String, order.controller.String, org.springframework.http.HttpHeaders]",
+     "destinationEndpointHttpMethod": "GET",
+     "destinationEndpointPath": "/api/v1/orderservice/order/security/{checkDate}/{accountId}",
+     "destinationEndpointReturnType": "HttpEntity",
+     "destinationEndpointArguments": [
+      "@PathVariable String checkDate",
+      "@PathVariable String accountId",
+      "@RequestHeader HttpHeaders headers"
+     ],
+     "sentPathVariables": [
+      "checkDate",
+      "accountId"
+     ],
+     "sentQueryParameters": [],
+     "requestBodySent": false,
+     "headersSent": true,
+     "staticallyMissingArguments": [],
+     "staticallyOptionalButUnsentArguments": [],
+     "bodyKind": "NONE",
+     "bodyType": null,
+     "bodyProperties": [],
+     "reachableBodyProperties": [],
+     "notReachableBodyProperties": [],
+     "bodyOrigins": []
+    }
+   ],
+   "pathHash": "ts-preserve-service|/api/v1/preserveservice/preserve->ts-security-service|GET|http://ts-security-service:11188/api/v1/securityservice/securityConfigs/{accountId}->ts-order-service|GET|http://ts-order-service:12031/api/v1/orderservice/order/security/{checkDate}/{accountId}",
+   "metadata": {}
+  }
+ ],
+ "analyzedServices": [],
+ "unresolvedServices": [],
+ "staticTraceResults": {}
+}

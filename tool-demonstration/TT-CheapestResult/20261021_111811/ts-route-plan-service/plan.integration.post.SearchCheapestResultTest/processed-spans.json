@@ -1,0 +1,3211 @@
+[ {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "bd3d2318c85b580e",
+  "parentSpanId" : "c9ae420dbd1fe2b0",
+  "name" : "BasicController.queryForStationId.execute",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "fe0c9d34fb2e6ca3",
+  "parentSpanId" : "0d2df3ba229b733f",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "9f9b89ac68dbc335",
+  "parentSpanId" : "457b9d74dddf3906",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "1ad2e5581a3e5caa",
+  "parentSpanId" : "828fa79b035af2f7",
+  "name" : "POST /api/v1/travelservice/trips/left",
+  "service" : "ts-travel-service",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/travelservice/trips/left",
+  "statusCode" : 200,
+  "requestBody" : "{\"startingPlace\":\"Station A\",\"endPlace\":\"Station B\",\"departureTime\":\"2025-05-04T01:00:00.000+00:00\"}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":[]}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "4cd0e4b29c024a43",
+  "parentSpanId" : "4601e937e6b69350",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Station A\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "193924b055bd8c7d",
+  "parentSpanId" : "0d455414f7ee69c2",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"9fc9c261-3263-4bfa-82f8-bb44e06b2f52\",\"stations\":[\"nanjing\",\"xuzhou\",\"jinan\",\"beijing\"],\"distances\":[0,500,700,1200],\"startStationId\":\"nanjing\",\"terminalStationId\":\"beijing\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "cd66e23a4e121c84",
+  "parentSpanId" : "ed8f72aeee2b5f22",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "ed8f72aeee2b5f22",
+  "parentSpanId" : "dadc9acfe74a6d2c",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"1367db1f-461e-4ab7-87ad-2bcc05fd9cb7\",\"stations\":[\"shanghaihongqiao\",\"jiaxingnan\",\"hangzhou\"],\"distances\":[0,150,300],\"startStationId\":\"shanghaihongqiao\",\"terminalStationId\":\"hangzhou\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "dacf7f1587909927",
+  "parentSpanId" : "e2daaa633beb2848",
+  "name" : "BasicController.queryForStationId",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "ae23de6b29e0b0e6",
+  "parentSpanId" : "841adb736a5bb450",
+  "name" : "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/ticketinfoservice/ticketinfo/{name}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Station B\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "dd2858133cf23241",
+  "parentSpanId" : "4862caf01a2709fd",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/aefcef3f-3f42-46e8-afd7-6cb2a928bd3d",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "16bfa350d13cb37f",
+  "parentSpanId" : "d261938389184f8c",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "0d455414f7ee69c2",
+  "parentSpanId" : "2952826efdf46aa8",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/9fc9c261-3263-4bfa-82f8-bb44e06b2f52",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "3392d26208612e94",
+  "parentSpanId" : "2952826efdf46aa8",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/d693a2c5-ef87-4a3c-bef8-600b43f62c68",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "a11cf0b27c324f39",
+  "parentSpanId" : "0a42e6c0b7864674",
+  "name" : "GET",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-basic-service:15680/api/v1/basicservice/basic/Station%20A",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "882fe86442631fc9",
+  "parentSpanId" : "51e30dc387502b49",
+  "name" : "TicketInfoController.queryForStationId.execute",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "1fdf331e338f6436",
+  "parentSpanId" : "d40e9eb51b4f645c",
+  "name" : "TicketInfoController.queryForStationId",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "1c6637d8d1178bb9",
+  "parentSpanId" : "2952826efdf46aa8",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/Station%20B",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "1091df824f72f721",
+  "parentSpanId" : "280c60236566d0fa",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "41da47d88f39172e",
+  "parentSpanId" : "8c326bafe591e7dc",
+  "name" : "POST /api/v1/travel2service/trips/left",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/travel2service/trips/left",
+  "statusCode" : 200,
+  "requestBody" : "{\"startingPlace\":\"Station A\",\"endPlace\":\"Station B\",\"departureTime\":\"2025-05-04T01:00:00.000+00:00\"}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Success Query\",\"data\":[]}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "828fa79b035af2f7",
+  "parentSpanId" : "bfd339225f7c74bd",
+  "name" : "POST",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "httpMethod" : "POST",
+  "statusCode" : 200,
+  "url" : "http://localhost:62711/api/v1/travelservice/trips/left",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "0a42e6c0b7864674",
+  "parentSpanId" : "5d90c0d7b34200f5",
+  "name" : "TicketInfoController.queryForStationId.execute",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "66b9d42cdeeebad5",
+  "parentSpanId" : "7ddc00b959ef98ac",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "a52e296a3f11f4b9",
+  "parentSpanId" : "cda530204f335890",
+  "name" : "GET",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-basic-service:15680/api/v1/basicservice/basic/Station%20B",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "8952e82fd2855c89",
+  "parentSpanId" : "2952826efdf46aa8",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/92708982-77af-4318-be25-57ccb0ff69ad",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "00094d08dc8e1e14",
+  "parentSpanId" : "cb518bf621c26ee4",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Station B\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "2946c349483e4092",
+  "parentSpanId" : "4862caf01a2709fd",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/a3f256c1-0e43-4f7d-9c21-121bf258101f",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "4601e937e6b69350",
+  "parentSpanId" : "2e97a488a56e644f",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Station%20A",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "793e2ce09d6f9f53",
+  "parentSpanId" : "7097b0a4f6dae3b8",
+  "name" : "TicketInfoController.queryForStationId.execute",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "d67f0fa537e67b2a",
+  "parentSpanId" : "34a23d5148de7465",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "34a23d5148de7465",
+  "parentSpanId" : "d26467fcccadf06e",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Station B\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "d47bff56ca995559",
+  "parentSpanId" : "339e368204cfbeab",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "dadc9acfe74a6d2c",
+  "parentSpanId" : "2952826efdf46aa8",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/1367db1f-461e-4ab7-87ad-2bcc05fd9cb7",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "e2daaa633beb2848",
+  "parentSpanId" : "a11cf0b27c324f39",
+  "name" : "GET /api/v1/basicservice/basic/{stationName}",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/basicservice/basic/{stationName}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Station A\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "ba62dacf5df9bd49",
+  "parentSpanId" : "bd5330b35e94cc32",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "bd5330b35e94cc32",
+  "parentSpanId" : "0d8738e9258f9f68",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"084837bb-53c8-4438-87c8-0321a4d09917\",\"stations\":[\"suzhou\",\"shanghai\"],\"distances\":[0,50],\"startStationId\":\"suzhou\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "8251c40f60a79076",
+  "parentSpanId" : "594b06878d0b2387",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "594b06878d0b2387",
+  "parentSpanId" : "f33e6f4383c52602",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"92708982-77af-4318-be25-57ccb0ff69ad\",\"stations\":[\"nanjing\",\"zhenjiang\",\"wuxi\",\"suzhou\",\"shanghai\"],\"distances\":[0,100,150,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "2abcd54741050620",
+  "parentSpanId" : "69913863e557e2c7",
+  "name" : "RoutePlanController.getCheapestRoutes",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "c6e3a0ea441841f8",
+  "parentSpanId" : "538866eb18d061fc",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Station%20A",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "4b09a4061fd5ba2c",
+  "parentSpanId" : "00094d08dc8e1e14",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "841adb736a5bb450",
+  "parentSpanId" : "4862caf01a2709fd",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/Station%20B",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "c7e89fb96e04a56d",
+  "parentSpanId" : "8efc7c3f7555cf13",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"92708982-77af-4318-be25-57ccb0ff69ad\",\"stations\":[\"nanjing\",\"zhenjiang\",\"wuxi\",\"suzhou\",\"shanghai\"],\"distances\":[0,100,150,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "a0b5072cb1695c90",
+  "parentSpanId" : "4862caf01a2709fd",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/92708982-77af-4318-be25-57ccb0ff69ad",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "d26467fcccadf06e",
+  "parentSpanId" : "9c706f0d0d6997c8",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Station%20B",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "9c706f0d0d6997c8",
+  "parentSpanId" : "4ef4b902f0c07ce9",
+  "name" : "BasicController.queryForStationId.execute",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "8c5e24d43d3ae11f",
+  "parentSpanId" : "2952826efdf46aa8",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/20eb7122-3a11-423f-b10a-be0dc5bce7db",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "51e30dc387502b49",
+  "parentSpanId" : "ae23de6b29e0b0e6",
+  "name" : "TicketInfoController.queryForStationId",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "5bfd224b953b6c29",
+  "parentSpanId" : "a52e296a3f11f4b9",
+  "name" : "GET /api/v1/basicservice/basic/{stationName}",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/basicservice/basic/{stationName}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Station B\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "280c60236566d0fa",
+  "parentSpanId" : "3392d26208612e94",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"d693a2c5-ef87-4a3c-bef8-600b43f62c68\",\"stations\":[\"taiyuan\",\"shijiazhuang\",\"nanjing\",\"shanghai\"],\"distances\":[0,300,950,1300],\"startStationId\":\"taiyuan\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "b3fe4fc86e185b83",
+  "parentSpanId" : "8952e82fd2855c89",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"92708982-77af-4318-be25-57ccb0ff69ad\",\"stations\":[\"nanjing\",\"zhenjiang\",\"wuxi\",\"suzhou\",\"shanghai\"],\"distances\":[0,100,150,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "0d8738e9258f9f68",
+  "parentSpanId" : "4862caf01a2709fd",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/084837bb-53c8-4438-87c8-0321a4d09917",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "0d2df3ba229b733f",
+  "parentSpanId" : "d0686c87582bf9bb",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"f3d4d4ef-693b-4456-8eed-59c0d717dd08\",\"stations\":[\"shanghai\",\"suzhou\"],\"distances\":[0,50],\"startStationId\":\"shanghai\",\"terminalStationId\":\"suzhou\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "4c9ffa2d8ff8c143",
+  "parentSpanId" : "8ba0f22bc0660fa3",
+  "name" : "BasicController.queryForStationId",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "5c536a7ab082d886",
+  "parentSpanId" : "793e2ce09d6f9f53",
+  "name" : "GET",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-basic-service:15680/api/v1/basicservice/basic/Station%20A",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "cda530204f335890",
+  "parentSpanId" : "1fdf331e338f6436",
+  "name" : "TicketInfoController.queryForStationId.execute",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "0735658f50d1324a",
+  "parentSpanId" : "2952826efdf46aa8",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/0b23bd3e-876a-4af3-b920-c50a90c90b04",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "339e368204cfbeab",
+  "parentSpanId" : "8c5e24d43d3ae11f",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"20eb7122-3a11-423f-b10a-be0dc5bce7db\",\"stations\":[\"shanghai\",\"taiyuan\"],\"distances\":[0,1300],\"startStationId\":\"shanghai\",\"terminalStationId\":\"taiyuan\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "040bed814cd2697d",
+  "parentSpanId" : "b3fe4fc86e185b83",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "2c95c314f24ee32c",
+  "parentSpanId" : "c6e3a0ea441841f8",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Station A\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "c9ae420dbd1fe2b0",
+  "parentSpanId" : "094827ae68aaa215",
+  "name" : "BasicController.queryForStationId",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "457b9d74dddf3906",
+  "parentSpanId" : "a0b5072cb1695c90",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"92708982-77af-4318-be25-57ccb0ff69ad\",\"stations\":[\"nanjing\",\"zhenjiang\",\"wuxi\",\"suzhou\",\"shanghai\"],\"distances\":[0,100,150,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "697727ac5f1402d2",
+  "parentSpanId" : "4cd0e4b29c024a43",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "bfd339225f7c74bd",
+  "parentSpanId" : "2abcd54741050620",
+  "name" : "RoutePlanController.getCheapestRoutes.execute",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "8c326bafe591e7dc",
+  "parentSpanId" : "bfd339225f7c74bd",
+  "name" : "POST",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "httpMethod" : "POST",
+  "statusCode" : 200,
+  "url" : "http://localhost:62679/api/v1/travel2service/trips/left",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "39314f14905b59a5",
+  "parentSpanId" : "27664491a4c579f2",
+  "name" : "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/ticketinfoservice/ticketinfo/{name}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Station A\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "5f9ff8b5557059e9",
+  "parentSpanId" : "c7e89fb96e04a56d",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "917a118341336957",
+  "parentSpanId" : "86e45e9d4e05c0a4",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "d261938389184f8c",
+  "parentSpanId" : "dd2858133cf23241",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"aefcef3f-3f42-46e8-afd7-6cb2a928bd3d\",\"stations\":[\"nanjing\",\"shanghai\"],\"distances\":[0,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "d0686c87582bf9bb",
+  "parentSpanId" : "4862caf01a2709fd",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/f3d4d4ef-693b-4456-8eed-59c0d717dd08",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "af55b34df4a34584",
+  "parentSpanId" : "882fe86442631fc9",
+  "name" : "GET",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-basic-service:15680/api/v1/basicservice/basic/Station%20B",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "7ddc00b959ef98ac",
+  "parentSpanId" : "103bef07e0c066c0",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"92708982-77af-4318-be25-57ccb0ff69ad\",\"stations\":[\"nanjing\",\"zhenjiang\",\"wuxi\",\"suzhou\",\"shanghai\"],\"distances\":[0,100,150,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "8ba0f22bc0660fa3",
+  "parentSpanId" : "5c536a7ab082d886",
+  "name" : "GET /api/v1/basicservice/basic/{stationName}",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/basicservice/basic/{stationName}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Station A\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "2e97a488a56e644f",
+  "parentSpanId" : "4c9ffa2d8ff8c143",
+  "name" : "BasicController.queryForStationId.execute",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "9536b93ba1083f94",
+  "parentSpanId" : "2c95c314f24ee32c",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "538866eb18d061fc",
+  "parentSpanId" : "dacf7f1587909927",
+  "name" : "BasicController.queryForStationId.execute",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "5d90c0d7b34200f5",
+  "parentSpanId" : "39314f14905b59a5",
+  "name" : "TicketInfoController.queryForStationId",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "1463634acafd3606",
+  "parentSpanId" : "1ad2e5581a3e5caa",
+  "name" : "TravelController.queryInfo",
+  "service" : "ts-travel-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "4ef4b902f0c07ce9",
+  "parentSpanId" : "5bfd224b953b6c29",
+  "name" : "BasicController.queryForStationId",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "d40e9eb51b4f645c",
+  "parentSpanId" : "1c6637d8d1178bb9",
+  "name" : "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/ticketinfoservice/ticketinfo/{name}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Station B\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "bdb48f425a3d3d9e",
+  "parentSpanId" : "9093c60d0b0ba32e",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "9093c60d0b0ba32e",
+  "parentSpanId" : "0735658f50d1324a",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"0b23bd3e-876a-4af3-b920-c50a90c90b04\",\"stations\":[\"shanghai\",\"nanjing\",\"shijiazhuang\",\"taiyuan\"],\"distances\":[0,350,1000,1300],\"startStationId\":\"shanghai\",\"terminalStationId\":\"taiyuan\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "cb518bf621c26ee4",
+  "parentSpanId" : "bd3d2318c85b580e",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Station%20B",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "103bef07e0c066c0",
+  "parentSpanId" : "4862caf01a2709fd",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/92708982-77af-4318-be25-57ccb0ff69ad",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "14156aa003c73a03",
+  "parentSpanId" : "2952826efdf46aa8",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/Station%20A",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "f33e6f4383c52602",
+  "parentSpanId" : "2952826efdf46aa8",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/92708982-77af-4318-be25-57ccb0ff69ad",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "27664491a4c579f2",
+  "parentSpanId" : "4862caf01a2709fd",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/Station%20A",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "094827ae68aaa215",
+  "parentSpanId" : "af55b34df4a34584",
+  "name" : "GET /api/v1/basicservice/basic/{stationName}",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/basicservice/basic/{stationName}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Station B\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "86e45e9d4e05c0a4",
+  "parentSpanId" : "2946c349483e4092",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"stations\":[\"nanjing\",\"suzhou\",\"shanghai\"],\"distances\":[0,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "7097b0a4f6dae3b8",
+  "parentSpanId" : "3893f5fc4b639bb2",
+  "name" : "TicketInfoController.queryForStationId",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "2952826efdf46aa8",
+  "parentSpanId" : "fc58d4d3e1d80006",
+  "name" : "Travel2Controller.queryInfo.execute",
+  "service" : "ts-travel2-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "fc58d4d3e1d80006",
+  "parentSpanId" : "41da47d88f39172e",
+  "name" : "Travel2Controller.queryInfo",
+  "service" : "ts-travel2-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "69913863e557e2c7",
+  "parentSpanId" : null,
+  "name" : "POST /api/v1/routeplanservice/routePlan/cheapestRoute",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/routeplanservice/routePlan/cheapestRoute",
+  "statusCode" : 200,
+  "requestBody" : "{\"formStationName\":\"Station A\",\"num\":1,\"toStationName\":\"Station B\",\"travelDate\":1746320400000}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":[]}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "8efc7c3f7555cf13",
+  "parentSpanId" : "4862caf01a2709fd",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/92708982-77af-4318-be25-57ccb0ff69ad",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "4862caf01a2709fd",
+  "parentSpanId" : "1463634acafd3606",
+  "name" : "TravelController.queryInfo.execute",
+  "service" : "ts-travel-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "3893f5fc4b639bb2",
+  "parentSpanId" : "14156aa003c73a03",
+  "name" : "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/ticketinfoservice/ticketinfo/{name}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":0,\"msg\":\"Not exists\",\"data\":\"Station A\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "9afc6320ec6e45abcd28123ecb91dd7d",
+  "spanId" : "270192420616659f",
+  "parentSpanId" : "193924b055bd8c7d",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "f66188995f299e2f",
+  "parentSpanId" : "345cfa456fb90ba2",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-price-service:16579/api/v1/priceservice/prices/9fc9c261-3263-4bfa-82f8-bb44e06b2f52/ZhiDa",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "de4c16373cf82750",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "22f06036f85ce7be",
+  "parentSpanId" : "01036af62fdbb866",
+  "name" : "POST",
+  "service" : "ts-seat-service",
+  "httpMethod" : "POST",
+  "statusCode" : 200,
+  "url" : "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/tickets",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "70dc9a263bb43acc",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "76ae37b168c0bfad",
+  "parentSpanId" : "6a2535dc1d519544",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "bace2bd140d7ce4b",
+  "parentSpanId" : "20891360d818ba9a",
+  "name" : "BasicController.queryForStationId.execute",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "447f1e04850c37ca",
+  "parentSpanId" : "e1071ed3f0c76681",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"f3d4d4ef-693b-4456-8eed-59c0d717dd08\",\"stations\":[\"shanghai\",\"suzhou\"],\"distances\":[0,50],\"startStationId\":\"shanghai\",\"terminalStationId\":\"suzhou\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "d4f91e4622e94078",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/9fc9c261-3263-4bfa-82f8-bb44e06b2f52",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "6a3b1c0f57cfcfdf",
+  "parentSpanId" : null,
+  "name" : "POST /api/v1/routeplanservice/routePlan/cheapestRoute",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/routeplanservice/routePlan/cheapestRoute",
+  "statusCode" : 200,
+  "requestBody" : "{\"formStationName\":\"Nan Jing\",\"num\":1,\"toStationName\":\"Bei Jing\",\"travelDate\":33310627200000}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":[{\"tripId\":\"Z1235\",\"trainTypeId\":\"ZhiDa\",\"fromStationName\":\"Nan Jing\",\"toStationName\":\"Bei Jing\",\"stopStations\":[\"nanjing\",\"xuzhou\",\"jinan\",\"beijing\"],\"priceForSecondClassSeat\":\"420.0\",\"priceForFirstClassSeat\":\"1200.0\",\"startingTime\":\"2013-05-04T03:31:52.000+00:00\",\"endTime\":\"2013-05-04T13:31:52.000+00:00\"}]}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "8905b71cecbd8400",
+  "parentSpanId" : "aec6a3e28046e0db",
+  "name" : "Travel2Controller.getTrainTypeByTripId.execute",
+  "service" : "ts-travel2-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "0080154723128637",
+  "parentSpanId" : "2aeb6eac96a7889c",
+  "name" : "POST /api/v1/basicservice/basic/travel",
+  "service" : "ts-basic-service",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/basicservice/basic/travel",
+  "statusCode" : 200,
+  "requestBody" : "{\"trip\":{\"tripId\":{\"type\":\"Z\",\"number\":\"1235\"},\"trainTypeId\":\"ZhiDa\",\"routeId\":\"9fc9c261-3263-4bfa-82f8-bb44e06b2f52\",\"startingStationId\":\"shanghai\",\"stationsId\":\"nanjing\",\"terminalStationId\":\"beijing\",\"startingTime\":\"2013-05-04T03:31:52.000+00:00\",\"endTime\":\"2013-05-04T09:51:52.000+00:00\"},\"startingPlace\":\"Nan Jing\",\"endPlace\":\"Bei Jing\",\"departureTime\":\"3025-07-28T16:00:00.000+00:00\"}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"status\":true,\"percent\":1.0,\"trainType\":{\"id\":\"ZhiDa\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":120},\"prices\":{\"confortClass\":\"1200.0\",\"economyClass\":\"420.0\"}}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "359e3dc24d12ac14",
+  "parentSpanId" : "f66188995f299e2f",
+  "name" : "GET /api/v1/priceservice/prices/{routeId}/{trainType}",
+  "service" : "ts-price-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/priceservice/prices/{routeId}/{trainType}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"8fb01829-393f-4af4-9e96-f72866f94d14\",\"trainType\":\"ZhiDa\",\"routeId\":\"9fc9c261-3263-4bfa-82f8-bb44e06b2f52\",\"basicPriceRate\":0.35,\"firstClassPriceRate\":1.0}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "e330c06110ed15b1",
+  "parentSpanId" : "86a7e9714137210f",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "59d7a323d789090e",
+  "parentSpanId" : "b18eda2e6bc4119f",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/084837bb-53c8-4438-87c8-0321a4d09917",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "d5fb64a477b188e0",
+  "parentSpanId" : "5698f64b790d4643",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"92708982-77af-4318-be25-57ccb0ff69ad\",\"stations\":[\"nanjing\",\"zhenjiang\",\"wuxi\",\"suzhou\",\"shanghai\"],\"distances\":[0,100,150,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "05dee373716bd5bf",
+  "parentSpanId" : "d90258f13fdbea7f",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Bei%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "a9981d8c0fe6f659",
+  "parentSpanId" : "369838137a0ecf4a",
+  "name" : "TicketInfoController.queryForStationId",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "db24e1d31bd3f71e",
+  "parentSpanId" : "a60c6f843f2dc337",
+  "name" : "BasicController.queryForStationId",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "d5c82b2858103846",
+  "parentSpanId" : "a0271642f5a30b54",
+  "name" : "GET /api/v1/travel2service/routes/{tripId}",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/travel2service/routes/{tripId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"[Get Route By Trip ID] Success\",\"data\":{\"id\":\"9fc9c261-3263-4bfa-82f8-bb44e06b2f52\",\"stations\":[\"nanjing\",\"xuzhou\",\"jinan\",\"beijing\"],\"distances\":[0,500,700,1200],\"startStationId\":\"nanjing\",\"terminalStationId\":\"beijing\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "9cadc5828a1bc3f2",
+  "parentSpanId" : "6c94eee9a71016d1",
+  "name" : "OrderOtherController.getTicketListByDateAndTripId",
+  "service" : "ts-order-other-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "15886344b75f1a7c",
+  "parentSpanId" : "6c4382ee896d86d7",
+  "name" : "TrainController.retrieve",
+  "service" : "ts-train-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "479758d80cc59a0e",
+  "parentSpanId" : "c548dce26a7d11b0",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"20eb7122-3a11-423f-b10a-be0dc5bce7db\",\"stations\":[\"shanghai\",\"taiyuan\"],\"distances\":[0,1300],\"startStationId\":\"shanghai\",\"terminalStationId\":\"taiyuan\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "92e17c3a8c668792",
+  "parentSpanId" : "b18eda2e6bc4119f",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "3d0a9692e5c2954b",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/0b23bd3e-876a-4af3-b920-c50a90c90b04",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "599b5e80d554899a",
+  "parentSpanId" : "e91664e5e652e6e8",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"92708982-77af-4318-be25-57ccb0ff69ad\",\"stations\":[\"nanjing\",\"zhenjiang\",\"wuxi\",\"suzhou\",\"shanghai\"],\"distances\":[0,100,150,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "10ed62a312c2cd2c",
+  "parentSpanId" : "b53711609f3ef106",
+  "name" : "GET",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-basic-service:15680/api/v1/basicservice/basic/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "607bad0b7e97c32c",
+  "parentSpanId" : "6a223260f9f4693a",
+  "name" : "ConfigController.retrieve",
+  "service" : "ts-config-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "f678070fa04667c1",
+  "parentSpanId" : "5176d460e95af67c",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"92708982-77af-4318-be25-57ccb0ff69ad\",\"stations\":[\"nanjing\",\"zhenjiang\",\"wuxi\",\"suzhou\",\"shanghai\"],\"distances\":[0,100,150,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "bbbc2ced0103206e",
+  "parentSpanId" : "d4f91e4622e94078",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"9fc9c261-3263-4bfa-82f8-bb44e06b2f52\",\"stations\":[\"nanjing\",\"xuzhou\",\"jinan\",\"beijing\"],\"distances\":[0,500,700,1200],\"startStationId\":\"nanjing\",\"terminalStationId\":\"beijing\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "c8f81b49cff219f4",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "POST",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "POST",
+  "statusCode" : 200,
+  "url" : "http://ts-seat-service:18898/api/v1/seatservice/seats/left_tickets",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "85f1a8c67dfd64b2",
+  "parentSpanId" : "59d5d8b2b43404b9",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "2538ded222e78d94",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/1367db1f-461e-4ab7-87ad-2bcc05fd9cb7",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "6fd58f25f004b2d9",
+  "parentSpanId" : "f490818a0c9f57a0",
+  "name" : "POST",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "httpMethod" : "POST",
+  "statusCode" : 200,
+  "url" : "http://localhost:62679/api/v1/travel2service/trips/left",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "86a7e9714137210f",
+  "parentSpanId" : "d14d76f427b59b17",
+  "name" : "BasicController.queryForStationId.execute",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "2ab81ee4564f5c70",
+  "parentSpanId" : "4e72d40b84dfb973",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "e0c84eac27cbe69a",
+  "parentSpanId" : "94b74f31aa7ccd0b",
+  "name" : "GET /api/v1/basicservice/basic/{stationName}",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/basicservice/basic/{stationName}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"beijing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "8ab67d8279692003",
+  "parentSpanId" : "3bd488f743143d5e",
+  "name" : "GET /api/v1/travel2service/train_types/{tripId}",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/travel2service/train_types/{tripId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success query Train by trip id\",\"data\":{\"id\":\"ZhiDa\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":120}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "cf1e8a57404c7a3a",
+  "parentSpanId" : "3a5624c815a59e94",
+  "name" : "TicketInfoController.queryForStationId",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "07c68700be591d69",
+  "parentSpanId" : "a75f2a8be5088a46",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "fd079e54615c547e",
+  "parentSpanId" : "05dee373716bd5bf",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"beijing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "edd154d95f48dddd",
+  "parentSpanId" : "de4c16373cf82750",
+  "name" : "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/ticketinfoservice/ticketinfo/{name}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "9f10c9252efb9367",
+  "parentSpanId" : "7aaf2fb76e05e27c",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "28384c7a9c1c15fd",
+  "parentSpanId" : "63ca6e9187a1e750",
+  "name" : "OrderOtherController.getTicketListByDateAndTripId",
+  "service" : "ts-order-other-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "a89852609be5426e",
+  "parentSpanId" : "b56093f6bf190dcd",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"92708982-77af-4318-be25-57ccb0ff69ad\",\"stations\":[\"nanjing\",\"zhenjiang\",\"wuxi\",\"suzhou\",\"shanghai\"],\"distances\":[0,100,150,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "dc561963dfce7dc1",
+  "parentSpanId" : "e0c84eac27cbe69a",
+  "name" : "BasicController.queryForStationId",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "edce3fb76beb39ce",
+  "parentSpanId" : "92e17c3a8c668792",
+  "name" : "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/ticketinfoservice/ticketinfo/{name}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "a60c6f843f2dc337",
+  "parentSpanId" : "8c5a5cbf6cbff800",
+  "name" : "GET /api/v1/basicservice/basic/{stationName}",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/basicservice/basic/{stationName}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"beijing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "f94dd53db8cb99c6",
+  "parentSpanId" : "c6971be5d41612e3",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"beijing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "365826477e1ece38",
+  "parentSpanId" : "8135edda008e5915",
+  "name" : "Travel2Controller.queryInfo",
+  "service" : "ts-travel2-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "964ad131e2864483",
+  "parentSpanId" : "b18eda2e6bc4119f",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/a3f256c1-0e43-4f7d-9c21-121bf258101f",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "873b0f3863f02c16",
+  "parentSpanId" : "345cfa456fb90ba2",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Bei%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "6a223260f9f4693a",
+  "parentSpanId" : "35f5c1651299b731",
+  "name" : "GET /api/v1/configservice/configs/{configName}",
+  "service" : "ts-config-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/configservice/configs/{configName}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"name\":\"DirectTicketAllocationProportion\",\"value\":\"0.5\",\"description\":\"Allocation Proportion Of The Direct Ticket - From Start To End\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "63164c0482424bd6",
+  "parentSpanId" : "e74cea30543d8a05",
+  "name" : "TravelController.queryInfo",
+  "service" : "ts-travel-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "89715891bfe25d1b",
+  "parentSpanId" : "5bd47f2f35e84db7",
+  "name" : "BasicController.queryForStationId",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "01036af62fdbb866",
+  "parentSpanId" : "dcd9a38baf05f70c",
+  "name" : "SeatController.getLeftTicketOfInterval.execute",
+  "service" : "ts-seat-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "c6971be5d41612e3",
+  "parentSpanId" : "23a952b34d64341f",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Bei%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "8135edda008e5915",
+  "parentSpanId" : "6fd58f25f004b2d9",
+  "name" : "POST /api/v1/travel2service/trips/left",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/travel2service/trips/left",
+  "statusCode" : 200,
+  "requestBody" : "{\"startingPlace\":\"Nan Jing\",\"endPlace\":\"Bei Jing\",\"departureTime\":\"3025-07-28T16:00:00.000+00:00\"}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Success Query\",\"data\":[{\"tripId\":{\"type\":\"Z\",\"number\":\"1235\"},\"trainTypeId\":\"ZhiDa\",\"startingStation\":\"Nan Jing\",\"terminalStation\":\"Bei Jing\",\"startingTime\":\"2013-05-04T03:31:52.000+00:00\",\"endTime\":\"2013-05-04T13:31:52.000+00:00\",\"economyClass\":1073741823,\"confortClass\":1073741823,\"priceForEconomyClass\":\"420.0\",\"priceForConfortClass\":\"1200.0\"}]}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "6d2c0e4e7f61e258",
+  "parentSpanId" : "bace2bd140d7ce4b",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Bei%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "7c3197f2185dbee7",
+  "parentSpanId" : "e38e485143027be1",
+  "name" : "GET /api/v1/trainservice/trains/{id}",
+  "service" : "ts-train-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/trainservice/trains/{id}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"ZhiDa\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":120}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "603f128583b5067b",
+  "parentSpanId" : "8d153d393e575e21",
+  "name" : "GET",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-basic-service:15680/api/v1/basicservice/basic/Bei%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "13b5dc5983407c14",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/d693a2c5-ef87-4a3c-bef8-600b43f62c68",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "20891360d818ba9a",
+  "parentSpanId" : "171157ca7b3e5c7f",
+  "name" : "BasicController.queryForStationId",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "1858f0587f7119cb",
+  "parentSpanId" : "0bf8652828e3d44a",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "9b68e6c59555fff9",
+  "parentSpanId" : "3d28ee904717a91a",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "59d5d8b2b43404b9",
+  "parentSpanId" : "ec15fc087330d58e",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "d90258f13fdbea7f",
+  "parentSpanId" : "dc561963dfce7dc1",
+  "name" : "BasicController.queryForStationId.execute",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "87801629a4b960d0",
+  "parentSpanId" : "f7216181ccb51660",
+  "name" : "TicketInfoController.queryForStationId.execute",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "746857554349a648",
+  "parentSpanId" : "af657bede63d560f",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"beijing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "ddcdcfa17bae7e33",
+  "parentSpanId" : "927ab99c8c0fed54",
+  "name" : "BasicController.queryForStationId.execute",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "369838137a0ecf4a",
+  "parentSpanId" : "70dc9a263bb43acc",
+  "name" : "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/ticketinfoservice/ticketinfo/{name}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "8d153d393e575e21",
+  "parentSpanId" : "1c561e63dadab246",
+  "name" : "TicketInfoController.queryForStationId.execute",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "63ca6e9187a1e750",
+  "parentSpanId" : "8591e9a8b722a3df",
+  "name" : "POST /api/v1/orderOtherService/orderOther/tickets",
+  "service" : "ts-order-other-service",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/orderOtherService/orderOther/tickets",
+  "statusCode" : 200,
+  "requestBody" : "{\"travelDate\":\"3025-07-28T16:00:00.000+00:00\",\"trainNumber\":\"Z1235\",\"startStation\":\"nanjing\",\"destStation\":\"beijing\",\"seatType\":3}",
+  "responseBody" : "{\"status\":0,\"msg\":\"Seat is Null.\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "44b75a2e53370135",
+  "parentSpanId" : "9827c0a1fcfe3530",
+  "name" : "Travel2Controller.getRouteByTripId.execute",
+  "service" : "ts-travel2-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "e91664e5e652e6e8",
+  "parentSpanId" : "b18eda2e6bc4119f",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/92708982-77af-4318-be25-57ccb0ff69ad",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "e38e485143027be1",
+  "parentSpanId" : "345cfa456fb90ba2",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-train-service:14567/api/v1/trainservice/trains/ZhiDa",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "0d8b7507adf75d34",
+  "parentSpanId" : "20e1d625a1cb826a",
+  "name" : "Travel2Controller.getRouteByTripId",
+  "service" : "ts-travel2-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "5bd47f2f35e84db7",
+  "parentSpanId" : "10ed62a312c2cd2c",
+  "name" : "GET /api/v1/basicservice/basic/{stationName}",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/basicservice/basic/{stationName}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "15ff72bf00f31c0c",
+  "parentSpanId" : "b242bb205181f621",
+  "name" : "GET",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-basic-service:15680/api/v1/basicservice/basic/Bei%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "e4a177b3a4544e72",
+  "parentSpanId" : "34d5addd9c0ebf91",
+  "name" : "TicketInfoController.queryForTravel",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "cc6f9a35efc500bc",
+  "parentSpanId" : "2a6012143e671d52",
+  "name" : "TicketInfoController.queryForStationId.execute",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "109d1ce66e7b1b63",
+  "parentSpanId" : "d5c82b2858103846",
+  "name" : "Travel2Controller.getRouteByTripId",
+  "service" : "ts-travel2-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "3057acebd7642a54",
+  "parentSpanId" : "964ad131e2864483",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"a3f256c1-0e43-4f7d-9c21-121bf258101f\",\"stations\":[\"nanjing\",\"suzhou\",\"shanghai\"],\"distances\":[0,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "c0a3102fd0da39a5",
+  "parentSpanId" : "873b0f3863f02c16",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"beijing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "d7100f86e85b4375",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/Bei%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "f73e9d297155e97e",
+  "parentSpanId" : "d7100f86e85b4375",
+  "name" : "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/ticketinfoservice/ticketinfo/{name}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"beijing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "adc1e9dc92ec2018",
+  "parentSpanId" : "2538ded222e78d94",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"1367db1f-461e-4ab7-87ad-2bcc05fd9cb7\",\"stations\":[\"shanghaihongqiao\",\"jiaxingnan\",\"hangzhou\"],\"distances\":[0,150,300],\"startStationId\":\"shanghaihongqiao\",\"terminalStationId\":\"hangzhou\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "83213870aa15a937",
+  "parentSpanId" : "544ec33c524ec3b5",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/9fc9c261-3263-4bfa-82f8-bb44e06b2f52",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "af75b55f8df0ae24",
+  "parentSpanId" : "f490818a0c9f57a0",
+  "name" : "POST",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "httpMethod" : "POST",
+  "statusCode" : 200,
+  "url" : "http://localhost:62711/api/v1/travelservice/trips/left",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "1c14424f1058c24a",
+  "parentSpanId" : "b570616f47c601b4",
+  "name" : "TrainController.retrieve",
+  "service" : "ts-train-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "bece8b29ffb6d791",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "1e26070899538917",
+  "parentSpanId" : "db788765ab4de760",
+  "name" : "BasicController.queryForStationId",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "f490818a0c9f57a0",
+  "parentSpanId" : "c715549c4296b8c9",
+  "name" : "RoutePlanController.getCheapestRoutes.execute",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "e74cea30543d8a05",
+  "parentSpanId" : "af75b55f8df0ae24",
+  "name" : "POST /api/v1/travelservice/trips/left",
+  "service" : "ts-travel-service",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/travelservice/trips/left",
+  "statusCode" : 200,
+  "requestBody" : "{\"startingPlace\":\"Nan Jing\",\"endPlace\":\"Bei Jing\",\"departureTime\":\"3025-07-28T16:00:00.000+00:00\"}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":[]}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "b18eda2e6bc4119f",
+  "parentSpanId" : "63164c0482424bd6",
+  "name" : "TravelController.queryInfo.execute",
+  "service" : "ts-travel-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "b570616f47c601b4",
+  "parentSpanId" : "7e73b999cb5fc03c",
+  "name" : "GET /api/v1/trainservice/trains/{id}",
+  "service" : "ts-train-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/trainservice/trains/{id}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"ZhiDa\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":120}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "6dfab5ca2a5036bd",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "POST",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "POST",
+  "statusCode" : 200,
+  "url" : "http://ts-seat-service:18898/api/v1/seatservice/seats/left_tickets",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "3d28ee904717a91a",
+  "parentSpanId" : "e2d85edeb85c7a5f",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "a6e1a6b72a951d72",
+  "parentSpanId" : "f94dd53db8cb99c6",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "c2e5ea3a31025b2d",
+  "parentSpanId" : "f490818a0c9f57a0",
+  "name" : "GET",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://localhost:62679/api/v1/travel2service/routes/Z1235",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "6a2535dc1d519544",
+  "parentSpanId" : "07c68700be591d69",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "2a6012143e671d52",
+  "parentSpanId" : "edd154d95f48dddd",
+  "name" : "TicketInfoController.queryForStationId",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "228f5c3c510b148f",
+  "parentSpanId" : "db24e1d31bd3f71e",
+  "name" : "BasicController.queryForStationId.execute",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "7e73b999cb5fc03c",
+  "parentSpanId" : "8905b71cecbd8400",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-train-service:14567/api/v1/trainservice/trains/ZhiDa",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "affc172ad5615326",
+  "parentSpanId" : "345cfa456fb90ba2",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "98a48acd2dc27088",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "POST",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "POST",
+  "statusCode" : 200,
+  "url" : "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "7de8b0e1fde368fe",
+  "parentSpanId" : "3057acebd7642a54",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "675093a89074e4ca",
+  "parentSpanId" : "66982b111728eff5",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "d4046ad6c9755a60",
+  "parentSpanId" : "9b68e6c59555fff9",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "1c561e63dadab246",
+  "parentSpanId" : "72e6ef6bd765d3a4",
+  "name" : "TicketInfoController.queryForStationId",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "c548dce26a7d11b0",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/20eb7122-3a11-423f-b10a-be0dc5bce7db",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "5ed7df36d7e4b5c7",
+  "parentSpanId" : "aea7169de79facaf",
+  "name" : "TicketInfoController.queryForStationId.execute",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "b1e38a023ed1d981",
+  "parentSpanId" : "1875b18c53a3b97c",
+  "name" : "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/ticketinfoservice/ticketinfo/{name}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"beijing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "c47d508bd68066a2",
+  "parentSpanId" : "bbbc2ced0103206e",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "137115c20f1d7e96",
+  "parentSpanId" : "599b5e80d554899a",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "94b74f31aa7ccd0b",
+  "parentSpanId" : "87801629a4b960d0",
+  "name" : "GET",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-basic-service:15680/api/v1/basicservice/basic/Bei%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "f2d689cb616e97fc",
+  "parentSpanId" : "53f9ab163db96c1e",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "94461c3715b20301",
+  "parentSpanId" : "b184e014bcc01b66",
+  "name" : "TicketInfoController.queryForStationId.execute",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "aec6a3e28046e0db",
+  "parentSpanId" : "8ab67d8279692003",
+  "name" : "Travel2Controller.getTrainTypeByTripId",
+  "service" : "ts-travel2-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "f3706788d3f1cec9",
+  "parentSpanId" : "4732bb9e8557b62a",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-train-service:14567/api/v1/trainservice/trains/ZhiDa",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "62df72b54d01eac4",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-train-service:14567/api/v1/trainservice/trains/ZhiDa",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "f04094e9d108ee9f",
+  "parentSpanId" : "6dfab5ca2a5036bd",
+  "name" : "POST /api/v1/seatservice/seats/left_tickets",
+  "service" : "ts-seat-service",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/seatservice/seats/left_tickets",
+  "statusCode" : 200,
+  "requestBody" : "{\"travelDate\":\"3025-07-28T16:00:00.000+00:00\",\"trainNumber\":\"Z1235\",\"startStation\":\"nanjing\",\"destStation\":\"beijing\",\"seatType\":3}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Get Left Ticket of Internal Success\",\"data\":1073741823}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "34d5addd9c0ebf91",
+  "parentSpanId" : "98a48acd2dc27088",
+  "name" : "POST /api/v1/ticketinfoservice/ticketinfo",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/ticketinfoservice/ticketinfo",
+  "statusCode" : 200,
+  "requestBody" : "{\"trip\":{\"tripId\":{\"type\":\"Z\",\"number\":\"1235\"},\"trainTypeId\":\"ZhiDa\",\"routeId\":\"9fc9c261-3263-4bfa-82f8-bb44e06b2f52\",\"startingStationId\":\"shanghai\",\"stationsId\":\"nanjing\",\"terminalStationId\":\"beijing\",\"startingTime\":\"2013-05-04T03:31:52.000+00:00\",\"endTime\":\"2013-05-04T09:51:52.000+00:00\"},\"startingPlace\":\"Nan Jing\",\"endPlace\":\"Bei Jing\",\"departureTime\":\"3025-07-28T16:00:00.000+00:00\"}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"status\":true,\"percent\":1.0,\"trainType\":{\"id\":\"ZhiDa\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":120},\"prices\":{\"confortClass\":\"1200.0\",\"economyClass\":\"420.0\"}}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "aea7169de79facaf",
+  "parentSpanId" : "edce3fb76beb39ce",
+  "name" : "TicketInfoController.queryForStationId",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "eaa75941f51aae17",
+  "parentSpanId" : "c2ef45f8f36e144c",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"9fc9c261-3263-4bfa-82f8-bb44e06b2f52\",\"stations\":[\"nanjing\",\"xuzhou\",\"jinan\",\"beijing\"],\"distances\":[0,500,700,1200],\"startStationId\":\"nanjing\",\"terminalStationId\":\"beijing\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "fb66a3ef3596ff5a",
+  "parentSpanId" : "d65aa1bc63b58af1",
+  "name" : "OrderOtherController.calculateSoldTicket",
+  "service" : "ts-order-other-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "23a952b34d64341f",
+  "parentSpanId" : "9ae2723b6e2a50a3",
+  "name" : "BasicController.queryForStationId.execute",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "af657bede63d560f",
+  "parentSpanId" : "345cfa456fb90ba2",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Bei%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "04552b0b75ab53e0",
+  "parentSpanId" : "b7097f8c4458f785",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "8e9697cb5b946574",
+  "parentSpanId" : "3d0a9692e5c2954b",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"0b23bd3e-876a-4af3-b920-c50a90c90b04\",\"stations\":[\"shanghai\",\"nanjing\",\"shijiazhuang\",\"taiyuan\"],\"distances\":[0,350,1000,1300],\"startStationId\":\"shanghai\",\"terminalStationId\":\"taiyuan\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "79f9a5d26727bbf0",
+  "parentSpanId" : "94a9191f51cf5db1",
+  "name" : "GET /api/v1/travel2service/routes/{tripId}",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/travel2service/routes/{tripId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"[Get Route By Trip ID] Success\",\"data\":{\"id\":\"9fc9c261-3263-4bfa-82f8-bb44e06b2f52\",\"stations\":[\"nanjing\",\"xuzhou\",\"jinan\",\"beijing\"],\"distances\":[0,500,700,1200],\"startStationId\":\"nanjing\",\"terminalStationId\":\"beijing\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "53f9ab163db96c1e",
+  "parentSpanId" : "68b74eddb95eead5",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"9fc9c261-3263-4bfa-82f8-bb44e06b2f52\",\"stations\":[\"nanjing\",\"xuzhou\",\"jinan\",\"beijing\"],\"distances\":[0,500,700,1200],\"startStationId\":\"nanjing\",\"terminalStationId\":\"beijing\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "4e72d40b84dfb973",
+  "parentSpanId" : "6d2c0e4e7f61e258",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"beijing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "5d6442fe0b4cc560",
+  "parentSpanId" : "447f1e04850c37ca",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "927ab99c8c0fed54",
+  "parentSpanId" : "299efce294d2791b",
+  "name" : "BasicController.queryForStationId",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "666cc0489efaa0d6",
+  "parentSpanId" : "365826477e1ece38",
+  "name" : "Travel2Controller.queryInfo.execute",
+  "service" : "ts-travel2-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "ec9b9e1f18f9e163",
+  "parentSpanId" : "670fb273c04a7b6c",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "cdb1bbb0af46d3e7",
+  "parentSpanId" : "109d1ce66e7b1b63",
+  "name" : "Travel2Controller.getRouteByTripId.execute",
+  "service" : "ts-travel2-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "a75f2a8be5088a46",
+  "parentSpanId" : "f9a0a5c7ccec469d",
+  "name" : "BasicController.queryForStationId.execute",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "1875b18c53a3b97c",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/Bei%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "d7a602113ff8bb70",
+  "parentSpanId" : "7c3197f2185dbee7",
+  "name" : "TrainController.retrieve",
+  "service" : "ts-train-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "0bf8652828e3d44a",
+  "parentSpanId" : "affc172ad5615326",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "0e1590ef46dd9d8c",
+  "parentSpanId" : "e4a177b3a4544e72",
+  "name" : "TicketInfoController.queryForTravel.execute",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "b53711609f3ef106",
+  "parentSpanId" : "a9981d8c0fe6f659",
+  "name" : "TicketInfoController.queryForStationId.execute",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "79b8b6649b8953f9",
+  "parentSpanId" : "a89852609be5426e",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "124738ba3f5a3acd",
+  "parentSpanId" : "d8c51f668073854c",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "72fb9b944478431a",
+  "parentSpanId" : "ecc6a5157c7156a8",
+  "name" : "GET /api/v1/basicservice/basic/{stationName}",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/basicservice/basic/{stationName}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "299efce294d2791b",
+  "parentSpanId" : "6cddba12ff77477b",
+  "name" : "GET /api/v1/basicservice/basic/{stationName}",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/basicservice/basic/{stationName}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "c2a330ec1ed9f88e",
+  "parentSpanId" : "026d18c61b88f16d",
+  "name" : "GET /api/v1/configservice/configs/{configName}",
+  "service" : "ts-config-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/configservice/configs/{configName}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"name\":\"DirectTicketAllocationProportion\",\"value\":\"0.5\",\"description\":\"Allocation Proportion Of The Direct Ticket - From Start To End\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "35a3a3747262b1b4",
+  "parentSpanId" : "31dc08ab695f8689",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "e84ef93bb8ab921f",
+  "parentSpanId" : "a4590ab50a86f1b0",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"beijing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "2cfe4934544a1ddb",
+  "parentSpanId" : "5f36b645fa00cb12",
+  "name" : "GET",
+  "service" : "ts-seat-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-travel2-service:16346/api/v1/travel2service/train_types/Z1235",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "619fb51862740451",
+  "parentSpanId" : "c8f81b49cff219f4",
+  "name" : "POST /api/v1/seatservice/seats/left_tickets",
+  "service" : "ts-seat-service",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/seatservice/seats/left_tickets",
+  "statusCode" : 200,
+  "requestBody" : "{\"travelDate\":\"3025-07-28T16:00:00.000+00:00\",\"trainNumber\":\"Z1235\",\"startStation\":\"nanjing\",\"destStation\":\"beijing\",\"seatType\":2}",
+  "responseBody" : "{\"status\":1,\"msg\":\"Get Left Ticket of Internal Success\",\"data\":1073741823}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "dcd9a38baf05f70c",
+  "parentSpanId" : "619fb51862740451",
+  "name" : "SeatController.getLeftTicketOfInterval",
+  "service" : "ts-seat-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "c715549c4296b8c9",
+  "parentSpanId" : "6a3b1c0f57cfcfdf",
+  "name" : "RoutePlanController.getCheapestRoutes",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "f9a0a5c7ccec469d",
+  "parentSpanId" : "49e9ca9a860957f5",
+  "name" : "BasicController.queryForStationId",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "f8dd9d56b757dbf1",
+  "parentSpanId" : "fd079e54615c547e",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "7aaf2fb76e05e27c",
+  "parentSpanId" : "ddcdcfa17bae7e33",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "5f36b645fa00cb12",
+  "parentSpanId" : "e4f70566dac7fc41",
+  "name" : "SeatController.getLeftTicketOfInterval.execute",
+  "service" : "ts-seat-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "d8c51f668073854c",
+  "parentSpanId" : "83213870aa15a937",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"9fc9c261-3263-4bfa-82f8-bb44e06b2f52\",\"stations\":[\"nanjing\",\"xuzhou\",\"jinan\",\"beijing\"],\"distances\":[0,500,700,1200],\"startStationId\":\"nanjing\",\"terminalStationId\":\"beijing\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "ec90c1f3664a4921",
+  "parentSpanId" : "b18eda2e6bc4119f",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/92708982-77af-4318-be25-57ccb0ff69ad",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "1b71f03501a0151d",
+  "parentSpanId" : "675093a89074e4ca",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "35f5c1651299b731",
+  "parentSpanId" : "01036af62fdbb866",
+  "name" : "GET",
+  "service" : "ts-seat-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-config-service:15679/api/v1/configservice/configs/DirectTicketAllocationProportion",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "9827c0a1fcfe3530",
+  "parentSpanId" : "79f9a5d26727bbf0",
+  "name" : "Travel2Controller.getRouteByTripId",
+  "service" : "ts-travel2-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "4e5855eca39f8a30",
+  "parentSpanId" : "c2a330ec1ed9f88e",
+  "name" : "ConfigController.retrieve",
+  "service" : "ts-config-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "304ba8d2bf4b906a",
+  "parentSpanId" : "788447919e486c8a",
+  "name" : "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/ticketinfoservice/ticketinfo/{name}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "3a5624c815a59e94",
+  "parentSpanId" : "d65ec2767da80abe",
+  "name" : "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/ticketinfoservice/ticketinfo/{name}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"beijing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "b7097f8c4458f785",
+  "parentSpanId" : "59d7a323d789090e",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"084837bb-53c8-4438-87c8-0321a4d09917\",\"stations\":[\"suzhou\",\"shanghai\"],\"distances\":[0,50],\"startStationId\":\"suzhou\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "ec15fc087330d58e",
+  "parentSpanId" : "1e26070899538917",
+  "name" : "BasicController.queryForStationId.execute",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "94a9191f51cf5db1",
+  "parentSpanId" : "5f36b645fa00cb12",
+  "name" : "GET",
+  "service" : "ts-seat-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-travel2-service:16346/api/v1/travel2service/routes/Z1235",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "e4f70566dac7fc41",
+  "parentSpanId" : "f04094e9d108ee9f",
+  "name" : "SeatController.getLeftTicketOfInterval",
+  "service" : "ts-seat-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "171157ca7b3e5c7f",
+  "parentSpanId" : "15ff72bf00f31c0c",
+  "name" : "GET /api/v1/basicservice/basic/{stationName}",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/basicservice/basic/{stationName}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"beijing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "a7ac2fdd2c2b6440",
+  "parentSpanId" : "0080154723128637",
+  "name" : "BasicController.queryForTravel",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "b184e014bcc01b66",
+  "parentSpanId" : "f73e9d297155e97e",
+  "name" : "TicketInfoController.queryForStationId",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "9ae2723b6e2a50a3",
+  "parentSpanId" : "2613b9227b9514f1",
+  "name" : "BasicController.queryForStationId",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "d14d76f427b59b17",
+  "parentSpanId" : "72fb9b944478431a",
+  "name" : "BasicController.queryForStationId",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "670fb273c04a7b6c",
+  "parentSpanId" : "b21318798d62609a",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"aefcef3f-3f42-46e8-afd7-6cb2a928bd3d\",\"stations\":[\"nanjing\",\"shanghai\"],\"distances\":[0,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "68b74eddb95eead5",
+  "parentSpanId" : "345cfa456fb90ba2",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/9fc9c261-3263-4bfa-82f8-bb44e06b2f52",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "8c5a5cbf6cbff800",
+  "parentSpanId" : "94461c3715b20301",
+  "name" : "GET",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-basic-service:15680/api/v1/basicservice/basic/Bei%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "6c94eee9a71016d1",
+  "parentSpanId" : "22f06036f85ce7be",
+  "name" : "POST /api/v1/orderOtherService/orderOther/tickets",
+  "service" : "ts-order-other-service",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/orderOtherService/orderOther/tickets",
+  "statusCode" : 200,
+  "requestBody" : "{\"travelDate\":\"3025-07-28T16:00:00.000+00:00\",\"trainNumber\":\"Z1235\",\"startStation\":\"nanjing\",\"destStation\":\"beijing\",\"seatType\":2}",
+  "responseBody" : "{\"status\":0,\"msg\":\"Seat is Null.\",\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "3d77fe5521531376",
+  "parentSpanId" : "25cc67b515fdb67a",
+  "name" : "TicketInfoController.queryForStationId",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "f481204cd4048cc9",
+  "parentSpanId" : "44b75a2e53370135",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/9fc9c261-3263-4bfa-82f8-bb44e06b2f52",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "026d18c61b88f16d",
+  "parentSpanId" : "5f36b645fa00cb12",
+  "name" : "GET",
+  "service" : "ts-seat-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-config-service:15679/api/v1/configservice/configs/DirectTicketAllocationProportion",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "66982b111728eff5",
+  "parentSpanId" : "345cfa456fb90ba2",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "a0271642f5a30b54",
+  "parentSpanId" : "01036af62fdbb866",
+  "name" : "GET",
+  "service" : "ts-seat-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-travel2-service:16346/api/v1/travel2service/routes/Z1235",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "ed376b5707e893d0",
+  "parentSpanId" : "f3706788d3f1cec9",
+  "name" : "GET /api/v1/trainservice/trains/{id}",
+  "service" : "ts-train-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/trainservice/trains/{id}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"ZhiDa\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":120}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "86a15df119821dec",
+  "parentSpanId" : "8ce60319ca35514d",
+  "name" : "TicketInfoController.queryForStationId.execute",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "162388e8033a9d2a",
+  "parentSpanId" : "359e3dc24d12ac14",
+  "name" : "PriceController.query",
+  "service" : "ts-price-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "d65aa1bc63b58af1",
+  "parentSpanId" : "c4970690c870ebe0",
+  "name" : "GET /api/v1/orderOtherService/orderOther/{travelDate}/{trainNumber}",
+  "service" : "ts-order-other-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/orderOtherService/orderOther/{travelDate}/{trainNumber}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"travelDate\":\"3025-07-28T16:00:00.000+00:00\",\"trainNumber\":\"Z1235\",\"noSeat\":0,\"businessSeat\":0,\"firstClassSeat\":0,\"secondClassSeat\":0,\"hardSeat\":0,\"softSeat\":0,\"hardBed\":0,\"softBed\":0,\"highSoftBed\":0}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "a4590ab50a86f1b0",
+  "parentSpanId" : "228f5c3c510b148f",
+  "name" : "GET",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-station-service:12345/api/v1/stationservice/stations/id/Bei%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "25cc67b515fdb67a",
+  "parentSpanId" : "bece8b29ffb6d791",
+  "name" : "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/ticketinfoservice/ticketinfo/{name}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "afb240ad55e5cafa",
+  "parentSpanId" : "c597b3e8b0b87bc4",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "60abedb45f7a2ca0",
+  "parentSpanId" : "c0a3102fd0da39a5",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "4596808534fef2e0",
+  "parentSpanId" : "9f10c9252efb9367",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "81213fe84d24b38e",
+  "parentSpanId" : "3d77fe5521531376",
+  "name" : "TicketInfoController.queryForStationId.execute",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "44af9a9b41ec7c61",
+  "parentSpanId" : "40c3892dfd4fd690",
+  "name" : "Travel2Controller.getTrainTypeByTripId",
+  "service" : "ts-travel2-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "1d0f7cd7f6b23279",
+  "parentSpanId" : "b7a28619d3bdfd54",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "b7a28619d3bdfd54",
+  "parentSpanId" : "e330c06110ed15b1",
+  "name" : "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+  "service" : "ts-station-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/stationservice/stations/id/{stationNameForId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "b242bb205181f621",
+  "parentSpanId" : "cf1e8a57404c7a3a",
+  "name" : "TicketInfoController.queryForStationId.execute",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "ec425e934aa959c6",
+  "parentSpanId" : "8e9697cb5b946574",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "96bf020122f51228",
+  "parentSpanId" : "81213fe84d24b38e",
+  "name" : "GET",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-basic-service:15680/api/v1/basicservice/basic/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "3c246d611233933f",
+  "parentSpanId" : "13b5dc5983407c14",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"d693a2c5-ef87-4a3c-bef8-600b43f62c68\",\"stations\":[\"taiyuan\",\"shijiazhuang\",\"nanjing\",\"shanghai\"],\"distances\":[0,300,950,1300],\"startStationId\":\"taiyuan\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "20e1d625a1cb826a",
+  "parentSpanId" : "c2e5ea3a31025b2d",
+  "name" : "GET /api/v1/travel2service/routes/{tripId}",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/travel2service/routes/{tripId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"[Get Route By Trip ID] Success\",\"data\":{\"id\":\"9fc9c261-3263-4bfa-82f8-bb44e06b2f52\",\"stations\":[\"nanjing\",\"xuzhou\",\"jinan\",\"beijing\"],\"distances\":[0,500,700,1200],\"startStationId\":\"nanjing\",\"terminalStationId\":\"beijing\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "4732bb9e8557b62a",
+  "parentSpanId" : "44af9a9b41ec7c61",
+  "name" : "Travel2Controller.getTrainTypeByTripId.execute",
+  "service" : "ts-travel2-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "44e1aeecfae3e25e",
+  "parentSpanId" : "f678070fa04667c1",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "3bd488f743143d5e",
+  "parentSpanId" : "01036af62fdbb866",
+  "name" : "GET",
+  "service" : "ts-seat-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-travel2-service:16346/api/v1/travel2service/train_types/Z1235",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "edb272ddf902e1f5",
+  "parentSpanId" : "ed376b5707e893d0",
+  "name" : "TrainController.retrieve",
+  "service" : "ts-train-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "8591e9a8b722a3df",
+  "parentSpanId" : "5f36b645fa00cb12",
+  "name" : "POST",
+  "service" : "ts-seat-service",
+  "httpMethod" : "POST",
+  "statusCode" : 200,
+  "url" : "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/tickets",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "b56093f6bf190dcd",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/92708982-77af-4318-be25-57ccb0ff69ad",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "788447919e486c8a",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "2613b9227b9514f1",
+  "parentSpanId" : "603f128583b5067b",
+  "name" : "GET /api/v1/basicservice/basic/{stationName}",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/basicservice/basic/{stationName}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"beijing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "72e6ef6bd765d3a4",
+  "parentSpanId" : "93ed24dab1ec77a2",
+  "name" : "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/ticketinfoservice/ticketinfo/{name}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"beijing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "5176d460e95af67c",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/92708982-77af-4318-be25-57ccb0ff69ad",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "ecc6a5157c7156a8",
+  "parentSpanId" : "5ed7df36d7e4b5c7",
+  "name" : "GET",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-basic-service:15680/api/v1/basicservice/basic/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "b21318798d62609a",
+  "parentSpanId" : "b18eda2e6bc4119f",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/aefcef3f-3f42-46e8-afd7-6cb2a928bd3d",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "ac628a41d41aadc2",
+  "parentSpanId" : "746857554349a648",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "93ed24dab1ec77a2",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/Bei%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "40c3892dfd4fd690",
+  "parentSpanId" : "2cfe4934544a1ddb",
+  "name" : "GET /api/v1/travel2service/train_types/{tripId}",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/travel2service/train_types/{tripId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success query Train by trip id\",\"data\":{\"id\":\"ZhiDa\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":120}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "31dc08ab695f8689",
+  "parentSpanId" : "ec90c1f3664a4921",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"92708982-77af-4318-be25-57ccb0ff69ad\",\"stations\":[\"nanjing\",\"zhenjiang\",\"wuxi\",\"suzhou\",\"shanghai\"],\"distances\":[0,100,150,200,250],\"startStationId\":\"nanjing\",\"terminalStationId\":\"shanghai\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "8ce60319ca35514d",
+  "parentSpanId" : "304ba8d2bf4b906a",
+  "name" : "TicketInfoController.queryForStationId",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "2aeb6eac96a7889c",
+  "parentSpanId" : "0e1590ef46dd9d8c",
+  "name" : "POST",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "POST",
+  "statusCode" : 200,
+  "url" : "http://ts-basic-service:15680/api/v1/basicservice/basic/travel",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "bcf8479863f2bdbc",
+  "parentSpanId" : "e84ef93bb8ab921f",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "d65ec2767da80abe",
+  "parentSpanId" : "b18eda2e6bc4119f",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-ticketinfo-service:15681/api/v1/ticketinfoservice/ticketinfo/Bei%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "5698f64b790d4643",
+  "parentSpanId" : "b18eda2e6bc4119f",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/92708982-77af-4318-be25-57ccb0ff69ad",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "c4970690c870ebe0",
+  "parentSpanId" : "666cc0489efaa0d6",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/Fri%20Jul%2029%2000:00:00%20CST%203025/Z1235",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "c2ef45f8f36e144c",
+  "parentSpanId" : "cdb1bbb0af46d3e7",
+  "name" : "GET",
+  "service" : "ts-travel2-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/9fc9c261-3263-4bfa-82f8-bb44e06b2f52",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "6ed780ab669b30a4",
+  "parentSpanId" : "85f1a8c67dfd64b2",
+  "name" : "StationController.queryForStationId",
+  "service" : "ts-station-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "c704143aeb251c46",
+  "parentSpanId" : "86a15df119821dec",
+  "name" : "GET",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-basic-service:15680/api/v1/basicservice/basic/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "f88eb2ed73961750",
+  "parentSpanId" : "eaa75941f51aae17",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "0669b7bc8540b7db",
+  "parentSpanId" : "3c246d611233933f",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "e1071ed3f0c76681",
+  "parentSpanId" : "b18eda2e6bc4119f",
+  "name" : "GET",
+  "service" : "ts-travel-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-route-service:11178/api/v1/routeservice/routes/f3d4d4ef-693b-4456-8eed-59c0d717dd08",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "49e9ca9a860957f5",
+  "parentSpanId" : "c704143aeb251c46",
+  "name" : "GET /api/v1/basicservice/basic/{stationName}",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/basicservice/basic/{stationName}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "6cddba12ff77477b",
+  "parentSpanId" : "cc6f9a35efc500bc",
+  "name" : "GET",
+  "service" : "ts-ticketinfo-service",
+  "httpMethod" : "GET",
+  "statusCode" : 200,
+  "url" : "http://ts-basic-service:15680/api/v1/basicservice/basic/Nan%20Jing",
+  "kind" : "CLIENT"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "6c4382ee896d86d7",
+  "parentSpanId" : "62df72b54d01eac4",
+  "name" : "GET /api/v1/trainservice/trains/{id}",
+  "service" : "ts-train-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/trainservice/trains/{id}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"success\",\"data\":{\"id\":\"ZhiDa\",\"economyClass\":2147483647,\"confortClass\":2147483647,\"averageSpeed\":120}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "db788765ab4de760",
+  "parentSpanId" : "96bf020122f51228",
+  "name" : "GET /api/v1/basicservice/basic/{stationName}",
+  "service" : "ts-basic-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/basicservice/basic/{stationName}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":\"nanjing\"}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "c597b3e8b0b87bc4",
+  "parentSpanId" : "f481204cd4048cc9",
+  "name" : "GET /api/v1/routeservice/routes/{routeId}",
+  "service" : "ts-route-service",
+  "httpMethod" : "GET",
+  "route" : "/api/v1/routeservice/routes/{routeId}",
+  "statusCode" : 200,
+  "requestBody" : null,
+  "responseBody" : "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"9fc9c261-3263-4bfa-82f8-bb44e06b2f52\",\"stations\":[\"nanjing\",\"xuzhou\",\"jinan\",\"beijing\"],\"distances\":[0,500,700,1200],\"startStationId\":\"nanjing\",\"terminalStationId\":\"beijing\"}}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "d18b5b3e1e852403",
+  "parentSpanId" : "479758d80cc59a0e",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "544ec33c524ec3b5",
+  "parentSpanId" : "0d8b7507adf75d34",
+  "name" : "Travel2Controller.getRouteByTripId.execute",
+  "service" : "ts-travel2-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "a8c7afe60bea72d0",
+  "parentSpanId" : "d5fb64a477b188e0",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "f7216181ccb51660",
+  "parentSpanId" : "b1e38a023ed1d981",
+  "name" : "TicketInfoController.queryForStationId",
+  "service" : "ts-ticketinfo-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "345cfa456fb90ba2",
+  "parentSpanId" : "a7ac2fdd2c2b6440",
+  "name" : "BasicController.queryForTravel.execute",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "e2d85edeb85c7a5f",
+  "parentSpanId" : "89715891bfe25d1b",
+  "name" : "BasicController.queryForStationId.execute",
+  "service" : "ts-basic-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "ec96c3ba697c807faf7e95b151fa7db6",
+  "spanId" : "e2230ec0acccb5bb",
+  "parentSpanId" : "adc1e9dc92ec2018",
+  "name" : "RouteController.queryById",
+  "service" : "ts-route-service",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "7905a58b567278cc90011cb3617ac56b",
+  "spanId" : "adfeb245cf5a0beb",
+  "parentSpanId" : null,
+  "name" : "POST /api/v1/routeplanservice/routePlan/cheapestRoute",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "httpMethod" : "POST",
+  "route" : "/api/v1/routeplanservice/routePlan/cheapestRoute",
+  "statusCode" : 200,
+  "requestBody" : "{\"formStationName\":\"Nan Jing\",\"num\":1,\"toStationName\":\"Shang Hai\",\"travelDate\":1746320400000}",
+  "responseBody" : "{\"status\":null,\"msg\":null,\"data\":null}",
+  "kind" : "SERVER"
+}, {
+  "traceId" : "7905a58b567278cc90011cb3617ac56b",
+  "spanId" : "c3ddbcf87570f8f4",
+  "parentSpanId" : "adfeb245cf5a0beb",
+  "name" : "RoutePlanController.getCheapestRoutes",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "7905a58b567278cc90011cb3617ac56b",
+  "spanId" : "5e088dde52c80984",
+  "parentSpanId" : "c3ddbcf87570f8f4",
+  "name" : "RoutePlanController.getCheapestRoutes.execute",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "7905a58b567278cc90011cb3617ac56b",
+  "spanId" : "412bef5eb1164c98",
+  "parentSpanId" : "5e088dde52c80984",
+  "name" : "RoutePlanController.getCheapestRoutes.fallback",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "kind" : "INTERNAL"
+}, {
+  "traceId" : "7905a58b567278cc90011cb3617ac56b",
+  "spanId" : "8ae7518d50545105",
+  "parentSpanId" : "5e088dde52c80984",
+  "name" : "POST",
+  "service" : "ts-route-plan-service/plan.integration.post.SearchCheapestResultTest",
+  "httpMethod" : "POST",
+  "statusCode" : 0,
+  "url" : "http://localhost:62711/api/v1/travelservice/trips/left",
+  "kind" : "CLIENT"
+} ]

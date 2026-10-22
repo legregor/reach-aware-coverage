@@ -1,0 +1,364 @@
+{
+    "coveredConnections": [
+        {
+            "source": "ts-cancel-service",
+            "destination": "ts-order-service",
+            "call": {
+                "method": "PUT",
+                "url": "http://ts-order-service:12031/api/v1/orderservice/order",
+                "returnType": "edu.fudan.common.util.Response"
+            },
+            "endpoint": {
+                "method": "PUT",
+                "path": "/api/v1/orderservice/order",
+                "arguments": [
+                    "@RequestBody Order orderInfo",
+                    "@RequestHeader HttpHeaders headers"
+                ],
+                "returnType": "org.springframework.http.HttpEntity"
+            }
+        },
+        {
+            "source": "ts-cancel-service",
+            "destination": "ts-order-service",
+            "call": {
+                "method": "GET",
+                "url": "http://ts-order-service:12031/api/v1/orderservice/order/{orderId}",
+                "returnType": "new ParameterizedTypeReference<Response<Order>>() {\n}"
+            },
+            "endpoint": {
+                "method": "GET",
+                "path": "/api/v1/orderservice/order/{orderId}",
+                "arguments": [
+                    "@PathVariable String orderId",
+                    "@RequestHeader HttpHeaders headers"
+                ],
+                "returnType": "org.springframework.http.HttpEntity"
+            }
+        },
+        {
+            "source": "ts-cancel-service",
+            "destination": "ts-inside-payment-service",
+            "call": {
+                "method": "GET",
+                "url": "http://ts-inside-payment-service:18673/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+                "returnType": "edu.fudan.common.util.Response"
+            },
+            "endpoint": {
+                "method": "GET",
+                "path": "/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+                "arguments": [
+                    "@PathVariable String userId",
+                    "@PathVariable String money",
+                    "@RequestHeader HttpHeaders headers"
+                ],
+                "returnType": "org.springframework.http.HttpEntity"
+            }
+        },
+        {
+            "source": "ts-cancel-service",
+            "destination": "ts-user-service",
+            "call": {
+                "method": "GET",
+                "url": "http://ts-user-service:12342/api/v1/userservice/users/id/{orderId}",
+                "returnType": "new ParameterizedTypeReference<Response<User>>() {\n}"
+            },
+            "endpoint": {
+                "method": "GET",
+                "path": "/api/v1/userservice/users/id/{userId}",
+                "arguments": [
+                    "@PathVariable String userId",
+                    "@RequestHeader HttpHeaders headers"
+                ],
+                "returnType": "ResponseEntity<Response>"
+            }
+        },
+        {
+            "source": "ts-cancel-service",
+            "destination": "ts-notification-service",
+            "call": {
+                "method": "POST",
+                "url": "http://ts-notification-service:17853/api/v1/notifyservice/notification/order_cancel_success",
+                "returnType": "Boolean"
+            },
+            "endpoint": {
+                "method": "POST",
+                "path": "/api/v1/notifyservice/notification/order_cancel_success",
+                "arguments": [
+                    "@RequestBody NotifyInfo info",
+                    "@RequestHeader HttpHeaders headers"
+                ],
+                "returnType": "boolean"
+            }
+        }
+    ],
+    "uncoveredConnections": [
+        {
+            "source": "ts-inside-payment-service",
+            "destination": "ts-order-service",
+            "call": {
+                "method": "GET",
+                "url": "http://ts-order-service:12031/api/v1/orderservice/order/{var}",
+                "returnType": "new ParameterizedTypeReference<Response<Order>>() {\n}"
+            },
+            "endpoint": {
+                "method": "GET",
+                "path": "/api/v1/orderservice/order/{orderId}",
+                "arguments": [
+                    "@PathVariable String orderId",
+                    "@RequestHeader HttpHeaders headers"
+                ],
+                "returnType": "org.springframework.http.HttpEntity"
+            }
+        },
+        {
+            "source": "ts-inside-payment-service",
+            "destination": "ts-order-service",
+            "call": {
+                "method": "GET",
+                "url": "http://ts-order-service:12031/api/v1/orderservice/order/status/{orderId}/{orderStatus}",
+                "returnType": "edu.fudan.common.util.Response"
+            },
+            "endpoint": {
+                "method": "GET",
+                "path": "/api/v1/orderservice/order/status/{orderId}/{status}",
+                "arguments": [
+                    "@PathVariable String orderId",
+                    "@PathVariable int status",
+                    "@RequestHeader HttpHeaders headers"
+                ],
+                "returnType": "org.springframework.http.HttpEntity"
+            }
+        }
+    ],
+    "connectionReports": [
+        {
+            "connection": {
+                "source": "ts-cancel-service",
+                "destination": "ts-order-service",
+                "call": {
+                    "method": "PUT",
+                    "url": "http://ts-order-service:12031/api/v1/orderservice/order",
+                    "returnType": "edu.fudan.common.util.Response"
+                },
+                "endpoint": {
+                    "method": "PUT",
+                    "path": "/api/v1/orderservice/order",
+                    "arguments": [
+                        "@RequestBody Order orderInfo",
+                        "@RequestHeader HttpHeaders headers"
+                    ],
+                    "returnType": "org.springframework.http.HttpEntity"
+                }
+            },
+            "count": 2,
+            "statusCodes": [
+                200,
+                200
+            ],
+            "requestBodies": [
+                "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2025-08-04T16:59:22.487+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}",
+                "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2025-08-04T16:59:22.491+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0d6f2e1b-2bec-414c-9052-2367d84b9a9c\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}"
+            ],
+            "responseBodies": [
+                "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2025-08-04T16:59:22.487+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}}",
+                "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2025-08-04T16:59:22.491+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0d6f2e1b-2bec-414c-9052-2367d84b9a9c\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}}"
+            ],
+            "uniqueStatusCodes": [
+                200
+            ],
+            "statusCodeClassCoveragePercentage": 50.0,
+            "uniqueRequestBodies": [
+                "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2025-08-04T16:59:22.487+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}",
+                "{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2025-08-04T16:59:22.491+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0d6f2e1b-2bec-414c-9052-2367d84b9a9c\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}"
+            ],
+            "uniqueResponseBodies": [
+                "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2025-08-04T16:59:22.487+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}}",
+                "{\"status\":1,\"msg\":\"Success\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2025-08-04T16:59:22.491+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0d6f2e1b-2bec-414c-9052-2367d84b9a9c\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":4,\"price\":\"100.0\"}}"
+            ],
+            "uniqueStatusCodeClasses": [
+                "2xx"
+            ]
+        },
+        {
+            "connection": {
+                "source": "ts-cancel-service",
+                "destination": "ts-order-service",
+                "call": {
+                    "method": "GET",
+                    "url": "http://ts-order-service:12031/api/v1/orderservice/order/{orderId}",
+                    "returnType": "new ParameterizedTypeReference<Response<Order>>() {\n}"
+                },
+                "endpoint": {
+                    "method": "GET",
+                    "path": "/api/v1/orderservice/order/{orderId}",
+                    "arguments": [
+                        "@PathVariable String orderId",
+                        "@RequestHeader HttpHeaders headers"
+                    ],
+                    "returnType": "org.springframework.http.HttpEntity"
+                }
+            },
+            "count": 6,
+            "statusCodes": [
+                200,
+                200,
+                200,
+                200,
+                200,
+                200
+            ],
+            "requestBodies": [],
+            "responseBodies": [
+                "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2025-08-04T16:59:22.487+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":0,\"price\":\"100.0\"}}",
+                "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d7\",\"boughtDate\":\"2025-08-04T16:59:22.480+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":2,\"price\":\"100.0\"}}",
+                "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}",
+                "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}",
+                "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}",
+                "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2025-08-04T16:59:22.491+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0d6f2e1b-2bec-414c-9052-2367d84b9a9c\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":0,\"price\":\"100.0\"}}"
+            ],
+            "uniqueStatusCodes": [
+                200
+            ],
+            "statusCodeClassCoveragePercentage": 50.0,
+            "uniqueRequestBodies": [],
+            "uniqueResponseBodies": [
+                "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992b\",\"boughtDate\":\"2025-08-04T16:59:22.487+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":0,\"price\":\"100.0\"}}",
+                "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"f8e2dc60-bd59-4af9-bf15-507f3b6572d7\",\"boughtDate\":\"2025-08-04T16:59:22.480+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":2,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":2,\"price\":\"100.0\"}}",
+                "{\"status\":0,\"msg\":\"Order Not Found\",\"data\":null}",
+                "{\"status\":1,\"msg\":\"Success.\",\"data\":{\"id\":\"e9cb042e-54d3-4b56-b5fa-67ff1c1c992c\",\"boughtDate\":\"2025-08-04T16:59:22.491+00:00\",\"travelDate\":\"1970-01-03T23:24:49.287+00:00\",\"travelTime\":\"1970-01-02T10:17:36.799+00:00\",\"accountId\":\"0d6f2e1b-2bec-414c-9052-2367d84b9a9c\",\"contactsName\":\"Contacts_One\",\"documentType\":1,\"contactsDocumentNumber\":\"DocumentNumber_One\",\"trainNumber\":\"G1235\",\"coachNumber\":5,\"seatClass\":0,\"seatNumber\":\"FirstClass-30\",\"from\":\"shanghai\",\"to\":\"beijing\",\"status\":0,\"price\":\"100.0\"}}"
+            ],
+            "uniqueStatusCodeClasses": [
+                "2xx"
+            ]
+        },
+        {
+            "connection": {
+                "source": "ts-cancel-service",
+                "destination": "ts-inside-payment-service",
+                "call": {
+                    "method": "GET",
+                    "url": "http://ts-inside-payment-service:18673/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+                    "returnType": "edu.fudan.common.util.Response"
+                },
+                "endpoint": {
+                    "method": "GET",
+                    "path": "/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+                    "arguments": [
+                        "@PathVariable String userId",
+                        "@PathVariable String money",
+                        "@RequestHeader HttpHeaders headers"
+                    ],
+                    "returnType": "org.springframework.http.HttpEntity"
+                }
+            },
+            "count": 3,
+            "statusCodes": [
+                200,
+                200,
+                200
+            ],
+            "requestBodies": [],
+            "responseBodies": [
+                "{\"status\":1,\"msg\":\"Draw Back Money Success\",\"data\":null}",
+                "{\"status\":1,\"msg\":\"Draw Back Money Success\",\"data\":null}",
+                "{\"status\":1,\"msg\":\"Draw Back Money Success\",\"data\":null}"
+            ],
+            "uniqueStatusCodes": [
+                200
+            ],
+            "statusCodeClassCoveragePercentage": 50.0,
+            "uniqueRequestBodies": [],
+            "uniqueResponseBodies": [
+                "{\"status\":1,\"msg\":\"Draw Back Money Success\",\"data\":null}"
+            ],
+            "uniqueStatusCodeClasses": [
+                "2xx"
+            ]
+        },
+        {
+            "connection": {
+                "source": "ts-cancel-service",
+                "destination": "ts-user-service",
+                "call": {
+                    "method": "GET",
+                    "url": "http://ts-user-service:12342/api/v1/userservice/users/id/{orderId}",
+                    "returnType": "new ParameterizedTypeReference<Response<User>>() {\n}"
+                },
+                "endpoint": {
+                    "method": "GET",
+                    "path": "/api/v1/userservice/users/id/{userId}",
+                    "arguments": [
+                        "@PathVariable String userId",
+                        "@RequestHeader HttpHeaders headers"
+                    ],
+                    "returnType": "ResponseEntity<Response>"
+                }
+            },
+            "count": 2,
+            "statusCodes": [
+                200,
+                200
+            ],
+            "requestBodies": [],
+            "responseBodies": [
+                "{\"status\":1,\"msg\":\"Find User Success\",\"data\":{\"userId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"userName\":\"fdse_microservice\",\"password\":\"111111\",\"gender\":1,\"documentType\":1,\"documentNum\":\"2135488099312X\",\"email\":\"fdse_microservice@163.com\"}}",
+                "{\"status\":0,\"msg\":\"No User\",\"data\":null}"
+            ],
+            "uniqueStatusCodes": [
+                200
+            ],
+            "statusCodeClassCoveragePercentage": 50.0,
+            "uniqueRequestBodies": [],
+            "uniqueResponseBodies": [
+                "{\"status\":1,\"msg\":\"Find User Success\",\"data\":{\"userId\":\"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f\",\"userName\":\"fdse_microservice\",\"password\":\"111111\",\"gender\":1,\"documentType\":1,\"documentNum\":\"2135488099312X\",\"email\":\"fdse_microservice@163.com\"}}",
+                "{\"status\":0,\"msg\":\"No User\",\"data\":null}"
+            ],
+            "uniqueStatusCodeClasses": [
+                "2xx"
+            ]
+        },
+        {
+            "connection": {
+                "source": "ts-cancel-service",
+                "destination": "ts-notification-service",
+                "call": {
+                    "method": "POST",
+                    "url": "http://ts-notification-service:17853/api/v1/notifyservice/notification/order_cancel_success",
+                    "returnType": "Boolean"
+                },
+                "endpoint": {
+                    "method": "POST",
+                    "path": "/api/v1/notifyservice/notification/order_cancel_success",
+                    "arguments": [
+                        "@RequestBody NotifyInfo info",
+                        "@RequestHeader HttpHeaders headers"
+                    ],
+                    "returnType": "boolean"
+                }
+            },
+            "count": 1,
+            "statusCodes": [
+                200
+            ],
+            "requestBodies": [],
+            "responseBodies": [],
+            "uniqueStatusCodes": [
+                200
+            ],
+            "statusCodeClassCoveragePercentage": 50.0,
+            "uniqueRequestBodies": [],
+            "uniqueResponseBodies": [],
+            "uniqueStatusCodeClasses": [
+                "2xx"
+            ]
+        }
+    ],
+    "totalConnections": 7,
+    "connectionCoveragePercentage": 71.42857142857143,
+    "statusCodeClassCoveragePercentage": 35.714285714285715,
+    "coveredConnectionsStatusCodeClassCoveragePercentage": 50.0,
+    "connectionsWithCorrectStatusCodeClass": 5,
+    "connectionsWithClientErrorStatusCodeClasses": 0,
+    "connectionsWithServerErrorStatusCodeClasses": 0
+}

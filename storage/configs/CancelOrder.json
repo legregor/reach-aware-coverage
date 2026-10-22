@@ -1,0 +1,55 @@
+{
+  "configName": "CancelOrder",
+  "services": [
+    {
+      "serviceName": "ts-cancel-service"
+    },
+    {
+      "serviceName": "ts-inside-payment-service"
+    },
+    {
+      "serviceName": "ts-notification-service"
+    },
+    {
+      "serviceName": "ts-order-other-service"
+    },
+    {
+      "serviceName": "ts-order-service"
+    },
+    {
+      "serviceName": "ts-user-service"
+    }
+  ],
+  "tests": [
+    {
+      "path": "cancel/integration/get/CancelOrderTest.java",
+      "fileName": "CancelOrderTest.java",
+      "serviceName": "ts-cancel-service"
+    }
+  ],
+  "globalExpectedStatusCodes": [
+    "2xx",
+    "4xx"
+  ],
+  "connectionOverrides": [],
+  "graphSelection": {
+    "selectedServices": [
+      "ts-cancel-service",
+      "ts-inside-payment-service",
+      "ts-notification-service",
+      "ts-order-other-service",
+      "ts-order-service",
+      "ts-user-service"
+    ],
+    "selectedConnections": [
+      "ts-cancel-service->ts-order-service:GET:/api/v1/orderservice/order/{orderId}",
+      "ts-cancel-service->ts-order-service:PUT:/api/v1/orderservice/order",
+      "ts-cancel-service->ts-order-other-service:GET:/api/v1/orderOtherService/orderOther/{orderId}",
+      "ts-cancel-service->ts-inside-payment-service:GET:/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+      "ts-cancel-service->ts-notification-service:POST:/api/v1/notifyservice/notification/order_cancel_success",
+      "ts-cancel-service->ts-order-other-service:PUT:/api/v1/orderOtherService/orderOther",
+      "ts-cancel-service->ts-user-service:GET:/api/v1/userservice/users/id/{orderId}"
+    ],
+    "updatedAt": "2026-10-22T08:02:02.427Z"
+  }
+}

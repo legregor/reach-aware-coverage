@@ -1,0 +1,37 @@
+{
+  "configName": "CancelConfig",
+  "globalExpectedStatusCodes": ["2xx", "4xx", "500"],
+  "connectionOverrides": [
+    {
+      "sourceService": "ts-cancel-service",
+      "destinationService": "ts-order-service",
+      "method": "POST",
+      "path": "/api/v1/orders",
+      "expectedStatusCodes": ["200", "404"]
+    }
+  ],
+  "services": [
+    {
+      "serviceName": "ts-cancel-service"
+    },
+    {
+      "serviceName": "ts-order-service"
+    },
+    {
+      "serviceName": "ts-inside-payment-service"
+    },
+    {
+      "serviceName": "ts-user-service"
+    },
+    {
+      "serviceName": "ts-notification-service"
+    }
+  ],
+  "tests": [
+    {
+      "path": "cancel/integration/get/CancelOrderTest.java",
+      "fileName": "CancelOrderTest.java",
+      "serviceName": "ts-cancel-service"
+    }
+  ]
+}

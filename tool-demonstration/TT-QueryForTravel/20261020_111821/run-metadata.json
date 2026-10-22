@@ -1,0 +1,6 @@
+{
+  "totalDurationMillis" : 64830,
+  "testDurationMillis" : 63842,
+  "testServiceNames" : [ "ts-basic-service" ],
+  "coverageConfigFile" : "/Users/lenagregor/Documents/microservice-coverage/tool-evaluation/configs/TT-QueryForTravel.json"
+}

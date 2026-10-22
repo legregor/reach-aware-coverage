@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-03-27T11:54:54.900Z",
+  "nodePositions": {
+    "ts-cancel-service": {
+      "x": 179.0000119990653,
+      "y": 54.1606625283436
+    },
+    "ts-order-service": {
+      "x": 76.08461784317468,
+      "y": -26.372705140342365
+    },
+    "ts-inside-payment-service": {
+      "x": -6.926247074556207,
+      "y": 52.06088616051293
+    },
+    "ts-user-service": {
+      "x": 2.368538583041137,
+      "y": 115.65832541371249
+    },
+    "ts-notification-service": {
+      "x": 152.25777733120927,
+      "y": 119.88613262211958
+    }
+  },
+  "viewport": {
+    "pan": {}
+  },
+  "styleConfig": {
+    "node": {
+      "size": 32,
+      "color": "#787373",
+      "textColor": "#ffffff"
+    },
+    "edge": {
+      "width": 1,
+      "coveredColor": "#16a34a",
+      "uncoveredColor": "#dc2626",
+      "curveStyle": "bezier",
+      "controlPointDistance": 28
+    },
+    "label": {
+      "fontSize": 2,
+      "backgroundColor": "#ffffff",
+      "coveredBackgroundColor": "#dcfce7",
+      "uncoveredBackgroundColor": "#fee2e2",
+      "textColor": "#374151",
+      "opacity": 0.95,
+      "padding": 2,
+      "borderWidth": 0.2,
+      "borderColor": "#d1d5db"
+    }
+  },
+  "edgeFilter": "all"
+}

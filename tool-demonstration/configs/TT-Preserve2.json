@@ -1,0 +1,43 @@
+{
+  "configName": "TT-Preserve2",
+  "globalExpectedStatusCodes": [
+    "status=1",
+    "status=0"
+  ],
+  "connectionOverrides": [
+    {
+      "sourceService": "ts-seat-service",
+      "destinationService": "ts-travel2-service",
+      "method": "GET",
+      "path": "/api/v1/travel2service/routes/{trainNumber}",
+      "reachable": false
+    },
+    {
+      "sourceService": "ts-seat-service",
+      "destinationService": "ts-travel2-service",
+      "method": "GET",
+      "path": "/api/v1/travel2service/train_types/{trainNumber}",
+      "reachable": false
+    },
+    {
+      "sourceService": "ts-seat-service",
+      "destinationService": "ts-order-other-service",
+      "method": "POST",
+      "path": "/api/v1/orderOtherService/orderOther/tickets",
+      "reachable": false
+    }
+  ],
+  "tests": [
+    {
+      "path": "preserve/integration/post/PreserveTest.java",
+      "fileName": "PreserveTest.java",
+      "serviceName": "ts-preserve-service",
+      "entryEndpoints": [
+        {
+          "method": "POST",
+          "path": "/api/v1/preserveservice/preserve"
+        }
+      ]
+    }
+  ]
+}
