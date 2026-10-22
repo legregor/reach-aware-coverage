@@ -1,4 +1,4 @@
-# Microservice Coverage
+# Reachability Aware Microservice Coverage
 
 A tool for measuring how thoroughly **integration tests** exercise the interactions between the services of a
 microservice system.
